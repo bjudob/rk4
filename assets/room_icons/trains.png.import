@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgrahxmanddwv"
-path="res://.godot/imported/Screenshot 2026-10-25 234714.png-9b0832c71df6cd93420ab169577f0ad8.ctex"
+uid="uid://brb8abmlunha0"
+path="res://.godot/imported/trains.png-49083ddb78fd09a8314c8229369463fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/room_icons/Screenshot 2026-10-25 234714.png"
-dest_files=["res://.godot/imported/Screenshot 2026-10-25 234714.png-9b0832c71df6cd93420ab169577f0ad8.ctex"]
+source_file="res://assets/room_icons/trains.png"
+dest_files=["res://.godot/imported/trains.png-49083ddb78fd09a8314c8229369463fb.ctex"]
 
 [params]
 

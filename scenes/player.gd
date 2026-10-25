@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
-## Can we move around?
+var move_lock = false
+
 @export var can_move : bool = true
 @export var has_gravity : bool = true
 @export var can_jump : bool = true
@@ -130,9 +131,12 @@ func release_mouse():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	mouse_captured = false
 
+func lock_move():
+	move_lock = true
+	
+func unlock_move():
+	move_lock = false
 
-## Checks if some Input Actions haven't been created.
-## Disables functionality accordingly.
 func check_input_mappings():
 	if can_move and not InputMap.has_action(input_left):
 		push_error("Movement disabled. No InputAction found for input_left: " + input_left)

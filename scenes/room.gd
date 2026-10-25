@@ -1,7 +1,7 @@
 class_name Room
 extends Node3D
 
-@export var image = "res://assets/room_icons/Screenshot 2026-10-25 234714.png"
+@export var image: Texture2D = load("res://assets/room_icons/tree.png")
 
 @onready var game = get_tree().get_nodes_in_group("game")[0]
 @onready var room_00 = get_tree().get_nodes_in_group("room_00_pos")[0]

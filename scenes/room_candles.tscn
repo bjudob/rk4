@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bv4dfi8ql4u5x"]
+
+[ext_resource type="PackedScene" uid="uid://dpjwqdpxrr8ux" path="res://assets/HolidayKit/hanukkah-dreidel.glb" id="1_3n4jx"]
+[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_tb5ne"]
+[ext_resource type="PackedScene" uid="uid://c1fkwkipuff65" path="res://assets/HolidayKit/hanukkah-menorah-candles.glb" id="2_tb5ne"]
+[ext_resource type="Texture2D" uid="uid://blqnepmc2qf20" path="res://assets/room_icons/candles.png" id="2_w71fb"]
+[ext_resource type="PackedScene" uid="uid://b0ejf0y2c38nx" path="res://assets/HolidayKit/hanukkah-menorah.glb" id="3_w71fb"]
+
+[node name="RoomCandles" type="Node3D" unique_id=2056734870]
+script = ExtResource("1_tb5ne")
+image = ExtResource("2_w71fb")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=959945205]
+size = Vector3(10, 1, 10)
+
+[node name="hanukkah-dreidel2" parent="." unique_id=1818754585 instance=ExtResource("1_3n4jx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05707407, 0.7270069, 0.36684275)
+
+[node name="hanukkah-menorah-candles2" parent="." unique_id=373819340 instance=ExtResource("2_tb5ne")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19469702, 0.5061871, 1.6226637)
+
+[node name="hanukkah-menorah2" parent="." unique_id=826509829 instance=ExtResource("3_w71fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14273286, 0.5474851, 2.3124123)
+
+[node name="hanukkah-menorah3" parent="." unique_id=788236597 instance=ExtResource("3_w71fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2240709, 0.4776832, 1.3002689)

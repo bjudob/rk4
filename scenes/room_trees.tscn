@@ -3,11 +3,13 @@
 [ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_3e8lf"]
 [ext_resource type="PackedScene" uid="uid://recuaeph8s8d" path="res://assets/HolidayKit/tree-snow-a.glb" id="1_rsp8f"]
 [ext_resource type="PackedScene" uid="uid://bjrfahcivy2ik" path="res://assets/HolidayKit/tree-snow-b.glb" id="2_3e8lf"]
+[ext_resource type="Texture2D" uid="uid://bgrahxmanddwv" path="res://assets/room_icons/tree.png" id="2_aoftf"]
 [ext_resource type="PackedScene" uid="uid://dm7ijqguc1qe8" path="res://assets/HolidayKit/tree-snow-c.glb" id="3_aoftf"]
 [ext_resource type="PackedScene" uid="uid://dwlcho1sxkv67" path="res://assets/HolidayKit/tree-decorated.glb" id="4_k7bwd"]
 
 [node name="RoomTrees" type="Node3D" unique_id=92647697]
 script = ExtResource("1_3e8lf")
+image = ExtResource("2_aoftf")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=136571297]
 size = Vector3(10, 1, 10)

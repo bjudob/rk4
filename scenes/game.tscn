@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dwlcho1sxkv67" path="res://assets/HolidayKit/tree-decorated.glb" id="8_dinhu"]
 [ext_resource type="PackedScene" uid="uid://cy558l45lti6d" path="res://scenes/room_ui.tscn" id="11_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://dkmf2q0bdlj1k" path="res://scenes/room_trees.tscn" id="12_dinhu"]
+[ext_resource type="PackedScene" uid="uid://coerr0y5yop0s" path="res://scenes/room_train.tscn" id="13_kvuet"]
+[ext_resource type="PackedScene" uid="uid://bv4dfi8ql4u5x" path="res://scenes/room_candles.tscn" id="14_trtic"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_top_color = Color(0.2543043, 0.42400897, 0.8124737, 1)
@@ -174,5 +176,9 @@ shape = SubResource("BoxShape3D_vtaks")
 [node name="RoomUI" parent="." unique_id=567577425 instance=ExtResource("11_kvpfn")]
 
 [node name="RoomTrees" parent="." unique_id=92647697 instance=ExtResource("12_dinhu")]
+
+[node name="RoomTrain" parent="." unique_id=584542378 instance=ExtResource("13_kvuet")]
+
+[node name="RoomCandles" parent="." unique_id=2056734870 instance=ExtResource("14_trtic")]
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

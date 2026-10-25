@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cy558l45lti6d"]
 
 [ext_resource type="Script" uid="uid://dk6qtiayynl5i" path="res://scenes/room_ui.gd" id="1_2uyx7"]
-[ext_resource type="Texture2D" uid="uid://bgrahxmanddwv" path="res://assets/room_icons/Screenshot 2026-10-25 234714.png" id="1_c1pem"]
+[ext_resource type="Texture2D" uid="uid://bgrahxmanddwv" path="res://assets/room_icons/tree.png" id="1_c1pem"]
 
 [node name="RoomUI" type="CanvasLayer" unique_id=567577425]
 script = ExtResource("1_2uyx7")
