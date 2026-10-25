@@ -3,6 +3,7 @@
 [ext_resource type="AudioStream" uid="uid://d2a5v77f02v66" path="res://music/Instrumental Christmas Music Peder B. Helland - O Holy Night (Album).mp3" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://c3ralf23uxqie" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://by6xy7d4fuupj" path="res://assets/MeshyAI/santa_dead.glb" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://ddp16jd21lvf5" path="res://assets/bench2.blend" id="4_lbhrr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_top_color = Color(0.2543043, 0.42400897, 0.8124737, 1)
@@ -18,6 +19,8 @@ background_mode = 2
 sky = SubResource("Sky_yqjtg")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_lnu2h"]
 
 [node name="Game" type="Node3D" unique_id=427786463]
 
@@ -113,3 +116,10 @@ size = Vector3(2, 3, 2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.918, 16.591)
 operation = 2
 size = Vector3(2, 3, 2)
+
+[node name="GPUParticlesCollisionSDF3D" type="GPUParticlesCollisionSDF3D" parent="." unique_id=1170235672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.0718975, 36.38649)
+texture = SubResource("NoiseTexture3D_lnu2h")
+
+[node name="bench2" parent="." unique_id=237736301 instance=ExtResource("4_lbhrr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06714058, 0.44993782, 20.515877)
