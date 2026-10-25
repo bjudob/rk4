@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cuwxn1ghfgdgf"]
 
+[ext_resource type="AudioStream" uid="uid://d2a5v77f02v66" path="res://music/Instrumental Christmas Music Peder B. Helland - O Holy Night (Album).mp3" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://c3ralf23uxqie" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://by6xy7d4fuupj" path="res://assets/MeshyAI/santa_dead.glb" id="2_yqjtg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_top_color = Color(0.2543043, 0.42400897, 0.8124737, 1)
@@ -22,6 +24,10 @@ glow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1290101628]
 environment = SubResource("Environment_lnu2h")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=53743505]
+stream = ExtResource("1_lnu2h")
+autoplay = true
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1100774870]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 light_color = Color(0.26666668, 0.5803922, 1, 1)
@@ -30,33 +36,80 @@ shadow_enabled = true
 [node name="Player" parent="." unique_id=1434208923 instance=ExtResource("1_uwrxv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.671146, 37.335365)
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=608930707]
-use_collision = true
+[node name="santa_dead" parent="." unique_id=1755617714 instance=ExtResource("2_yqjtg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.752752)
 
-[node name="Ground" type="CSGBox3D" parent="CSGCombiner3D" unique_id=986475359]
+[node name="Ground" type="CSGBox3D" parent="." unique_id=986475359]
 use_collision = true
 size = Vector3(100, 1, 100)
 
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=608930707]
+use_collision = true
+
 [node name="HWall1" type="CSGBox3D" parent="CSGCombiner3D" unique_id=535276184]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 28)
 size = Vector3(56, 30, 1)
 
 [node name="HWall2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=458394326]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 17)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17)
 size = Vector3(56, 30, 1)
 
 [node name="HWall3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=347297021]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 size = Vector3(56, 30, 1)
 
 [node name="HWall4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1557673497]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 size = Vector3(56, 30, 1)
 
 [node name="HWall5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2142840608]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
 size = Vector3(56, 30, 1)
 
 [node name="HWall6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=875677522]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -27)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27)
 size = Vector3(56, 30, 1)
+
+[node name="DoorMain" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=1644119985]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 2.5, 28)
+operation = 2
+radius = 4.0
+
+[node name="VWall1" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1777978401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 0)
+size = Vector3(1, 30, 56)
+
+[node name="VWall2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1694311883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 0)
+size = Vector3(1, 30, 56)
+
+[node name="VWall3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=46957417]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+size = Vector3(1, 30, 56)
+
+[node name="VWall4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1309696513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+size = Vector3(1, 30, 56)
+
+[node name="VWall5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1378096581]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
+size = Vector3(1, 30, 56)
+
+[node name="VWall6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=646525916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, 0)
+size = Vector3(1, 30, 56)
+
+[node name="Door12-13" type="CSGBox3D" parent="CSGCombiner3D" unique_id=226266389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.714, 1.918, 22.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door13-14" type="CSGBox3D" parent="CSGCombiner3D" unique_id=728979621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8115325, 1.918, 22.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door13-23" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2021807206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.918, 16.591)
+operation = 2
+size = Vector3(2, 3, 2)
