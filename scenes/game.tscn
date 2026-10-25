@@ -4,9 +4,35 @@
 
 [node name="Game" type="Node3D" unique_id=427786463]
 
-[node name="Ground" type="CSGBox3D" parent="." unique_id=986475359]
+[node name="Player" parent="." unique_id=1434208923 instance=ExtResource("1_uwrxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.671146, 0)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=608930707]
+
+[node name="Ground" type="CSGBox3D" parent="CSGCombiner3D" unique_id=986475359]
 use_collision = true
 size = Vector3(100, 1, 100)
 
-[node name="Player" parent="." unique_id=1434208923 instance=ExtResource("1_uwrxv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.671146, 0)
+[node name="HWall1" type="CSGBox3D" parent="CSGCombiner3D" unique_id=535276184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 28)
+size = Vector3(56, 30, 1)
+
+[node name="HWall2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=458394326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 17)
+size = Vector3(56, 30, 1)
+
+[node name="HWall3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=347297021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 6)
+size = Vector3(56, 30, 1)
+
+[node name="HWall4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1557673497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5)
+size = Vector3(56, 30, 1)
+
+[node name="HWall5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2142840608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -16)
+size = Vector3(56, 30, 1)
+
+[node name="HWall6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=875677522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -27)
+size = Vector3(56, 30, 1)
