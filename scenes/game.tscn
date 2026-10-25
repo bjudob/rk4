@@ -2,7 +2,9 @@
 
 [ext_resource type="AudioStream" uid="uid://d2a5v77f02v66" path="res://music/Instrumental Christmas Music Peder B. Helland - O Holy Night (Album).mp3" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://c3ralf23uxqie" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://duiebyo7sx707" path="res://scenes/game.gd" id="1_vtaks"]
 [ext_resource type="PackedScene" uid="uid://by6xy7d4fuupj" path="res://assets/MeshyAI/santa_dead.glb" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dl7hgxfcu67s4" path="res://scenes/room.tscn" id="4_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://dujvmh1fokw3t" path="res://assets/HolidayKit/tree.glb" id="4_gee14"]
 [ext_resource type="PackedScene" uid="uid://dm7ijqguc1qe8" path="res://assets/HolidayKit/tree-snow-c.glb" id="5_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://bjrfahcivy2ik" path="res://assets/HolidayKit/tree-snow-b.glb" id="6_vtaks"]
@@ -26,7 +28,8 @@ glow_enabled = true
 
 [sub_resource type="NoiseTexture3D" id="NoiseTexture3D_lnu2h"]
 
-[node name="Game" type="Node3D" unique_id=427786463]
+[node name="Game" type="Node3D" unique_id=427786463 groups=["game"]]
+script = ExtResource("1_vtaks")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1290101628]
 environment = SubResource("Environment_lnu2h")
@@ -125,19 +128,19 @@ size = Vector3(2, 3, 2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.0718975, 36.38649)
 texture = SubResource("NoiseTexture3D_lnu2h")
 
-[node name="Room" type="Node3D" parent="." unique_id=2034141414]
+[node name="Room" parent="." unique_id=564975233 instance=ExtResource("4_0tnpc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
 
 [node name="tree2" parent="." unique_id=878718430 instance=ExtResource("4_gee14")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9922266, 0.49999952, 44.15846)
 
-[node name="tree-snow-c2" parent="." unique_id=665969864 instance=ExtResource("5_0tnpc")]
+[node name="tree-snow-c2" parent="." unique_id=313304335 instance=ExtResource("5_0tnpc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1409292, 0.5, 45.94363)
 
-[node name="tree-snow-b2" parent="." unique_id=616160586 instance=ExtResource("6_vtaks")]
+[node name="tree-snow-b2" parent="." unique_id=552550449 instance=ExtResource("6_vtaks")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6148787, 0.49999952, 46.277775)
 
-[node name="tree-snow-a2" parent="." unique_id=1922761847 instance=ExtResource("7_kvpfn")]
+[node name="tree-snow-a2" parent="." unique_id=1127091538 instance=ExtResource("7_kvpfn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.968294, 0.5000005, 42.628498)
 
 [node name="tree-decorated2" parent="." unique_id=1667198677 instance=ExtResource("8_dinhu")]
@@ -148,3 +151,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.518277, 0.5000005, 44.9941
 
 [node name="tree-snow-b3" parent="." unique_id=1445907499 instance=ExtResource("6_vtaks")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.000497, 0.5, 46.00259)
+
+[node name="Room00Pos" type="Node3D" parent="." unique_id=1163338060 groups=["room_00_pos"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 22.5)
