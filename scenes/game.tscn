@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bjrfahcivy2ik" path="res://assets/HolidayKit/tree-snow-b.glb" id="6_vtaks"]
 [ext_resource type="PackedScene" uid="uid://recuaeph8s8d" path="res://assets/HolidayKit/tree-snow-a.glb" id="7_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://dwlcho1sxkv67" path="res://assets/HolidayKit/tree-decorated.glb" id="8_dinhu"]
+[ext_resource type="PackedScene" uid="uid://cy558l45lti6d" path="res://scenes/room_ui.tscn" id="11_kvpfn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_top_color = Color(0.2543043, 0.42400897, 0.8124737, 1)
@@ -27,6 +28,9 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="NoiseTexture3D" id="NoiseTexture3D_lnu2h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vtaks"]
+size = Vector3(4.462311, 5.262268, 1.31781)
 
 [node name="Game" type="Node3D" unique_id=427786463 groups=["game"]]
 script = ExtResource("1_vtaks")
@@ -51,7 +55,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.7527
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=986475359]
 use_collision = true
-size = Vector3(100, 1, 100)
+size = Vector3(200, 1, 200)
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=608930707]
 use_collision = true
@@ -131,26 +135,41 @@ texture = SubResource("NoiseTexture3D_lnu2h")
 [node name="Room" parent="." unique_id=564975233 instance=ExtResource("4_0tnpc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
 
-[node name="tree2" parent="." unique_id=878718430 instance=ExtResource("4_gee14")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9922266, 0.49999952, 44.15846)
-
-[node name="tree-snow-c2" parent="." unique_id=313304335 instance=ExtResource("5_0tnpc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1409292, 0.5, 45.94363)
-
-[node name="tree-snow-b2" parent="." unique_id=552550449 instance=ExtResource("6_vtaks")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6148787, 0.49999952, 46.277775)
-
-[node name="tree-snow-a2" parent="." unique_id=1127091538 instance=ExtResource("7_kvpfn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.968294, 0.5000005, 42.628498)
-
-[node name="tree-decorated2" parent="." unique_id=1667198677 instance=ExtResource("8_dinhu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.335531, 0.5, 46.711807)
-
-[node name="tree-snow-a3" parent="." unique_id=1248446373 instance=ExtResource("7_kvpfn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.518277, 0.5000005, 44.99417)
-
-[node name="tree-snow-b3" parent="." unique_id=1445907499 instance=ExtResource("6_vtaks")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.000497, 0.5, 46.00259)
-
 [node name="Room00Pos" type="Node3D" parent="." unique_id=1163338060 groups=["room_00_pos"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 22.5)
+
+[node name="Trees" type="Node3D" parent="." unique_id=430750571]
+
+[node name="tree2" parent="Trees" unique_id=878718430 instance=ExtResource("4_gee14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9922266, 0.49999952, 44.15846)
+
+[node name="tree-snow-c2" parent="Trees" unique_id=313304335 instance=ExtResource("5_0tnpc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1409292, 0.5, 45.94363)
+
+[node name="tree-snow-b2" parent="Trees" unique_id=552550449 instance=ExtResource("6_vtaks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6148787, 0.49999952, 46.277775)
+
+[node name="tree-snow-a2" parent="Trees" unique_id=1127091538 instance=ExtResource("7_kvpfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.968294, 0.5000005, 42.628498)
+
+[node name="tree-decorated2" parent="Trees" unique_id=1667198677 instance=ExtResource("8_dinhu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.335531, 0.5, 46.711807)
+
+[node name="tree-snow-a3" parent="Trees" unique_id=1248446373 instance=ExtResource("7_kvpfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.518277, 0.5000005, 44.99417)
+
+[node name="tree-snow-b3" parent="Trees" unique_id=1445907499 instance=ExtResource("6_vtaks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.000497, 0.5, 46.00259)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1432962095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26.343323)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1403561462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19444275, 1.4744568, 1.3694687)
+shape = SubResource("BoxShape3D_vtaks")
+
+[node name="RoomUI" parent="." unique_id=567577425 instance=ExtResource("11_kvpfn")]
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

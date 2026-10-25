@@ -1,6 +1,8 @@
 class_name Room
 extends Node3D
 
+@export var image = 1
+
 @onready var game = get_tree().get_nodes_in_group("game")[0]
 @onready var room_00 = get_tree().get_nodes_in_group("room_00_pos")[0]
 
