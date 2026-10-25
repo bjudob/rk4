@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cy558l45lti6d"]
+
+[ext_resource type="Script" uid="uid://dk6qtiayynl5i" path="res://scenes/room_ui.gd" id="1_2uyx7"]
+[ext_resource type="Texture2D" uid="uid://bgrahxmanddwv" path="res://assets/room_icons/tree.png" id="1_c1pem"]
+
+[node name="RoomUI" type="CanvasLayer" unique_id=567577425]
+script = ExtResource("1_2uyx7")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=97368667]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 500
+theme_override_constants/margin_top = 500
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 500
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=2111383626]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer" unique_id=539267545]
+layout_mode = 2
+theme_override_constants/margin_right = 50
+
+[node name="Room1Image" type="TextureRect" parent="MarginContainer/HBoxContainer/MarginContainer" unique_id=1396674823]
+layout_mode = 2
+texture = ExtResource("1_c1pem")
+expand_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer" unique_id=1359270762]
+layout_mode = 2
+theme_override_constants/margin_right = 50
+
+[node name="Room2Image" type="TextureRect" parent="MarginContainer/HBoxContainer/MarginContainer2" unique_id=1727864301]
+layout_mode = 2
+texture = ExtResource("1_c1pem")
+expand_mode = 2
+
+[node name="Room3Image" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=780648003]
+layout_mode = 2
+texture = ExtResource("1_c1pem")
+expand_mode = 2
+
+[connection signal="gui_input" from="MarginContainer/HBoxContainer/MarginContainer/Room1Image" to="." method="_on_room_1_image_gui_input"]
+[connection signal="gui_input" from="MarginContainer/HBoxContainer/MarginContainer2/Room2Image" to="." method="_on_room_2_image_gui_input"]
+[connection signal="gui_input" from="MarginContainer/HBoxContainer/Room3Image" to="." method="_on_room_3_image_gui_input"]

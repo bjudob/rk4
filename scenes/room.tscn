@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dl7hgxfcu67s4"]
+
+[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_14vil"]
+[ext_resource type="PackedScene" uid="uid://recuaeph8s8d" path="res://assets/HolidayKit/tree-snow-a.glb" id="1_85yof"]
+[ext_resource type="PackedScene" uid="uid://bjrfahcivy2ik" path="res://assets/HolidayKit/tree-snow-b.glb" id="2_14vil"]
+[ext_resource type="PackedScene" uid="uid://dm7ijqguc1qe8" path="res://assets/HolidayKit/tree-snow-c.glb" id="3_jxe34"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_14vil"]
+size = Vector3(0.41503906, 1, 1)
+
+[node name="Room" type="Node3D" unique_id=564975233]
+script = ExtResource("1_14vil")
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=1897413087]
+size = Vector3(10, 1, 10)
+
+[node name="tree-snow-a2" parent="." unique_id=1922761847 instance=ExtResource("1_85yof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5150218, 0)
+
+[node name="tree-snow-b2" parent="." unique_id=616160586 instance=ExtResource("2_14vil")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4433517, 0.43408465, -3.2572098)
+
+[node name="tree-snow-c2" parent="." unique_id=665969864 instance=ExtResource("3_jxe34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5010033, 0.61457086, 2.485464)
+
+[node name="tree-snow-b3" parent="." unique_id=612570147 instance=ExtResource("2_14vil")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5369267, 0.57022464, 2.4624424)
+
+[node name="tree-snow-a3" parent="." unique_id=957364847 instance=ExtResource("1_85yof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5732198, 0.41491747, -3.6961985)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1724207648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.300932, 0, 0)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1847474187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.018066406, 0, 0)
+shape = SubResource("BoxShape3D_14vil")

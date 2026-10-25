@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c3ralf23uxqie"]
+
+[ext_resource type="Script" uid="uid://wejifp86s7st" path="res://scenes/player.gd" id="1_3vyb7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8cj0n"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1434208923 groups=["player"]]
+collision_layer = 3
+script = ExtResource("1_3vyb7")
+
+[node name="Collider" type="CollisionShape3D" parent="." unique_id=743305937]
+shape = SubResource("CapsuleShape3D_8cj0n")
+
+[node name="AudioListener3D" type="AudioListener3D" parent="." unique_id=1140290428]
+
+[node name="Head" type="Node3D" parent="." unique_id=1847798087]
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=498591599]
