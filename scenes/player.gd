@@ -6,7 +6,7 @@ var move_lock = false
 @export var has_gravity : bool = true
 @export var can_jump : bool = true
 @export var can_sprint : bool = false
-@export var can_freefly : bool = false
+@export var can_freefly : bool = true
 
 @export_group("Speeds")
 @export var look_speed : float = 0.002
@@ -57,6 +57,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			disable_freefly()
 
 func _physics_process(delta: float) -> void:
+	if move_lock:
+		return
+	
 	# If freeflying, handle freefly and nothing else
 	if can_freefly and freeflying:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
@@ -133,9 +136,11 @@ func release_mouse():
 
 func lock_move():
 	move_lock = true
+	release_mouse()
 	
 func unlock_move():
 	move_lock = false
+	capture_mouse()
 
 func check_input_mappings():
 	if can_move and not InputMap.has_action(input_left):

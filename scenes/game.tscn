@@ -30,8 +30,6 @@ sky = SubResource("Sky_yqjtg")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_lnu2h"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_vtaks"]
 size = Vector3(4.462311, 5.262268, 1.31781)
 
@@ -116,6 +114,11 @@ size = Vector3(1, 30, 56)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, 0)
 size = Vector3(1, 30, 56)
 
+[node name="Door11-12" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1738338912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.245636, 1.918, 22.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
 [node name="Door12-13" type="CSGBox3D" parent="CSGCombiner3D" unique_id=226266389]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.714, 1.918, 22.5)
 operation = 2
@@ -126,20 +129,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8115325, 1.918, 22.5)
 operation = 2
 size = Vector3(2, 3, 2)
 
-[node name="Door13-23" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2021807206]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.918, 16.591)
+[node name="Door14-15" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1090607725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.759192, 1.918, 22.5)
 operation = 2
 size = Vector3(2, 3, 2)
 
-[node name="GPUParticlesCollisionSDF3D" type="GPUParticlesCollisionSDF3D" parent="." unique_id=1170235672]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.0718975, 36.38649)
-texture = SubResource("NoiseTexture3D_lnu2h")
+[node name="Door11-21" type="CSGBox3D" parent="CSGCombiner3D" unique_id=779718849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, 2, 16.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door12-22" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1303942010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 2, 16.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door13-23" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2021807206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 16.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door14-24" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1531872853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 2, 16.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door15-25" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1247229254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 2, 16.5)
+operation = 2
+size = Vector3(2, 3, 2)
 
 [node name="Room" parent="." unique_id=564975233 instance=ExtResource("4_0tnpc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
-
-[node name="Room00Pos" type="Node3D" parent="." unique_id=1163338060 groups=["room_00_pos"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 22.5)
 
 [node name="Trees" type="Node3D" parent="." unique_id=430750571]
 
@@ -174,6 +195,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19444275, 1.4744568, 1.3694
 shape = SubResource("BoxShape3D_vtaks")
 
 [node name="RoomUI" parent="." unique_id=567577425 instance=ExtResource("11_kvpfn")]
+
+[node name="Room00Pos" type="Node3D" parent="." unique_id=1163338060 groups=["room_00_pos"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 0, 22.5)
 
 [node name="RoomTrees" parent="." unique_id=92647697 instance=ExtResource("12_dinhu")]
 

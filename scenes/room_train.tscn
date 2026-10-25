@@ -7,12 +7,33 @@
 [ext_resource type="PackedScene" uid="uid://c42eapdgbu46b" path="res://assets/HolidayKit/train-wagon-logs.glb" id="3_t07gh"]
 [ext_resource type="PackedScene" uid="uid://c4mfngnnhrdkf" path="res://assets/HolidayKit/train-tender.glb" id="4_njowa"]
 [ext_resource type="PackedScene" uid="uid://ci3ktpuxq322p" path="res://assets/HolidayKit/sock-green.glb" id="5_p3f07"]
+[ext_resource type="PackedScene" uid="uid://dmcicfthqaeye" path="res://assets/HolidayKit/lights-colored.glb" id="8_hqb0u"]
+[ext_resource type="PackedScene" uid="uid://te4uhh1d8svl" path="res://assets/HolidayKit/nutcracker.glb" id="9_yjuv5"]
+[ext_resource type="PackedScene" uid="uid://b8daikt4pcwmb" path="res://assets/HolidayKit/present-a-cube.glb" id="10_7nt65"]
+[ext_resource type="PackedScene" uid="uid://cec4a1yftle0i" path="res://assets/HolidayKit/present-a-rectangle.glb" id="11_hkxan"]
+[ext_resource type="PackedScene" uid="uid://vcwqpfh5hvos" path="res://assets/HolidayKit/present-a-round.glb" id="12_y7242"]
+[ext_resource type="PackedScene" uid="uid://b5vsei0ti4b0i" path="res://assets/HolidayKit/present-b-cube.glb" id="13_y6kgk"]
+[ext_resource type="PackedScene" uid="uid://3lq8cw5qppu3" path="res://assets/HolidayKit/present-b-rectangle.glb" id="14_43prm"]
+[ext_resource type="PackedScene" uid="uid://dstc28n01xn1m" path="res://assets/HolidayKit/present-b-round.glb" id="15_7cfcb"]
+[ext_resource type="PackedScene" uid="uid://c6a754hxrns23" path="res://assets/HolidayKit/reindeer.glb" id="16_vjp3c"]
+[ext_resource type="PackedScene" uid="uid://bmdttlmvvw5ef" path="res://assets/HolidayKit/rocks-large.glb" id="17_ccn6a"]
+[ext_resource type="PackedScene" uid="uid://cskhllg8l7agn" path="res://assets/HolidayKit/sled-long.glb" id="18_67u8o"]
+[ext_resource type="PackedScene" uid="uid://bhq3jx425dwts" path="res://assets/HolidayKit/sled.glb" id="19_uv72q"]
+[ext_resource type="PackedScene" uid="uid://bdsxiut4m23t2" path="res://assets/HolidayKit/snow-bunker.glb" id="20_q5dnl"]
+[ext_resource type="PackedScene" uid="uid://cf1jsfp5yo6kx" path="res://assets/HolidayKit/snow-flat-large.glb" id="21_3huik"]
+[ext_resource type="PackedScene" uid="uid://cdeltu2a44kur" path="res://assets/HolidayKit/snow-flat.glb" id="22_pui7b"]
+[ext_resource type="PackedScene" uid="uid://dn0j1j4kvwrk8" path="res://assets/HolidayKit/snowflake-b.glb" id="23_o0ma7"]
+[ext_resource type="PackedScene" uid="uid://tlfr718j1teu" path="res://assets/HolidayKit/snowman.glb" id="24_pqlbs"]
+[ext_resource type="PackedScene" uid="uid://dxn3hb6g8u8dj" path="res://assets/HolidayKit/sock-green-cane.glb" id="25_084dd"]
+[ext_resource type="PackedScene" uid="uid://b0etr43rakk0e" path="res://assets/HolidayKit/wreath-decorated.glb" id="26_gbj11"]
+[ext_resource type="PackedScene" uid="uid://dn2q05egmjkku" path="res://assets/HolidayKit/wreath.glb" id="27_bnyo0"]
 
 [node name="RoomTrain" type="Node3D" unique_id=584542378]
 script = ExtResource("1_ggp3i")
+room_name = "train"
 image = ExtResource("2_t07gh")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1761677655]
+[node name="Ground" type="CSGBox3D" parent="." unique_id=1761677655]
 size = Vector3(10, 1, 10)
 
 [node name="trainset-rail-detailed-bend2" parent="." unique_id=1759014290 instance=ExtResource("1_6uwl1")]
@@ -29,3 +50,63 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.71230024, 0.5093677, 0.760
 
 [node name="sock-green2" parent="." unique_id=2133644272 instance=ExtResource("5_p3f07")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6092925, 0.49814022, 0.7054417)
+
+[node name="lights-colored2" parent="." unique_id=601173236 instance=ExtResource("8_hqb0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5965145, 2.376328, -0.82710236)
+
+[node name="nutcracker2" parent="." unique_id=413560265 instance=ExtResource("9_yjuv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.590544, 0.58274364, -2.6212544)
+
+[node name="present-a-cube2" parent="." unique_id=1064665684 instance=ExtResource("10_7nt65")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8196206, 0.6465235, 0.22856855)
+
+[node name="present-a-rectangle2" parent="." unique_id=1483260242 instance=ExtResource("11_hkxan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.055635, 0.5318539, 0.66562223)
+
+[node name="present-a-round2" parent="." unique_id=2012893553 instance=ExtResource("12_y7242")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6666648, 0.5259969, 1.2540793)
+
+[node name="present-b-cube2" parent="." unique_id=107949556 instance=ExtResource("13_y6kgk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4447232, 0.5064125, 1.5874527)
+
+[node name="present-b-rectangle2" parent="." unique_id=1059600522 instance=ExtResource("14_43prm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.591193, 0.53945136, 2.556279)
+
+[node name="present-b-round2" parent="." unique_id=1829730369 instance=ExtResource("15_7cfcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8401003, 0.57554555, 1.8354914)
+
+[node name="reindeer2" parent="." unique_id=1763710288 instance=ExtResource("16_vjp3c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5044732, 0.54416466, 2.5263798)
+
+[node name="rocks-large2" parent="." unique_id=609667427 instance=ExtResource("17_ccn6a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4645233, 0.58350253, 3.6319685)
+
+[node name="sled-long2" parent="." unique_id=1615843247 instance=ExtResource("18_67u8o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4903467, 0.4756565, 3.3928566)
+
+[node name="sled2" parent="." unique_id=2114424313 instance=ExtResource("19_uv72q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8589162, 0.40340638, 3.644137)
+
+[node name="snow-bunker2" parent="." unique_id=1375519658 instance=ExtResource("20_q5dnl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4161606, 0.5525398, 3.854402)
+
+[node name="snow-flat-large2" parent="." unique_id=33904174 instance=ExtResource("21_3huik")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3910015, 0.58918214, -1.437439)
+
+[node name="snow-flat2" parent="." unique_id=1079726537 instance=ExtResource("22_pui7b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8850024, 0.5825784, -2.827674)
+
+[node name="snowflake-b2" parent="." unique_id=2094825034 instance=ExtResource("23_o0ma7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5524821, 1.7739542, 1.4058366)
+
+[node name="snowman2" parent="." unique_id=631897447 instance=ExtResource("24_pqlbs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1900065, 0.5310948, 1.2620835)
+
+[node name="sock-green-cane2" parent="." unique_id=1948150533 instance=ExtResource("25_084dd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3627503, 0.7125399, 1.7839603)
+
+[node name="wreath-decorated2" parent="." unique_id=983568120 instance=ExtResource("26_gbj11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9789596, 0.75521564, 2.0252357)
+
+[node name="wreath2" parent="." unique_id=1435327014 instance=ExtResource("27_bnyo0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0271125, 0.7283323, 3.2101617)

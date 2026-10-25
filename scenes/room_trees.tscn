@@ -9,9 +9,10 @@
 
 [node name="RoomTrees" type="Node3D" unique_id=92647697]
 script = ExtResource("1_3e8lf")
+room_name = "trees"
 image = ExtResource("2_aoftf")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=136571297]
+[node name="Ground" type="CSGBox3D" parent="." unique_id=136571297]
 size = Vector3(10, 1, 10)
 
 [node name="Trees" type="Node3D" parent="." unique_id=1217661644]

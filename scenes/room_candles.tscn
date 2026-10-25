@@ -8,9 +8,10 @@
 
 [node name="RoomCandles" type="Node3D" unique_id=2056734870]
 script = ExtResource("1_tb5ne")
+room_name = "candles"
 image = ExtResource("2_w71fb")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=959945205]
+[node name="Ground" type="CSGBox3D" parent="." unique_id=959945205]
 size = Vector3(10, 1, 10)
 
 [node name="hanukkah-dreidel2" parent="." unique_id=1818754585 instance=ExtResource("1_3n4jx")]
