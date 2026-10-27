@@ -8,7 +8,6 @@ extends Node3D
 @onready var room_candles = $Rooms/RoomCandles
 
 var roomsMap: Dictionary
-var roomSelected = false
 
 # resources
 var steps = 40
@@ -35,12 +34,6 @@ func spawn_room(room: Room) -> void:
 	var room_to_spawn = roomsMap[room.room_name]
 	room_to_spawn.spawn(Vector2(0,2))
 
-# doors
-func connect_door(area: Area3D):
-	area.body_entered.connect(_on_door_body_entered)
-
-func _on_door_body_entered(body: Node3D) -> void:
-	if not roomSelected:
-		room_ui.select_room(room_trees, room_train, room_candles)
-		roomSelected = true
-	steps = steps - 1
+func add_steps(s: int):
+	steps += s	
+	

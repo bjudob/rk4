@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://cuwxn1ghfgdgf"]
+
+[ext_resource type="AudioStream" uid="uid://d2a5v77f02v66" path="res://music/Instrumental Christmas Music Peder B. Helland - O Holy Night (Album).mp3" id="1_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://c3ralf23uxqie" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://duiebyo7sx707" path="res://scenes/game.gd" id="1_vtaks"]
+[ext_resource type="PackedScene" uid="uid://by6xy7d4fuupj" path="res://assets/MeshyAI/santa_dead.glb" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dl7hgxfcu67s4" path="res://scenes/room.tscn" id="4_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://dujvmh1fokw3t" path="res://assets/HolidayKit/tree.glb" id="4_gee14"]
+[ext_resource type="PackedScene" uid="uid://ce3qt8wxr1hfr" path="res://scenes/game_ui.tscn" id="4_ir15t"]
+[ext_resource type="PackedScene" uid="uid://dm7ijqguc1qe8" path="res://assets/HolidayKit/tree-snow-c.glb" id="5_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://bjrfahcivy2ik" path="res://assets/HolidayKit/tree-snow-b.glb" id="6_vtaks"]
+[ext_resource type="PackedScene" uid="uid://recuaeph8s8d" path="res://assets/HolidayKit/tree-snow-a.glb" id="7_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://dwlcho1sxkv67" path="res://assets/HolidayKit/tree-decorated.glb" id="8_dinhu"]
+[ext_resource type="PackedScene" uid="uid://cy558l45lti6d" path="res://scenes/room_ui.tscn" id="11_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://c10op1wmgmcit" path="res://scenes/door.tscn" id="12_ca42v"]
+[ext_resource type="PackedScene" uid="uid://dkmf2q0bdlj1k" path="res://scenes/room_trees.tscn" id="12_dinhu"]
+[ext_resource type="PackedScene" uid="uid://coerr0y5yop0s" path="res://scenes/room_train.tscn" id="13_kvuet"]
+[ext_resource type="PackedScene" uid="uid://bv4dfi8ql4u5x" path="res://scenes/room_candles.tscn" id="14_trtic"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
+sky_top_color = Color(0.2543043, 0.42400897, 0.8124737, 1)
+sky_horizon_color = Color(0.83259386, 0.8924885, 1.121701, 1)
+ground_bottom_color = Color(0.3182762, 0.3881501, 0.91653526, 1)
+ground_horizon_color = Color(0.83259386, 0.8924885, 1.121701, 1)
+
+[sub_resource type="Sky" id="Sky_yqjtg"]
+sky_material = SubResource("ProceduralSkyMaterial_uwrxv")
+
+[sub_resource type="Environment" id="Environment_lnu2h"]
+background_mode = 2
+sky = SubResource("Sky_yqjtg")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Game" type="Node3D" unique_id=427786463 groups=["game"]]
+script = ExtResource("1_vtaks")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1290101628]
+environment = SubResource("Environment_lnu2h")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=53743505]
+stream = ExtResource("1_lnu2h")
+autoplay = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1100774870]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0.26666668, 0.5803922, 1, 1)
+shadow_enabled = true
+
+[node name="Player" parent="." unique_id=1434208923 instance=ExtResource("1_uwrxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.671146, 37.335365)
+
+[node name="GameUI" parent="." unique_id=1500041056 instance=ExtResource("4_ir15t")]
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=986475359]
+use_collision = true
+size = Vector3(200, 1, 200)
+
+[node name="Building" type="CSGCombiner3D" parent="." unique_id=608930707]
+use_collision = true
+
+[node name="HWall1" type="CSGBox3D" parent="Building" unique_id=535276184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 28)
+size = Vector3(56, 30, 1)
+
+[node name="HWall2" type="CSGBox3D" parent="Building" unique_id=458394326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17)
+size = Vector3(56, 30, 1)
+
+[node name="HWall3" type="CSGBox3D" parent="Building" unique_id=347297021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+size = Vector3(56, 30, 1)
+
+[node name="HWall4" type="CSGBox3D" parent="Building" unique_id=1557673497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+size = Vector3(56, 30, 1)
+
+[node name="HWall5" type="CSGBox3D" parent="Building" unique_id=2142840608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+size = Vector3(56, 30, 1)
+
+[node name="HWall6" type="CSGBox3D" parent="Building" unique_id=875677522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27)
+size = Vector3(56, 30, 1)
+
+[node name="DoorMain" type="CSGCylinder3D" parent="Building" unique_id=1644119985]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 2.5, 28)
+operation = 2
+radius = 4.0
+
+[node name="VWall1" type="CSGBox3D" parent="Building" unique_id=1777978401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 0)
+size = Vector3(1, 30, 56)
+
+[node name="VWall2" type="CSGBox3D" parent="Building" unique_id=1694311883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 0)
+size = Vector3(1, 30, 56)
+
+[node name="VWall3" type="CSGBox3D" parent="Building" unique_id=46957417]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+size = Vector3(1, 30, 56)
+
+[node name="VWall4" type="CSGBox3D" parent="Building" unique_id=1309696513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+size = Vector3(1, 30, 56)
+
+[node name="VWall5" type="CSGBox3D" parent="Building" unique_id=1378096581]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
+size = Vector3(1, 30, 56)
+
+[node name="VWall6" type="CSGBox3D" parent="Building" unique_id=646525916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, 0)
+size = Vector3(1, 30, 56)
+
+[node name="Door11-12" type="CSGBox3D" parent="Building" unique_id=1738338912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.245636, 1.918, 22.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door12-13" type="CSGBox3D" parent="Building" unique_id=226266389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.714, 1.918, 22.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door13-14" type="CSGBox3D" parent="Building" unique_id=728979621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8115325, 1.918, 22.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door14-15" type="CSGBox3D" parent="Building" unique_id=1090607725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.759192, 1.918, 22.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door11-21" type="CSGBox3D" parent="Building" unique_id=779718849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, 2, 16.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door12-22" type="CSGBox3D" parent="Building" unique_id=1303942010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 2, 16.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door13-23" type="CSGBox3D" parent="Building" unique_id=2021807206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 16.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door14-24" type="CSGBox3D" parent="Building" unique_id=1531872853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 2, 16.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Door15-25" type="CSGBox3D" parent="Building" unique_id=1247229254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 2, 16.5)
+operation = 2
+size = Vector3(2, 3, 2)
+
+[node name="Trees" type="Node3D" parent="." unique_id=430750571]
+
+[node name="tree2" parent="Trees" unique_id=878718430 instance=ExtResource("4_gee14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9922266, 0.49999952, 44.15846)
+
+[node name="tree-snow-c2" parent="Trees" unique_id=313304335 instance=ExtResource("5_0tnpc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1409292, 0.5, 45.94363)
+
+[node name="tree-snow-b2" parent="Trees" unique_id=552550449 instance=ExtResource("6_vtaks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6148787, 0.49999952, 46.277775)
+
+[node name="tree-snow-a2" parent="Trees" unique_id=1127091538 instance=ExtResource("7_kvpfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.968294, 0.5000005, 42.628498)
+
+[node name="tree-decorated2" parent="Trees" unique_id=1667198677 instance=ExtResource("8_dinhu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.335531, 0.5, 46.711807)
+
+[node name="tree-snow-a3" parent="Trees" unique_id=1248446373 instance=ExtResource("7_kvpfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.518277, 0.5000005, 44.99417)
+
+[node name="tree-snow-b3" parent="Trees" unique_id=1445907499 instance=ExtResource("6_vtaks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.000497, 0.5, 46.00259)
+
+[node name="santa_dead" parent="." unique_id=1755617714 instance=ExtResource("2_yqjtg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.752752)
+
+[node name="RoomUI" parent="." unique_id=567577425 groups=["room_ui"] instance=ExtResource("11_kvpfn")]
+
+[node name="Rooms" type="Node3D" parent="." unique_id=683950956]
+
+[node name="Room00Pos" type="Node3D" parent="Rooms" unique_id=1163338060 groups=["room_00_pos"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 0, 22.5)
+
+[node name="Room" parent="Rooms" unique_id=564975233 instance=ExtResource("4_0tnpc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
+
+[node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
+
+[node name="RoomTrain" parent="Rooms" unique_id=584542378 instance=ExtResource("13_kvuet")]
+
+[node name="RoomCandles" parent="Rooms" unique_id=2056734870 instance=ExtResource("14_trtic")]
+
+[node name="Doors" type="Node3D" parent="." unique_id=440574801]
+
+[node name="Door00Pos" type="Node3D" parent="Doors" unique_id=2003391266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.635669, 0, 22.369377)
+
+[node name="Door11-12" parent="Doors" unique_id=2112804257 instance=ExtResource("12_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 22.5)
+
+[node name="Door12-13" parent="Doors" unique_id=763653271 instance=ExtResource("12_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 22.5)
+
+[node name="Door13-14" parent="Doors" unique_id=1787320236 instance=ExtResource("12_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 22.5)
+
+[node name="Door14-15" parent="Doors" unique_id=2131343455 instance=ExtResource("12_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 22.5)

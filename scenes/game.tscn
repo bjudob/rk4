@@ -180,10 +180,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.518277, 0.5000005, 44.9941
 [node name="tree-snow-b3" parent="Trees" unique_id=1445907499 instance=ExtResource("6_vtaks")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.000497, 0.5, 46.00259)
 
-[node name="RoomUI" parent="." unique_id=567577425 instance=ExtResource("11_kvpfn")]
-
 [node name="santa_dead" parent="." unique_id=1755617714 instance=ExtResource("2_yqjtg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.752752)
+
+[node name="RoomUI" parent="." unique_id=567577425 groups=["room_ui"] instance=ExtResource("11_kvpfn")]
 
 [node name="Rooms" type="Node3D" parent="." unique_id=683950956]
 
@@ -205,3 +205,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.635669, 0, 22.369377)
 
 [node name="Door11-12" parent="Doors" unique_id=2112804257 instance=ExtResource("12_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 22.5)
+
+[node name="Door12-13" parent="Doors" unique_id=763653271 instance=ExtResource("12_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 22.5)
+
+[node name="Door13-14" parent="Doors" unique_id=1787320236 instance=ExtResource("12_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 22.5)
+
+[node name="Door14-15" parent="Doors" unique_id=2131343455 instance=ExtResource("12_ca42v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 22.5)

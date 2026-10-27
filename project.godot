@@ -26,6 +26,7 @@ window/stretch/mode="viewport"
 game=""
 room_00_pos=""
 player=""
+room_ui=""
 
 [input]
 
