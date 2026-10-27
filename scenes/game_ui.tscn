@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://ce3qt8wxr1hfr"]
 
+[ext_resource type="Script" uid="uid://cpprnucakju14" path="res://scenes/game_ui.gd" id="1_rns2u"]
 [ext_resource type="Texture2D" uid="uid://c32fsli56cyj6" path="res://assets/icons/icon_steps.png" id="1_yubou"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=1500041056]
+script = ExtResource("1_rns2u")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1393289363]
 anchors_preset = 15
@@ -25,7 +27,7 @@ layout_mode = 2
 texture = ExtResource("1_yubou")
 expand_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=691901071]
+[node name="StepsLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=691901071]
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "50"

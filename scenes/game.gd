@@ -1,5 +1,6 @@
 extends Node3D
 
+@onready var game_ui = $GameUI
 @onready var room_ui = $RoomUI
 
 @onready var room_trees = $RoomTrees
@@ -9,6 +10,12 @@ extends Node3D
 var roomsMap: Dictionary
 var roomSelected = false
 
+# resources
+var steps = 40
+var keys = 1
+var gems = 2
+var rerolls = 4
+
 
 func _ready() -> void:
 	roomsMap[room_trees.room_name] = room_trees
@@ -16,7 +23,7 @@ func _ready() -> void:
 	roomsMap[room_candles.room_name] = room_candles
 
 func _process(delta: float) -> void:
-	pass
+	game_ui.update(steps)
 
 func select_room(place: Vector2) -> void:
 	room_ui.select_room(room_trees, room_train, room_candles)
@@ -31,3 +38,4 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if not roomSelected:
 		room_ui.select_room(room_trees, room_train, room_candles)
 		roomSelected = true
+	steps = steps - 1
