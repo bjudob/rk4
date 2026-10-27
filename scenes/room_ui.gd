@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var player = get_tree().get_nodes_in_group("player")[0]
 @onready var game = get_tree().get_nodes_in_group("game")[0]
 
+var room_place = Vector2(-1,-1)
 @onready var room_1_image = $MarginContainer/HBoxContainer/MarginContainer/Room1Image
 @onready var room_2_image = $MarginContainer/HBoxContainer/MarginContainer2/Room2Image
 @onready var room_3_image = $MarginContainer/HBoxContainer/Room3Image
@@ -14,7 +15,8 @@ var room_3: Room
 func _ready() -> void:
 	visible = false
 
-func select_room(room1: Room, room2: Room, room3: Room):
+func select_room(place: Vector2, room1: Room, room2: Room, room3: Room):
+	room_place = place
 	room_1 = room1
 	room_2 = room2
 	room_3 = room3
@@ -26,7 +28,7 @@ func select_room(room1: Room, room2: Room, room3: Room):
 	
 
 func spawn_room(room: Room) -> void:
-	game.spawn_room(room)
+	game.spawn_room(room_place, room)
 	player.unlock_move()
 	visible = false
 

@@ -28,11 +28,11 @@ func _process(delta: float) -> void:
 
 # rooms
 func select_room(place: Vector2) -> void:
-	room_ui.select_room(room_trees, room_train, room_candles)
+	room_ui.select_room(place, room_trees, room_train, room_candles)
 
-func spawn_room(room: Room) -> void:
+func spawn_room(place: Vector2, room: Room) -> void:
 	var room_to_spawn = roomsMap[room.room_name]
-	room_to_spawn.spawn(Vector2(0,2))
+	room_to_spawn.spawn(place)
 
 func add_steps(s: int):
 	steps += s	
