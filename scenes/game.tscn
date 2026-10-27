@@ -157,9 +157,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 2, 16.5)
 operation = 2
 size = Vector3(2, 3, 2)
 
-[node name="Room" parent="." unique_id=564975233 instance=ExtResource("4_0tnpc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
-
 [node name="Trees" type="Node3D" parent="." unique_id=430750571]
 
 [node name="tree2" parent="Trees" unique_id=878718430 instance=ExtResource("4_gee14")]
@@ -183,23 +180,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.518277, 0.5000005, 44.9941
 [node name="tree-snow-b3" parent="Trees" unique_id=1445907499 instance=ExtResource("6_vtaks")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.000497, 0.5, 46.00259)
 
-[node name="Door" parent="." unique_id=2112804257 instance=ExtResource("12_ca42v")]
-
 [node name="RoomUI" parent="." unique_id=567577425 instance=ExtResource("11_kvpfn")]
-
-[node name="Room00Pos" type="Node3D" parent="." unique_id=1163338060 groups=["room_00_pos"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 0, 22.5)
-
-[node name="Door00Pos" type="Node3D" parent="." unique_id=2003391266]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.635669, 0, 22.369377)
-
-[node name="RoomTrees" parent="." unique_id=92647697 instance=ExtResource("12_dinhu")]
-
-[node name="RoomTrain" parent="." unique_id=584542378 instance=ExtResource("13_kvuet")]
-
-[node name="RoomCandles" parent="." unique_id=2056734870 instance=ExtResource("14_trtic")]
 
 [node name="santa_dead" parent="." unique_id=1755617714 instance=ExtResource("2_yqjtg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.752752)
 
+[node name="Rooms" type="Node3D" parent="." unique_id=683950956]
+
+[node name="Room00Pos" type="Node3D" parent="Rooms" unique_id=1163338060 groups=["room_00_pos"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 0, 22.5)
+
+[node name="Room" parent="Rooms" unique_id=564975233 instance=ExtResource("4_0tnpc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
+
+[node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
+
+[node name="RoomTrain" parent="Rooms" unique_id=584542378 instance=ExtResource("13_kvuet")]
+
+[node name="RoomCandles" parent="Rooms" unique_id=2056734870 instance=ExtResource("14_trtic")]
+
 [node name="Doors" type="Node3D" parent="." unique_id=440574801]
+
+[node name="Door00Pos" type="Node3D" parent="Doors" unique_id=2003391266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.635669, 0, 22.369377)
+
+[node name="Door11-12" parent="Doors" unique_id=2112804257 instance=ExtResource("12_ca42v")]

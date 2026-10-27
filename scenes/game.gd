@@ -3,9 +3,9 @@ extends Node3D
 @onready var game_ui = $GameUI
 @onready var room_ui = $RoomUI
 
-@onready var room_trees = $RoomTrees
-@onready var room_train = $RoomTrain
-@onready var room_candles = $RoomCandles
+@onready var room_trees = $Rooms/RoomTrees
+@onready var room_train = $Rooms/RoomTrain
+@onready var room_candles = $Rooms/RoomCandles
 
 var roomsMap: Dictionary
 var roomSelected = false
