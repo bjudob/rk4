@@ -201,3 +201,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.635669, 0, 22.369377)
 
 [node name="santa_dead" parent="." unique_id=1755617714 instance=ExtResource("2_yqjtg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.752752)
+
+[node name="Doors" type="Node3D" parent="." unique_id=440574801]
