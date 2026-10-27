@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ce3qt8wxr1hfr"]
+
+[ext_resource type="Texture2D" uid="uid://c32fsli56cyj6" path="res://assets/icons/icon_steps.png" id="1_yubou"]
+
+[node name="GameUI" type="CanvasLayer" unique_id=1500041056]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1393289363]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1109864760]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="StepsIcon" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=82704642]
+layout_mode = 2
+texture = ExtResource("1_yubou")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=691901071]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "50"

@@ -7,6 +7,7 @@ extends Node3D
 @onready var room_candles = $RoomCandles
 
 var roomsMap: Dictionary
+var roomSelected = false
 
 
 func _ready() -> void:
@@ -27,4 +28,6 @@ func spawn_room(room: Room) -> void:
 	
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	room_ui.select_room(room_trees, room_train, room_candles)
+	if not roomSelected:
+		room_ui.select_room(room_trees, room_train, room_candles)
+		roomSelected = true

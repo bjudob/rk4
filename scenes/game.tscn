@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://by6xy7d4fuupj" path="res://assets/MeshyAI/santa_dead.glb" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dl7hgxfcu67s4" path="res://scenes/room.tscn" id="4_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://dujvmh1fokw3t" path="res://assets/HolidayKit/tree.glb" id="4_gee14"]
+[ext_resource type="PackedScene" uid="uid://ce3qt8wxr1hfr" path="res://scenes/game_ui.tscn" id="4_ir15t"]
 [ext_resource type="PackedScene" uid="uid://dm7ijqguc1qe8" path="res://assets/HolidayKit/tree-snow-c.glb" id="5_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://bjrfahcivy2ik" path="res://assets/HolidayKit/tree-snow-b.glb" id="6_vtaks"]
 [ext_resource type="PackedScene" uid="uid://recuaeph8s8d" path="res://assets/HolidayKit/tree-snow-a.glb" id="7_kvpfn"]
@@ -50,6 +51,8 @@ shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1434208923 instance=ExtResource("1_uwrxv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.671146, 37.335365)
+
+[node name="GameUI" parent="." unique_id=1500041056 instance=ExtResource("4_ir15t")]
 
 [node name="santa_dead" parent="." unique_id=1755617714 instance=ExtResource("2_yqjtg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.752752)
