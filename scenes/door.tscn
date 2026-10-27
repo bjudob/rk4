@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c10op1wmgmcit"]
+
+[ext_resource type="Script" uid="uid://ckdrbr6hf4511" path="res://scenes/door.gd" id="1_hpvv5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vtaks"]
+size = Vector3(4.462311, 5.262268, 1.31781)
+
+[node name="Door" type="Node3D" unique_id=2112804257]
+script = ExtResource("1_hpvv5")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=2108893628]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1411735232]
+shape = SubResource("BoxShape3D_vtaks")

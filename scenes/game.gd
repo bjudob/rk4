@@ -16,6 +16,8 @@ var keys = 1
 var gems = 2
 var rerolls = 4
 
+# preload
+const door_scene = preload("door.tscn")
 
 func _ready() -> void:
 	roomsMap[room_trees.room_name] = room_trees
@@ -25,16 +27,19 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	game_ui.update(steps)
 
+# rooms
 func select_room(place: Vector2) -> void:
 	room_ui.select_room(room_trees, room_train, room_candles)
 
 func spawn_room(room: Room) -> void:
 	var room_to_spawn = roomsMap[room.room_name]
 	room_to_spawn.spawn(Vector2(0,2))
-	
-	
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
+# doors
+func connect_door(area: Area3D):
+	area.body_entered.connect(_on_door_body_entered)
+
+func _on_door_body_entered(body: Node3D) -> void:
 	if not roomSelected:
 		room_ui.select_room(room_trees, room_train, room_candles)
 		roomSelected = true

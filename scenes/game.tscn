@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://recuaeph8s8d" path="res://assets/HolidayKit/tree-snow-a.glb" id="7_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://dwlcho1sxkv67" path="res://assets/HolidayKit/tree-decorated.glb" id="8_dinhu"]
 [ext_resource type="PackedScene" uid="uid://cy558l45lti6d" path="res://scenes/room_ui.tscn" id="11_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://c10op1wmgmcit" path="res://scenes/door.tscn" id="12_ca42v"]
 [ext_resource type="PackedScene" uid="uid://dkmf2q0bdlj1k" path="res://scenes/room_trees.tscn" id="12_dinhu"]
 [ext_resource type="PackedScene" uid="uid://coerr0y5yop0s" path="res://scenes/room_train.tscn" id="13_kvuet"]
 [ext_resource type="PackedScene" uid="uid://bv4dfi8ql4u5x" path="res://scenes/room_candles.tscn" id="14_trtic"]
@@ -30,9 +31,6 @@ background_mode = 2
 sky = SubResource("Sky_yqjtg")
 tonemap_mode = 2
 glow_enabled = true
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_vtaks"]
-size = Vector3(4.462311, 5.262268, 1.31781)
 
 [node name="Game" type="Node3D" unique_id=427786463 groups=["game"]]
 script = ExtResource("1_vtaks")
@@ -54,110 +52,107 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.671146, 37.335365)
 
 [node name="GameUI" parent="." unique_id=1500041056 instance=ExtResource("4_ir15t")]
 
-[node name="santa_dead" parent="." unique_id=1755617714 instance=ExtResource("2_yqjtg")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.752752)
-
 [node name="Ground" type="CSGBox3D" parent="." unique_id=986475359]
 use_collision = true
 size = Vector3(200, 1, 200)
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=608930707]
+[node name="Building" type="CSGCombiner3D" parent="." unique_id=608930707]
 use_collision = true
 
-[node name="HWall1" type="CSGBox3D" parent="CSGCombiner3D" unique_id=535276184]
+[node name="HWall1" type="CSGBox3D" parent="Building" unique_id=535276184]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 28)
 size = Vector3(56, 30, 1)
 
-[node name="HWall2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=458394326]
+[node name="HWall2" type="CSGBox3D" parent="Building" unique_id=458394326]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17)
 size = Vector3(56, 30, 1)
 
-[node name="HWall3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=347297021]
+[node name="HWall3" type="CSGBox3D" parent="Building" unique_id=347297021]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 size = Vector3(56, 30, 1)
 
-[node name="HWall4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1557673497]
+[node name="HWall4" type="CSGBox3D" parent="Building" unique_id=1557673497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 size = Vector3(56, 30, 1)
 
-[node name="HWall5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2142840608]
+[node name="HWall5" type="CSGBox3D" parent="Building" unique_id=2142840608]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
 size = Vector3(56, 30, 1)
 
-[node name="HWall6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=875677522]
+[node name="HWall6" type="CSGBox3D" parent="Building" unique_id=875677522]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27)
 size = Vector3(56, 30, 1)
 
-[node name="DoorMain" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=1644119985]
+[node name="DoorMain" type="CSGCylinder3D" parent="Building" unique_id=1644119985]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 2.5, 28)
 operation = 2
 radius = 4.0
 
-[node name="VWall1" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1777978401]
+[node name="VWall1" type="CSGBox3D" parent="Building" unique_id=1777978401]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 0)
 size = Vector3(1, 30, 56)
 
-[node name="VWall2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1694311883]
+[node name="VWall2" type="CSGBox3D" parent="Building" unique_id=1694311883]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 0)
 size = Vector3(1, 30, 56)
 
-[node name="VWall3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=46957417]
+[node name="VWall3" type="CSGBox3D" parent="Building" unique_id=46957417]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
 size = Vector3(1, 30, 56)
 
-[node name="VWall4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1309696513]
+[node name="VWall4" type="CSGBox3D" parent="Building" unique_id=1309696513]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 size = Vector3(1, 30, 56)
 
-[node name="VWall5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1378096581]
+[node name="VWall5" type="CSGBox3D" parent="Building" unique_id=1378096581]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
 size = Vector3(1, 30, 56)
 
-[node name="VWall6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=646525916]
+[node name="VWall6" type="CSGBox3D" parent="Building" unique_id=646525916]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, 0)
 size = Vector3(1, 30, 56)
 
-[node name="Door11-12" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1738338912]
+[node name="Door11-12" type="CSGBox3D" parent="Building" unique_id=1738338912]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.245636, 1.918, 22.5)
 operation = 2
 size = Vector3(2, 3, 2)
 
-[node name="Door12-13" type="CSGBox3D" parent="CSGCombiner3D" unique_id=226266389]
+[node name="Door12-13" type="CSGBox3D" parent="Building" unique_id=226266389]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.714, 1.918, 22.5)
 operation = 2
 size = Vector3(2, 3, 2)
 
-[node name="Door13-14" type="CSGBox3D" parent="CSGCombiner3D" unique_id=728979621]
+[node name="Door13-14" type="CSGBox3D" parent="Building" unique_id=728979621]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8115325, 1.918, 22.5)
 operation = 2
 size = Vector3(2, 3, 2)
 
-[node name="Door14-15" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1090607725]
+[node name="Door14-15" type="CSGBox3D" parent="Building" unique_id=1090607725]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.759192, 1.918, 22.5)
 operation = 2
 size = Vector3(2, 3, 2)
 
-[node name="Door11-21" type="CSGBox3D" parent="CSGCombiner3D" unique_id=779718849]
+[node name="Door11-21" type="CSGBox3D" parent="Building" unique_id=779718849]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5, 2, 16.5)
 operation = 2
 size = Vector3(2, 3, 2)
 
-[node name="Door12-22" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1303942010]
+[node name="Door12-22" type="CSGBox3D" parent="Building" unique_id=1303942010]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 2, 16.5)
 operation = 2
 size = Vector3(2, 3, 2)
 
-[node name="Door13-23" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2021807206]
+[node name="Door13-23" type="CSGBox3D" parent="Building" unique_id=2021807206]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 16.5)
 operation = 2
 size = Vector3(2, 3, 2)
 
-[node name="Door14-24" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1531872853]
+[node name="Door14-24" type="CSGBox3D" parent="Building" unique_id=1531872853]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 2, 16.5)
 operation = 2
 size = Vector3(2, 3, 2)
 
-[node name="Door15-25" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1247229254]
+[node name="Door15-25" type="CSGBox3D" parent="Building" unique_id=1247229254]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 2, 16.5)
 operation = 2
 size = Vector3(2, 3, 2)
@@ -188,19 +183,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.518277, 0.5000005, 44.9941
 [node name="tree-snow-b3" parent="Trees" unique_id=1445907499 instance=ExtResource("6_vtaks")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.000497, 0.5, 46.00259)
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1432962095]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26.343323)
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1403561462]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19444275, 1.4744568, 1.3694687)
-shape = SubResource("BoxShape3D_vtaks")
+[node name="Door" parent="." unique_id=2112804257 instance=ExtResource("12_ca42v")]
 
 [node name="RoomUI" parent="." unique_id=567577425 instance=ExtResource("11_kvpfn")]
 
 [node name="Room00Pos" type="Node3D" parent="." unique_id=1163338060 groups=["room_00_pos"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 0, 22.5)
+
+[node name="Door00Pos" type="Node3D" parent="." unique_id=2003391266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.635669, 0, 22.369377)
 
 [node name="RoomTrees" parent="." unique_id=92647697 instance=ExtResource("12_dinhu")]
 
@@ -208,4 +199,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 0, 22.5)
 
 [node name="RoomCandles" parent="." unique_id=2056734870 instance=ExtResource("14_trtic")]
 
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[node name="santa_dead" parent="." unique_id=1755617714 instance=ExtResource("2_yqjtg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.752752)
