@@ -11,9 +11,9 @@ var roomsMap: Dictionary
 
 # resources
 var steps = 40
+var gems = 20
 var keys = 1
-var gems = 2
-var rerolls = 4
+var dices = 99
 
 # preload
 const door_scene = preload("door.tscn")
@@ -24,7 +24,7 @@ func _ready() -> void:
 	roomsMap[room_candles.room_name] = room_candles
 
 func _process(delta: float) -> void:
-	game_ui.update(steps)
+	game_ui.update(steps, gems, keys, dices)
 
 # rooms
 func select_room(place: Vector2) -> void:
