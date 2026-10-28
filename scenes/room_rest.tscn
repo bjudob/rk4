@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c17mf3543lu6q"]
+
+[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_6fdgs"]
+[ext_resource type="PackedScene" uid="uid://b312xpmhfan6i" path="res://assets/HolidayKit/bench.glb" id="1_vxlmp"]
+[ext_resource type="PackedScene" uid="uid://dragf3vt32cku" path="res://assets/HolidayKit/bench-short.glb" id="2_6fdgs"]
+[ext_resource type="PackedScene" uid="uid://q2nyd60foqml" path="res://assets/HolidayKit/floor-wood-snow.glb" id="3_r8jad"]
+
+[node name="RoomRest" type="Node3D" unique_id=1819664826]
+script = ExtResource("1_6fdgs")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1900656012]
+size = Vector3(10, 1, 10)
+
+[node name="bench2" parent="." unique_id=771825809 instance=ExtResource("1_vxlmp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32815623, 0.5115056, -1.499846)
+
+[node name="bench-short2" parent="." unique_id=82589847 instance=ExtResource("2_6fdgs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5857325, 0.5133555, -1.6303272)
+
+[node name="floor-wood-snow2" parent="." unique_id=403200367 instance=ExtResource("3_r8jad")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.673234, 0.5228414, 0.8304057)

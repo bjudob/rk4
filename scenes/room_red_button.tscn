@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dhiaqq5okvak0"]
+
+[ext_resource type="PackedScene" uid="uid://dwtfongwnddvm" path="res://assets/MeshyAI/red_button.glb" id="1_nbeet"]
+
+[node name="RoomRedButton" type="Node3D" unique_id=581924088]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=695176550]
+size = Vector3(10, 1, 10)
+
+[node name="red_button" parent="." unique_id=69402087 instance=ExtResource("1_nbeet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

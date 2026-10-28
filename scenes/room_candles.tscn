@@ -5,6 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://c1fkwkipuff65" path="res://assets/HolidayKit/hanukkah-menorah-candles.glb" id="2_tb5ne"]
 [ext_resource type="Texture2D" uid="uid://blqnepmc2qf20" path="res://assets/room_icons/candles.png" id="2_w71fb"]
 [ext_resource type="PackedScene" uid="uid://b0ejf0y2c38nx" path="res://assets/HolidayKit/hanukkah-menorah.glb" id="3_w71fb"]
+[ext_resource type="PackedScene" uid="uid://b0etr43rakk0e" path="res://assets/HolidayKit/wreath-decorated.glb" id="6_utbj8"]
+[ext_resource type="PackedScene" uid="uid://cbyiytw2cv8si" path="res://assets/HolidayKit/lantern-hanging.glb" id="7_54epk"]
+[ext_resource type="PackedScene" uid="uid://dxkcf0lhrkmyq" path="res://assets/HolidayKit/festivus-pole.glb" id="8_bnlbi"]
+[ext_resource type="PackedScene" uid="uid://b312xpmhfan6i" path="res://assets/HolidayKit/bench.glb" id="9_56d6v"]
 
 [node name="RoomCandles" type="Node3D" unique_id=2056734870]
 script = ExtResource("1_tb5ne")
@@ -25,3 +29,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14273286, 0.5474851, 2.312
 
 [node name="hanukkah-menorah3" parent="." unique_id=788236597 instance=ExtResource("3_w71fb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2240709, 0.4776832, 1.3002689)
+
+[node name="wreath-decorated2" parent="." unique_id=983568120 instance=ExtResource("6_utbj8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1954993, 0, 2.1806824)
+
+[node name="lantern-hanging2" parent="." unique_id=817691075 instance=ExtResource("7_54epk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.63108087, 1.1679468, 1.464062)
+
+[node name="festivus-pole2" parent="." unique_id=1190590949 instance=ExtResource("8_bnlbi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0142822, 0.65250593, 0.9886792)
+
+[node name="bench2" parent="." unique_id=771825809 instance=ExtResource("9_56d6v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.681551, 0.59736824, 0.5404651)
