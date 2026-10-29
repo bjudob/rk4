@@ -1,11 +1,27 @@
 [gd_scene format=3 uid="uid://dhiaqq5okvak0"]
 
 [ext_resource type="PackedScene" uid="uid://dwtfongwnddvm" path="res://assets/MeshyAI/red_button.glb" id="1_nbeet"]
+[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_tejfj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbeet"]
+albedo_color = Color(1, 0, 0, 1)
 
 [node name="RoomRedButton" type="Node3D" unique_id=581924088]
+script = ExtResource("1_tejfj")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=695176550]
+[node name="Ground" type="CSGBox3D" parent="." unique_id=695176550]
 size = Vector3(10, 1, 10)
+
+[node name="RedWall" type="CSGBox3D" parent="." unique_id=35108997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+size = Vector3(5, 5, 0.2)
+material = SubResource("StandardMaterial3D_nbeet")
 
 [node name="red_button" parent="." unique_id=69402087 instance=ExtResource("1_nbeet")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1011839765]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0.8934101)
+text = "DO NOT PUSH
+THE
+RED BUTTON"

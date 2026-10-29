@@ -17,8 +17,10 @@
 [ext_resource type="PackedScene" uid="uid://coerr0y5yop0s" path="res://scenes/room_train.tscn" id="13_kvuet"]
 [ext_resource type="PackedScene" uid="uid://bv4dfi8ql4u5x" path="res://scenes/room_candles.tscn" id="14_trtic"]
 [ext_resource type="PackedScene" uid="uid://c17mf3543lu6q" path="res://scenes/room_rest.tscn" id="16_rysoc"]
+[ext_resource type="Texture2D" uid="uid://cgw1ntsb46ljk" path="res://assets/room_icons/room_rest.png" id="17_5newe"]
 [ext_resource type="PackedScene" uid="uid://dhiaqq5okvak0" path="res://scenes/room_red_button.tscn" id="17_264po"]
 [ext_resource type="PackedScene" uid="uid://b2sl8txwa0he6" path="res://scenes/keypad.tscn" id="18_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://k1m7s4irkkat" path="res://assets/room_icons/red_button.png" id="19_37s47"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_top_color = Color(0.2543043, 0.42400897, 0.8124737, 1)
@@ -203,8 +205,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
 [node name="RoomCandles" parent="Rooms" unique_id=2056734870 instance=ExtResource("14_trtic")]
 
 [node name="RoomRest" parent="Rooms" unique_id=1819664826 instance=ExtResource("16_rysoc")]
+room_name = "room_rest"
+image = ExtResource("17_5newe")
 
 [node name="RoomRedButton" parent="Rooms" unique_id=581924088 instance=ExtResource("17_264po")]
+room_name = "room_red_button"
+image = ExtResource("19_37s47")
 
 [node name="Doors" type="Node3D" parent="." unique_id=440574801]
 
