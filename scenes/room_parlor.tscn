@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b6cfra3h2i5a7"]
+
+[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_l2rs2"]
+[ext_resource type="Texture2D" uid="uid://bdbkxilrk08qo" path="res://assets/room_icons/parlor.png" id="2_sr8h4"]
+
+[node name="RoomParlor" type="Node3D" unique_id=2016360832]
+script = ExtResource("1_l2rs2")
+room_name = "parlor"
+image = ExtResource("2_sr8h4")
+gem_cost = 2
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=879790879]
+size = Vector3(10, 1, 10)

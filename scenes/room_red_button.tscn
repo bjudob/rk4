@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dwtfongwnddvm" path="res://assets/MeshyAI/red_button.glb" id="1_nbeet"]
 [ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_tejfj"]
+[ext_resource type="Texture2D" uid="uid://k1m7s4irkkat" path="res://assets/room_icons/red_button.png" id="2_kijit"]
 [ext_resource type="Script" uid="uid://btog1euv555xn" path="res://scenes/red_button.gd" id="2_x8sfy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbeet"]
@@ -66,6 +67,8 @@ _data = {
 
 [node name="RoomRedButton" type="Node3D" unique_id=581924088]
 script = ExtResource("1_tejfj")
+room_name = "red_button"
+image = ExtResource("2_kijit")
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=695176550]
 size = Vector3(10, 1, 10)

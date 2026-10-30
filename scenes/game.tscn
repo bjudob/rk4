@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cgw1ntsb46ljk" path="res://assets/room_icons/room_rest.png" id="17_5newe"]
 [ext_resource type="PackedScene" uid="uid://dhiaqq5okvak0" path="res://scenes/room_red_button.tscn" id="17_264po"]
 [ext_resource type="PackedScene" uid="uid://b2sl8txwa0he6" path="res://scenes/keypad.tscn" id="18_ssvqc"]
-[ext_resource type="Texture2D" uid="uid://k1m7s4irkkat" path="res://assets/room_icons/red_button.png" id="19_37s47"]
+[ext_resource type="PackedScene" uid="uid://b6cfra3h2i5a7" path="res://scenes/room_parlor.tscn" id="19_5newe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_top_color = Color(0.2543043, 0.42400897, 0.8124737, 1)
@@ -210,7 +210,8 @@ image = ExtResource("17_5newe")
 
 [node name="RoomRedButton" parent="Rooms" unique_id=581924088 instance=ExtResource("17_264po")]
 room_name = "room_red_button"
-image = ExtResource("19_37s47")
+
+[node name="RoomParlor" parent="Rooms" unique_id=2016360832 instance=ExtResource("19_5newe")]
 
 [node name="Doors" type="Node3D" parent="." unique_id=440574801]
 

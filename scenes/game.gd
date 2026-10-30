@@ -8,6 +8,7 @@ extends Node3D
 @onready var room_candles = $Rooms/RoomCandles
 @onready var room_rest = $Rooms/RoomRest
 @onready var room_red_button = $Rooms/RoomRedButton
+@onready var room_parlor = $Rooms/RoomParlor
 
 # rooms
 var rng
@@ -31,7 +32,8 @@ func _ready() -> void:
 		room_train,
 		room_candles,
 		room_rest,
-		room_red_button
+		room_red_button,
+		room_parlor
 	]
 
 func _process(delta: float) -> void:
@@ -76,3 +78,6 @@ func get_room(n: int, rUsed: Array):
 		if m==n:
 			return i
 		m = m + 1
+		
+		
+# 
