@@ -213,6 +213,8 @@ room_name = "room_red_button"
 
 [node name="RoomParlor" parent="Rooms" unique_id=2016360832 instance=ExtResource("19_5newe")]
 
+[node name="RoomWorkshop" type="Node3D" parent="Rooms" unique_id=1109836546]
+
 [node name="Doors" type="Node3D" parent="." unique_id=440574801]
 
 [node name="Door00Pos" type="Node3D" parent="Doors" unique_id=2003391266]
