@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 var move_lock = false
+@onready var raycast = $Head/RayCast3D
 
 @export var can_move : bool = true
 @export var has_gravity : bool = true
@@ -56,9 +57,22 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			disable_freefly()
 
+func _handle_raycast():
+	if !raycast.is_colliding():
+		return
+	var target = raycast.get_collider()
+	if !is_instance_of(target, Interactable):
+		return	
+	target.focus()
+	if Input.is_action_just_pressed("interact"):
+		target.interact()
+
 func _physics_process(delta: float) -> void:
 	if move_lock:
 		return
+		
+	# raycast
+	_handle_raycast()
 	
 	# If freeflying, handle freefly and nothing else
 	if can_freefly and freeflying:
