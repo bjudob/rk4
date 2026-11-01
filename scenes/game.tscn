@@ -21,6 +21,9 @@
 [ext_resource type="PackedScene" uid="uid://dhiaqq5okvak0" path="res://scenes/room_red_button.tscn" id="17_264po"]
 [ext_resource type="PackedScene" uid="uid://b2sl8txwa0he6" path="res://scenes/keypad.tscn" id="18_ssvqc"]
 [ext_resource type="PackedScene" uid="uid://b6cfra3h2i5a7" path="res://scenes/room_parlor.tscn" id="19_5newe"]
+[ext_resource type="PackedScene" uid="uid://dp8054sjy4wxt" path="res://scenes/room_workshop.tscn" id="20_37s47"]
+[ext_resource type="PackedScene" uid="uid://cq0lpd0pxl5tm" path="res://scenes/room_library.tscn" id="21_bt5mj"]
+[ext_resource type="PackedScene" uid="uid://8hs5c4uftnhq" path="res://scenes/room_prison.tscn" id="22_e1j6l"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_top_color = Color(0.2543043, 0.42400897, 0.8124737, 1)
@@ -213,7 +216,11 @@ room_name = "room_red_button"
 
 [node name="RoomParlor" parent="Rooms" unique_id=2016360832 instance=ExtResource("19_5newe")]
 
-[node name="RoomWorkshop" type="Node3D" parent="Rooms" unique_id=1109836546]
+[node name="RoomWorkshop" parent="Rooms" unique_id=1601642086 instance=ExtResource("20_37s47")]
+
+[node name="RoomLibrary" parent="Rooms" unique_id=1547982564 instance=ExtResource("21_bt5mj")]
+
+[node name="RoomPrison" parent="Rooms" unique_id=2138134028 instance=ExtResource("22_e1j6l")]
 
 [node name="Doors" type="Node3D" parent="." unique_id=440574801]
 

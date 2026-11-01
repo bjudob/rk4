@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://8hs5c4uftnhq"]
+
+[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_o4hoa"]
+[ext_resource type="Texture2D" uid="uid://cktkhasq63gdd" path="res://assets/room_icons/prison.png" id="2_t6mh3"]
+[ext_resource type="PackedScene" uid="uid://dvfam1ft8d2in" path="res://assets/Fantasy/Cage_Small.gltf" id="3_binql"]
+
+[node name="RoomPrison" type="Node3D" unique_id=2138134028]
+script = ExtResource("1_o4hoa")
+room_name = "Prison"
+image = ExtResource("2_t6mh3")
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=1091856767]
+size = Vector3(10, 1, 10)
+
+[node name="Cage_Small2" parent="." unique_id=284555966 instance=ExtResource("3_binql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8198898, 0.52367496, 2.547807)
+
+[node name="Cage_Small3" parent="." unique_id=1712572623 instance=ExtResource("3_binql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08392358, 0.49230468, 2.456639)
+
+[node name="Cage_Small4" parent="." unique_id=1129266947 instance=ExtResource("3_binql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5869651, 0.41558528, 2.4803524)

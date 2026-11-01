@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cq0lpd0pxl5tm"]
+
+[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_y6sta"]
+[ext_resource type="Texture2D" uid="uid://tgrht3gptb7d" path="res://assets/room_icons/library.png" id="2_sdjvv"]
+[ext_resource type="PackedScene" uid="uid://3e875lwc5c7m" path="res://assets/Fantasy/BookGroup_Medium_1.gltf" id="3_oxjm6"]
+[ext_resource type="PackedScene" uid="uid://g4rgf3q4upt1" path="res://assets/Fantasy/BookGroup_Medium_2.gltf" id="4_g6yxr"]
+[ext_resource type="PackedScene" uid="uid://bgguclragc7c" path="res://assets/Fantasy/BookGroup_Medium_3.gltf" id="5_epi3p"]
+[ext_resource type="PackedScene" uid="uid://c0si2vh3qnch4" path="res://assets/Fantasy/BookGroup_Small_1.gltf" id="6_tsp6b"]
+[ext_resource type="PackedScene" uid="uid://dj10hi877v5qb" path="res://assets/Fantasy/BookGroup_Small_3.gltf" id="7_khsef"]
+[ext_resource type="PackedScene" uid="uid://dh828iavaqxjr" path="res://assets/Fantasy/BookStand.gltf" id="8_6j8il"]
+[ext_resource type="PackedScene" uid="uid://bbqvm3vwfulab" path="res://assets/Fantasy/Book_7.gltf" id="9_8g7wm"]
+[ext_resource type="PackedScene" uid="uid://c15o7e5ix3rbl" path="res://assets/Fantasy/Bucket_Metal.gltf" id="10_23120"]
+[ext_resource type="PackedScene" uid="uid://cx73h6lxv1fgw" path="res://assets/Fantasy/Bucket_Wooden_1.gltf" id="11_oldnq"]
+[ext_resource type="PackedScene" uid="uid://dn04addd5132c" path="res://assets/Fantasy/Cabinet.gltf" id="12_1c4dv"]
+
+[node name="RoomLibrary" type="Node3D" unique_id=1547982564]
+script = ExtResource("1_y6sta")
+room_name = "Library"
+image = ExtResource("2_sdjvv")
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=150972203]
+size = Vector3(10, 1, 10)
+
+[node name="BookGroup_Medium_12" parent="." unique_id=1664537282 instance=ExtResource("3_oxjm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4)
+
+[node name="BookGroup_Medium_22" parent="." unique_id=203081303 instance=ExtResource("4_g6yxr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+
+[node name="BookGroup_Medium_32" parent="." unique_id=2109059016 instance=ExtResource("5_epi3p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.7321651, 2)
+
+[node name="BookGroup_Small_12" parent="." unique_id=1880867751 instance=ExtResource("6_tsp6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1984272, 0.70897627, 2.7834477)
+
+[node name="BookGroup_Small_32" parent="." unique_id=1302712326 instance=ExtResource("7_khsef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45000696, 0.5747056, 3.3259847)
+
+[node name="BookStand2" parent="." unique_id=2104117319 instance=ExtResource("8_6j8il")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9805434, 0, -1.2341032)
+
+[node name="Book_72" parent="." unique_id=172466991 instance=ExtResource("9_8g7wm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4)
+
+[node name="Bucket_Metal2" parent="." unique_id=1095598729 instance=ExtResource("10_23120")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.5451361, 3)
+
+[node name="Bucket_Wooden_12" parent="." unique_id=789328244 instance=ExtResource("11_oldnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1401806, 0.52790415, 2.300689)
+
+[node name="Cabinet2" parent="." unique_id=315364862 instance=ExtResource("12_1c4dv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.527375, 0, 1.9453924)
