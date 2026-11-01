@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://bgrahxmanddwv" path="res://assets/room_icons/tree.png" id="2_aoftf"]
 [ext_resource type="PackedScene" uid="uid://dm7ijqguc1qe8" path="res://assets/HolidayKit/tree-snow-c.glb" id="3_aoftf"]
 [ext_resource type="PackedScene" uid="uid://dwlcho1sxkv67" path="res://assets/HolidayKit/tree-decorated.glb" id="4_k7bwd"]
+[ext_resource type="PackedScene" uid="uid://j67w84621pts" path="res://assets/Christmas/bell.gltf" id="7_jho05"]
+[ext_resource type="PackedScene" uid="uid://cdco4cdf6gpbd" path="res://assets/Christmas/bell_decorated.gltf" id="8_w4sfe"]
+[ext_resource type="PackedScene" uid="uid://djugg2m1m4wyh" path="res://assets/Christmas/candycane_large.gltf" id="9_n6yfs"]
+[ext_resource type="PackedScene" uid="uid://2fj6eg6b0afj" path="res://assets/Christmas/wall_gingerbread_A.gltf" id="11_j8gcc"]
+[ext_resource type="PackedScene" uid="uid://cif241duphgtp" path="res://assets/Christmas/wall_gingerbread_doorway_B.gltf" id="12_ui88p"]
 
 [node name="RoomTrees" type="Node3D" unique_id=92647697]
 script = ExtResource("1_3e8lf")
@@ -52,3 +57,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9551642, 0, -2.128851)
 
 [node name="tree-snow-c3" parent="Trees" unique_id=982512841 instance=ExtResource("3_aoftf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0537844, 0, -0.99803686)
+
+[node name="bell2" parent="." unique_id=1432677035 instance=ExtResource("7_jho05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7393312, 2.10981, 2.7717915)
+
+[node name="bell_decorated2" parent="." unique_id=1035122582 instance=ExtResource("8_w4sfe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5918393, 2.3348124, 1.567502)
+
+[node name="candycane_large2" parent="." unique_id=181032988 instance=ExtResource("9_n6yfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0614657, 0, 3.0008945)
+
+[node name="wall_gingerbread_doorway_B2" parent="." unique_id=1652642199 instance=ExtResource("12_ui88p")]
+transform = Transform3D(0.0042062434, 0, -0.9999912, 0, 1, 0, 0.9999912, 0, 0.0042062434, -3.3429036, 0.46135664, -0.5337863)
+
+[node name="wall_gingerbread_A2" parent="." unique_id=484682251 instance=ExtResource("11_j8gcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3455558, 0.9463453, 3.4538994)
