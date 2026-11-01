@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_o4hoa"]
 [ext_resource type="Texture2D" uid="uid://cktkhasq63gdd" path="res://assets/room_icons/prison.png" id="2_t6mh3"]
 [ext_resource type="PackedScene" uid="uid://dvfam1ft8d2in" path="res://assets/Fantasy/Cage_Small.gltf" id="3_binql"]
+[ext_resource type="PackedScene" uid="uid://bjmi7ckbatmfy" path="res://assets/Christmas/tracks_curve.gltf" id="4_uhcay"]
+[ext_resource type="PackedScene" uid="uid://cjh8g6aan2ee5" path="res://assets/Christmas/present_sphere_B_white.gltf" id="5_ukk3a"]
 
 [node name="RoomPrison" type="Node3D" unique_id=2138134028]
 script = ExtResource("1_o4hoa")
@@ -20,3 +22,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08392358, 0.49230468, 2.45
 
 [node name="Cage_Small4" parent="." unique_id=1129266947 instance=ExtResource("3_binql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5869651, 0.41558528, 2.4803524)
+
+[node name="tracks_curve2" parent="." unique_id=574073465 instance=ExtResource("4_uhcay")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.52076316, 0.606951, 2.3506513)
+
+[node name="present_sphere_B_white2" parent="." unique_id=464467236 instance=ExtResource("5_ukk3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2631128, 0.92193234, 2.8403215)

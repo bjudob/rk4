@@ -1,7 +1,6 @@
 extends Interactable
 
 @onready var anim = $"../AnimationPlayer"
-@onready var model = $model
 
 var pushed = false
 
@@ -11,7 +10,7 @@ func interact():
 	pushed = true
 	anim.play("push")
 
-func focus():
-	if pushed:
-		return
-	anim.play("focus")
+#func focus():
+	#if pushed:
+		#return
+	#anim.play("focus")
