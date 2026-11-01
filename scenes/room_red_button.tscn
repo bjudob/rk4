@@ -79,7 +79,7 @@ use_collision = true
 size = Vector3(5, 5, 0.2)
 material = SubResource("StandardMaterial3D_nbeet")
 
-[node name="RedButton" type="StaticBody3D" parent="." unique_id=383635262]
+[node name="RedButton" type="StaticBody3D" parent="." unique_id=383635262 groups=["interactable"]]
 script = ExtResource("2_x8sfy")
 
 [node name="model" parent="RedButton" unique_id=69402087 instance=ExtResource("1_nbeet")]

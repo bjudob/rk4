@@ -59,9 +59,15 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _handle_raycast():
 	if !raycast.is_colliding():
+		var interactables = get_tree().get_nodes_in_group("interactable")
+		for interactable in interactables:
+			interactable.unfocus()
 		return
 	var target = raycast.get_collider()
 	if !is_instance_of(target, Interactable):
+		var interactables = get_tree().get_nodes_in_group("interactable")
+		for interactable in interactables:
+			interactable.unfocus()
 		return	
 	target.focus()
 	if Input.is_action_just_pressed("interact"):

@@ -15,6 +15,10 @@ func focus():
 	mesh = get_first_mesh_child(model)
 	mesh.material_overlay = OUTLINE_MATERIAL
 
+func unfocus():
+	if mesh == null:
+		return
+	mesh.material_overlay = null
 
 func get_first_mesh_child(current_node: Node3D) -> MeshInstance3D:
 	for child in current_node.get_children():

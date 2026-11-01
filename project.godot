@@ -27,6 +27,7 @@ game=""
 room_00_pos=""
 player=""
 room_ui=""
+interactable=""
 
 [input]
 
