@@ -1,7 +1,11 @@
 extends Node3D
 
+@onready var player = get_tree().get_nodes_in_group("player")[0]
+var player_starting_pos
+
 @onready var game_ui = $GameUI
 @onready var room_ui = $RoomUI
+@onready var new_day_ui = $NewDayUI
 
 @onready var room_trees = $Rooms/RoomTrees
 @onready var room_train = $Rooms/RoomTrain
@@ -28,6 +32,7 @@ var dices = 99
 const door_scene = preload("door.tscn")
 
 func _ready() -> void:
+	player_starting_pos = player.position
 	rng = RandomNumberGenerator.new()
 	rooms = [
 		room_trees,
@@ -46,10 +51,11 @@ func _process(delta: float) -> void:
 func add_steps(s: int):
 	steps += s	
 	if steps <= 0:
-		new_day()
+		new_day_ui.new_day(days)
 	
 func new_day():
 	days = days + 1
+	player.position = player_starting_pos
 	for room in rooms:
 		room.reset()
 

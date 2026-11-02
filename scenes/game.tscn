@@ -58,7 +58,7 @@ light_color = Color(0.26666668, 0.5803922, 1, 1)
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1434208923 instance=ExtResource("1_uwrxv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.671146, 37.335365)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.119753, 38.493633)
 
 [node name="GameUI" parent="." unique_id=1500041056 instance=ExtResource("4_ir15t")]
 
