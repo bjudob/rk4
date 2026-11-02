@@ -10,6 +10,9 @@ func _ready():
 
 func interact():
 	pass
+	
+func reset():
+	pass
 
 func focus():
 	mesh = get_first_mesh_child(model)

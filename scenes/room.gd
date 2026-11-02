@@ -31,3 +31,7 @@ func spawned() -> bool:
 func reset():
 	position.y = -100
 	place = Vector2(-1,-1)
+	for c in get_children():
+		if !is_instance_of(c, Interactable):
+			continue
+		c.reset()

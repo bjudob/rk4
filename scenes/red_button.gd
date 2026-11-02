@@ -4,13 +4,15 @@ extends Interactable
 
 var pushed = false
 
+func _ready():
+	anim.play("focus")
+
 func interact():
 	if pushed:
 		return
 	pushed = true
 	anim.play("push")
 
-#func focus():
-	#if pushed:
-		#return
-	#anim.play("focus")
+func reset():
+	pushed = false
+	anim.play("RESET")
