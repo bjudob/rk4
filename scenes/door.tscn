@@ -5,7 +5,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_vtaks"]
 size = Vector3(4.462311, 5.262268, 1.31781)
 
-[node name="Door" type="Node3D" unique_id=2112804257]
+[node name="Door" type="Node3D" unique_id=2112804257 groups=["door"]]
 script = ExtResource("1_hpvv5")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=2108893628]

@@ -23,6 +23,7 @@ var roomsUsed = []
 
 # resources
 var days = 1
+var steps_default = 5
 var steps = 5
 var gems = 20
 var keys = 1
@@ -54,10 +55,15 @@ func add_steps(s: int):
 		new_day_ui.new_day(days)
 	
 func new_day():
+	steps = steps_default
 	days = days + 1
 	player.position = player_starting_pos
+	roomsUsed = []
 	for room in rooms:
 		room.reset()
+	var doors = get_tree().get_nodes_in_group("door")
+	for door in doors:
+		door.reset()
 
 # rooms
 func select_room(place: Vector2) -> void:

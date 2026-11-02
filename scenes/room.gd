@@ -30,3 +30,4 @@ func spawned() -> bool:
 	
 func reset():
 	position.y = -100
+	place = Vector2(-1,-1)
