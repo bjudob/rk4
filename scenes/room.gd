@@ -16,10 +16,6 @@ func _ready() -> void:
 	position.y = -100
 	room_0_place = room_00.global_position
 
-
-func _process(delta: float) -> void:
-	pass
-
 func spawn(place: Vector2) -> void:
 	self.place = place
 	# hanyadik sor
@@ -31,3 +27,6 @@ func spawn(place: Vector2) -> void:
 
 func spawned() -> bool:
 	return place.x!=-1 and place.y!=-1
+	
+func reset():
+	position.y = -100

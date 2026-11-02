@@ -18,8 +18,8 @@ var rooms = []
 var roomsUsed = []
 
 # resources
-var day = 1
-var steps = 40
+var days = 1
+var steps = 5
 var gems = 20
 var keys = 1
 var dices = 99
@@ -42,6 +42,14 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	game_ui.update(steps, gems, keys, dices)
+
+func add_steps(s: int):
+	steps += s	
+	for room in rooms:
+		room.reset()
+	
+func new_day():
+	days = days + 1
 
 # rooms
 func select_room(place: Vector2) -> void:
@@ -70,9 +78,6 @@ func spawn_room(place: Vector2, room: Room) -> void:
 		if room.name == rooms[i].name:
 			roomsUsed.append(i)
 	room.spawn(place)
-
-func add_steps(s: int):
-	steps += s	
 	
 func get_room(n: int, rUsed: Array):
 	var m = 0
