@@ -47,7 +47,7 @@ func _ready() -> void:
 	]
 
 func _process(delta: float) -> void:
-	game_ui.update(steps, gems, keys, dices)
+	game_ui.update(days, steps, gems, keys, dices)
 
 func add_steps(s: int):
 	steps += s	
