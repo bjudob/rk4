@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmf7iqt2hpf5c"
-path="res://.godot/imported/mohogany_light.jpg-87543c469f3fdc0225c2a850f6a0fd6c.ctex"
+uid="uid://cqr2yakir7rab"
+path="res://.godot/imported/continue_button.png-d9bf158a5112629915b97252d1c7511b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/mohogany_light.jpg"
-dest_files=["res://.godot/imported/mohogany_light.jpg-87543c469f3fdc0225c2a850f6a0fd6c.ctex"]
+source_file="res://assets/continue_button.png"
+dest_files=["res://.godot/imported/continue_button.png-d9bf158a5112629915b97252d1c7511b.ctex"]
 
 [params]
 

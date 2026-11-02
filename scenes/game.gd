@@ -45,11 +45,13 @@ func _process(delta: float) -> void:
 
 func add_steps(s: int):
 	steps += s	
-	for room in rooms:
-		room.reset()
+	if steps <= 0:
+		new_day()
 	
 func new_day():
 	days = days + 1
+	for room in rooms:
+		room.reset()
 
 # rooms
 func select_room(place: Vector2) -> void:

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dujvmh1fokw3t" path="res://assets/HolidayKit/tree.glb" id="4_gee14"]
 [ext_resource type="PackedScene" uid="uid://ce3qt8wxr1hfr" path="res://scenes/game_ui.tscn" id="4_ir15t"]
 [ext_resource type="PackedScene" uid="uid://dm7ijqguc1qe8" path="res://assets/HolidayKit/tree-snow-c.glb" id="5_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://x3whic74iyno" path="res://scenes/new_day_ui.tscn" id="6_bhx41"]
 [ext_resource type="PackedScene" uid="uid://bjrfahcivy2ik" path="res://assets/HolidayKit/tree-snow-b.glb" id="6_vtaks"]
 [ext_resource type="PackedScene" uid="uid://recuaeph8s8d" path="res://assets/HolidayKit/tree-snow-a.glb" id="7_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://dwlcho1sxkv67" path="res://assets/HolidayKit/tree-decorated.glb" id="8_dinhu"]
@@ -60,6 +61,10 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.671146, 37.335365)
 
 [node name="GameUI" parent="." unique_id=1500041056 instance=ExtResource("4_ir15t")]
+
+[node name="RoomUI" parent="." unique_id=567577425 groups=["room_ui"] instance=ExtResource("11_kvpfn")]
+
+[node name="NewDayUI" parent="." unique_id=1976042543 instance=ExtResource("6_bhx41")]
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=986475359]
 use_collision = true
@@ -191,8 +196,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.000497, 0.5, 46.00259)
 
 [node name="santa_dead" parent="." unique_id=1755617714 instance=ExtResource("2_yqjtg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.752752)
-
-[node name="RoomUI" parent="." unique_id=567577425 groups=["room_ui"] instance=ExtResource("11_kvpfn")]
 
 [node name="Rooms" type="Node3D" parent="." unique_id=683950956]
 
