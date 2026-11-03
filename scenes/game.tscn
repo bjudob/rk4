@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://cq0lpd0pxl5tm" path="res://scenes/room_library.tscn" id="21_bt5mj"]
 [ext_resource type="PackedScene" uid="uid://8hs5c4uftnhq" path="res://scenes/room_prison.tscn" id="22_e1j6l"]
 [ext_resource type="PackedScene" uid="uid://2fj6eg6b0afj" path="res://assets/Christmas/wall_gingerbread_A.gltf" id="25_pl11u"]
+[ext_resource type="PackedScene" uid="uid://wgkwmiacqwlu" path="res://scenes/lock.tscn" id="28_sww3w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_top_color = Color(0.2543043, 0.42400897, 0.8124737, 1)
@@ -262,3 +263,6 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 1, 20.017054, 0.7905445, 28.3921
 
 [node name="wall_gingerbread_A3" parent="Walls" unique_id=717350067 instance=ExtResource("25_pl11u")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 1, -18.57665, 0.7905445, 28.392159)
+
+[node name="Lock" parent="." unique_id=932196067 instance=ExtResource("28_sww3w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1107018, 2.0260034, 17.539286)

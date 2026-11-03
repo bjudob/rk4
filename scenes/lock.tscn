@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://wgkwmiacqwlu"]
+
+[ext_resource type="Script" uid="uid://cbnvusodfu0if" path="res://scenes/lock.gd" id="1_60jus"]
+[ext_resource type="Script" uid="uid://byt0dilh06hdu" path="res://scenes/arrow.gd" id="2_s433i"]
+[ext_resource type="PackedScene" uid="uid://cuhqh036buypt" path="res://assets/MeshyAI/arrow_bad.glb" id="3_40mgl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_60jus"]
+albedo_color = Color(0.99634, 0.00014342964, 0.8123091, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_40mgl"]
+size = Vector3(0.113256834, 0.21361008, 0.1)
+
+[node name="Lock" type="Node3D" unique_id=932196067]
+script = ExtResource("1_60jus")
+
+[node name="Base" type="CSGBox3D" parent="." unique_id=2015530876]
+size = Vector3(0.6, 0.6, 0.1)
+material = SubResource("StandardMaterial3D_60jus")
+
+[node name="Display" type="Label3D" parent="." unique_id=1224344396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.053428173)
+text = "1 2 3 4"
+
+[node name="ArrowUp1" type="StaticBody3D" parent="." unique_id=1174217768 groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19971302, 0.11566514, 0.067471266)
+script = ExtResource("2_s433i")
+
+[node name="model" parent="ArrowUp1" unique_id=1130633368 instance=ExtResource("3_40mgl")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.010408282, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp1" unique_id=1464404759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014526397, 0.007944375, 0)
+shape = SubResource("BoxShape3D_40mgl")
+
+[node name="ArrowDown1" type="StaticBody3D" parent="." unique_id=2009056173 groups=["interactable"]]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.18713433, -0.090624265, 0.067471266)
+script = ExtResource("2_s433i")
+up = false
+
+[node name="model" parent="ArrowDown1" unique_id=368945645 instance=ExtResource("3_40mgl")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.010408282, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown1" unique_id=1255587597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014526397, 0.007944375, 0)
+shape = SubResource("BoxShape3D_40mgl")
