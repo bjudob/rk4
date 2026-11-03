@@ -57,10 +57,10 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 light_color = Color(0.26666668, 0.5803922, 1, 1)
 shadow_enabled = true
 
-[node name="MainMenu" parent="." unique_id=731990883 instance=ExtResource("3_bhx41")]
-
 [node name="Player" parent="." unique_id=1434208923 instance=ExtResource("1_uwrxv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.119753, 38.493633)
+
+[node name="MainMenu" parent="." unique_id=731990883 instance=ExtResource("3_bhx41")]
 
 [node name="GameUI" parent="." unique_id=1500041056 instance=ExtResource("4_ir15t")]
 visible = false

@@ -124,7 +124,8 @@ func load():
 	save_data.days = save_d.days
 	
 func start(load_save: bool):
-	pass
+	game_ui.visible = true
+	player.capture_mouse()
 	
 	
 	

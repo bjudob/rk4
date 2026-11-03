@@ -1,10 +1,10 @@
-extends Node3D
+extends CanvasLayer
 
 @onready var game = get_tree().get_nodes_in_group("game")[0]
 
-@onready var play_button = $CanvasLayer/MarginContainer/VBoxContainer/Play
-@onready var continue_button = $CanvasLayer/MarginContainer/VBoxContainer/Continue
-@onready var exit_button = $CanvasLayer/MarginContainer/VBoxContainer/Exit
+@onready var play_button = $MarginContainer/VBoxContainer/Play
+@onready var continue_button = $MarginContainer/VBoxContainer/Continue
+@onready var exit_button = $MarginContainer/VBoxContainer/Exit
 @onready var hover_sound = $HoverSound
 
 func _on_play_gui_input(event: InputEvent) -> void:
