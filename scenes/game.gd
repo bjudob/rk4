@@ -69,6 +69,7 @@ func new_day():
 	var doors = get_tree().get_nodes_in_group("door")
 	for door in doors:
 		door.reset()
+	save()
 
 # rooms
 func select_room(place: Vector2) -> void:
@@ -113,7 +114,7 @@ func save():
 	save_file.store_var(save_data.duplicate())
 	save_file.close()
 	
-func load():
+func load_save():
 	if !FileAccess.file_exists(save_file_path):
 		return
 	var save_file = FileAccess.open(save_file_path, FileAccess.READ)
@@ -121,11 +122,15 @@ func load():
 	save_file.close()
 	
 	var save_d = data.duplicate()
-	save_data.days = save_d.days
+	days = save_d.days
 	
 func start(load_save: bool):
 	game_ui.visible = true
 	player.capture_mouse()
+	
+	if !load_save:
+		return
+	load_save()
 	
 	
 	
