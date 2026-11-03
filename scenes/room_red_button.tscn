@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_tejfj"]
 [ext_resource type="Texture2D" uid="uid://k1m7s4irkkat" path="res://assets/room_icons/red_button.png" id="2_kijit"]
 [ext_resource type="Script" uid="uid://btog1euv555xn" path="res://scenes/red_button.gd" id="2_x8sfy"]
+[ext_resource type="PackedScene" uid="uid://ddd6t2m8tx8uo" path="res://scenes/scroll.tscn" id="5_jdt4i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbeet"]
 albedo_color = Color(1, 0, 0, 1)
@@ -97,3 +98,6 @@ RED BUTTON"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1355358297]
 libraries/ = SubResource("AnimationLibrary_kijit")
+
+[node name="Scroll" parent="." unique_id=1912316633 instance=ExtResource("5_jdt4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11289525, 0.68320346, 1.2206244)

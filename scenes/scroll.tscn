@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ddd6t2m8tx8uo"]
+
+[ext_resource type="Script" uid="uid://bpwo6y2edyhri" path="res://scenes/scroll.gd" id="1_rn5nb"]
+[ext_resource type="PackedScene" uid="uid://c3xcblk355ci6" path="res://assets/MeshyAI/scroll.glb" id="1_vy4mq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vy4mq"]
+radius = 0.18603516
+height = 0.5979309
+
+[node name="Scroll" type="StaticBody3D" unique_id=1912316633 groups=["interactable"]]
+script = ExtResource("1_rn5nb")
+
+[node name="model" parent="." unique_id=842303352 instance=ExtResource("1_vy4mq")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2141560802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012033209, -0.015410677, -0.0016502291)
+shape = SubResource("CapsuleShape3D_vy4mq")
