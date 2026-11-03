@@ -1,6 +1,8 @@
 class_name Interactable
 extends StaticBody3D
 
+@onready var scroll_ui = get_tree().get_nodes_in_group("scroll_ui")[0]
+
 const OUTLINE_MATERIAL = preload("res://materials/outline.tres")
 @onready var model = $model
 var mesh

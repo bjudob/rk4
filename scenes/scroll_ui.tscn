@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://0n34clveras7"]
+
+[ext_resource type="Script" uid="uid://coxhe7kmai42g" path="res://scenes/scroll_ui.gd" id="1_5xk65"]
+[ext_resource type="Texture2D" uid="uid://brusj11g8m8x0" path="res://assets/scrolls/scroll_hexa_6.png" id="1_jraxv"]
+
+[node name="ScrollUI" type="CanvasLayer" unique_id=780008881 groups=["scroll_ui"]]
+script = ExtResource("1_5xk65")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1372113784]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollImage" type="TextureRect" parent="MarginContainer" unique_id=273657129]
+layout_mode = 2
+texture = ExtResource("1_jraxv")
+expand_mode = 4
+stretch_mode = 3

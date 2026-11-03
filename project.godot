@@ -29,6 +29,7 @@ player=""
 room_ui=""
 interactable=""
 door=""
+scroll_ui=""
 
 [input]
 

@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bjrfahcivy2ik" path="res://assets/HolidayKit/tree-snow-b.glb" id="6_vtaks"]
 [ext_resource type="PackedScene" uid="uid://recuaeph8s8d" path="res://assets/HolidayKit/tree-snow-a.glb" id="7_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://dwlcho1sxkv67" path="res://assets/HolidayKit/tree-decorated.glb" id="8_dinhu"]
+[ext_resource type="PackedScene" uid="uid://0n34clveras7" path="res://scenes/scroll_ui.tscn" id="8_qnb83"]
 [ext_resource type="PackedScene" uid="uid://cy558l45lti6d" path="res://scenes/room_ui.tscn" id="11_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://c10op1wmgmcit" path="res://scenes/door.tscn" id="12_ca42v"]
 [ext_resource type="PackedScene" uid="uid://dkmf2q0bdlj1k" path="res://scenes/room_trees.tscn" id="12_dinhu"]
@@ -70,6 +71,8 @@ visible = false
 
 [node name="NewDayUI" parent="." unique_id=1976042543 instance=ExtResource("6_bhx41")]
 visible = false
+
+[node name="ScrollUI" parent="." unique_id=780008881 instance=ExtResource("8_qnb83")]
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=986475359]
 use_collision = true
