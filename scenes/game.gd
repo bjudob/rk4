@@ -123,6 +123,9 @@ func load():
 	var save_d = data.duplicate()
 	save_data.days = save_d.days
 	
+func start(load_save: bool):
+	pass
+	
 	
 	
 	

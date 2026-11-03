@@ -1,19 +1,25 @@
 extends Node3D
 
+@onready var game = get_tree().get_nodes_in_group("game")[0]
+
 @onready var play_button = $CanvasLayer/MarginContainer/VBoxContainer/Play
 @onready var continue_button = $CanvasLayer/MarginContainer/VBoxContainer/Continue
 @onready var exit_button = $CanvasLayer/MarginContainer/VBoxContainer/Exit
 @onready var hover_sound = $HoverSound
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _on_play_gui_input(event: InputEvent) -> void:
+	if (event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT):
+		visible = false
+		game.start(false)
 
+func _on_continue_gui_input(event: InputEvent) -> void:
+	if (event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT):
+		visible = false
+		game.start(true)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
+func _on_exit_gui_input(event: InputEvent) -> void:
+	if (event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT):
+		get_tree().quit()
 
 func _on_play_mouse_entered() -> void:
 	play_button.texture =  load("res://assets/icons/winter_button_play_hover.png")
