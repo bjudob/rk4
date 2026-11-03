@@ -16,6 +16,11 @@ var player_starting_pos
 @onready var room_workshop = $Rooms/RoomWorkshop
 @onready var room_prison = $Rooms/RoomPrison
 
+const save_file_path = "user://rk.json"
+var save_data = {
+	days: 1,
+}
+
 # rooms
 var rng
 var rooms = []
@@ -102,5 +107,22 @@ func get_room(n: int, rUsed: Array):
 			return i
 		m = m + 1
 		
-		
-# 
+func save():
+	var save_file = FileAccess.open(save_file_path, FileAccess.WRITE)
+	save_data.days = days
+	save_file.store_var(save_data.duplicate())
+	save_file.close()
+	
+func load():
+	if !FileAccess.file_exists(save_file_path):
+		return
+	var save_file = FileAccess.open(save_file_path, FileAccess.READ)
+	var data = save_file.get_var()
+	save_file.close()
+	
+	var save_d = data.duplicate()
+	save_data.days = save_d.days
+	
+	
+	
+	
