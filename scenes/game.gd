@@ -72,8 +72,8 @@ func new_day():
 	days = days + 1
 	player.position = player_starting_pos
 	rooms_used = []
-	for room in rooms:
-		room.reset()
+	for room_name in rooms:
+		rooms[room_name].reset()
 	var doors = get_tree().get_nodes_in_group("door")
 	for door in doors:
 		door.reset()
@@ -91,12 +91,12 @@ func select_room(place: Vector2) -> void:
 	var room_name_1 = random_room(rnd1, rooms_used_tmp)
 	rooms_used_tmp.append(room_name_1)
 	
-	roomsNr = roomsNr - 1
+	roomsNr = roomsNr - rooms[room_name_1].rarity
 	var rnd2 = rng.randi_range(0, roomsNr-1)
 	var room_name_2 = random_room(rnd2, rooms_used_tmp)
 	rooms_used_tmp.append(room_name_2)
 	
-	roomsNr = roomsNr - 1
+	roomsNr = roomsNr - rooms[room_name_2].rarity
 	var rnd3 = rng.randi_range(0, roomsNr-1)
 	var room_name_3 = random_room(rnd3, rooms_used_tmp)
 	

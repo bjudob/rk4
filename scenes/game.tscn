@@ -213,12 +213,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 0, 22.5)
 [node name="RoomStart" parent="Rooms" unique_id=564975233 instance=ExtResource("4_0tnpc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
 room_name = "StartRoom"
+rarity = 1
 
 [node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
 room_name = "Trees"
+rarity = 100
 
 [node name="RoomTrain" parent="Rooms" unique_id=584542378 instance=ExtResource("13_kvuet")]
 room_name = "Train"
+rarity = 100
 
 [node name="RoomCandles" parent="Rooms" unique_id=2056734870 instance=ExtResource("14_trtic")]
 room_name = "Candles"
@@ -231,6 +234,7 @@ rarity = 1
 
 [node name="RoomRedButton" parent="Rooms" unique_id=581924088 instance=ExtResource("17_264po")]
 room_name = "Red Button"
+rarity = 100
 
 [node name="RoomParlor" parent="Rooms" unique_id=2016360832 instance=ExtResource("19_5newe")]
 room_name = "Parlor"
