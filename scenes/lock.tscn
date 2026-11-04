@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://cbnvusodfu0if" path="res://scenes/lock.gd" id="1_60jus"]
 [ext_resource type="Script" uid="uid://byt0dilh06hdu" path="res://scenes/arrow.gd" id="2_s433i"]
 [ext_resource type="PackedScene" uid="uid://cuhqh036buypt" path="res://assets/MeshyAI/arrow_bad.glb" id="3_40mgl"]
+[ext_resource type="AudioStream" uid="uid://bjs27wchux210" path="res://music/key_lock.wav" id="4_mx35c"]
+[ext_resource type="PackedScene" uid="uid://crq6lxac7curk" path="res://assets/MeshyAI/unlock.glb" id="5_l4fmt"]
+[ext_resource type="PackedScene" uid="uid://c5jx5l8trktdn" path="res://assets/MeshyAI/locked.glb" id="6_l4fmt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_60jus"]
 albedo_color = Color(0.99634, 0.00014342964, 0.8123091, 1)
@@ -118,3 +121,12 @@ transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.010408282, 0.01598
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown4" unique_id=376305757]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008165747, 0.007944375, 0.10876906)
 shape = SubResource("BoxShape3D_40mgl")
+
+[node name="SolutionSound" type="AudioStreamPlayer3D" parent="." unique_id=805494979]
+stream = ExtResource("4_mx35c")
+
+[node name="Locked" parent="." unique_id=1599868899 instance=ExtResource("6_l4fmt")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.0137043, 0.22092155, 0.053989917)
+
+[node name="Unlock" parent="." unique_id=1528153673 instance=ExtResource("5_l4fmt")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.014228791, 0.22372231, 0.05551839)

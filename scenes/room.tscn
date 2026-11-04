@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://recuaeph8s8d" path="res://assets/HolidayKit/tree-snow-a.glb" id="1_85yof"]
 [ext_resource type="PackedScene" uid="uid://bjrfahcivy2ik" path="res://assets/HolidayKit/tree-snow-b.glb" id="2_14vil"]
 [ext_resource type="PackedScene" uid="uid://dm7ijqguc1qe8" path="res://assets/HolidayKit/tree-snow-c.glb" id="3_jxe34"]
+[ext_resource type="PackedScene" uid="uid://wgkwmiacqwlu" path="res://scenes/lock.tscn" id="5_jxe34"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_14vil"]
 size = Vector3(0.41503906, 1, 1)
@@ -37,3 +38,6 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1847474187]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.018066406, 0, 0)
 shape = SubResource("BoxShape3D_14vil")
+
+[node name="Lock" parent="." unique_id=932196067 instance=ExtResource("5_jxe34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8392749, 2.034299, -4.959373)

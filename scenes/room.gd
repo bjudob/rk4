@@ -7,9 +7,11 @@ extends Node3D
 
 @onready var game = get_tree().get_nodes_in_group("game")[0]
 @onready var room_00 = get_tree().get_nodes_in_group("room_00_pos")[0]
+@onready var lock = $Lock
 
 var place = Vector2(-1,-1)
 var room_0_place = Vector3(-1,-1,-1)
+var lock_solved = false
 
 
 func _ready() -> void:
@@ -35,3 +37,9 @@ func reset():
 		if !is_instance_of(c, Interactable):
 			continue
 		c.reset()
+		
+func solve_lock(solved: bool):
+	if !solved:
+		return
+	lock_solved = true
+	lock.solve()
