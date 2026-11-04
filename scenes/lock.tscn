@@ -8,7 +8,7 @@
 albedo_color = Color(0.99634, 0.00014342964, 0.8123091, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_40mgl"]
-size = Vector3(0.113256834, 0.21361008, 0.1)
+size = Vector3(0.117918395, 0.20299645, 0.0054687504)
 
 [node name="Lock" type="Node3D" unique_id=932196067]
 script = ExtResource("1_60jus")
@@ -22,54 +22,54 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.053428173)
 text = "1 2 3 4"
 
 [node name="ArrowUp1" type="StaticBody3D" parent="." unique_id=1174217768 groups=["interactable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17642847, 0.11566514, -0.055789143)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17935738, 0.099487275, -0.042233244)
 script = ExtResource("2_s433i")
 
 [node name="model" parent="ArrowUp1" unique_id=1130633368 instance=ExtResource("3_40mgl")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.02875717, 0.015987799, 0.107906)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp1" unique_id=1464404759]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014526397, 0.007944375, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030046076, 0.013251185, 0.11233123)
 shape = SubResource("BoxShape3D_40mgl")
 
-[node name="ArrowUp2" type="StaticBody3D" parent="." unique_id=2045088249 groups=["interactable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044775125, 0.11566514, -0.055789143)
+[node name="ArrowUp2" type="StaticBody3D" parent="." unique_id=624391086 groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044565767, 0.099487275, -0.042233244)
 script = ExtResource("2_s433i")
 nr = 1
 
-[node name="model" parent="ArrowUp2" unique_id=509879592 instance=ExtResource("3_40mgl")]
+[node name="model" parent="ArrowUp2" unique_id=1281009463 instance=ExtResource("3_40mgl")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.02875717, 0.015987799, 0.107906)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp2" unique_id=533229439]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014526397, 0.007944375, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp2" unique_id=1486457132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030046076, 0.013251185, 0.11233123)
 shape = SubResource("BoxShape3D_40mgl")
 
-[node name="ArrowUp3" type="StaticBody3D" parent="." unique_id=1324876102 groups=["interactable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08872157, 0.11566514, -0.055789143)
+[node name="ArrowUp3" type="StaticBody3D" parent="." unique_id=730033860 groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0860966, 0.099487275, -0.042233244)
 script = ExtResource("2_s433i")
 nr = 2
 
-[node name="model" parent="ArrowUp3" unique_id=1849257752 instance=ExtResource("3_40mgl")]
+[node name="model" parent="ArrowUp3" unique_id=1472647030 instance=ExtResource("3_40mgl")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.02875717, 0.015987799, 0.107906)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp3" unique_id=685474941]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014526397, 0.007944375, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp3" unique_id=1457062805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030046076, 0.013251185, 0.11233123)
 shape = SubResource("BoxShape3D_40mgl")
 
-[node name="ArrowUp4" type="StaticBody3D" parent="." unique_id=483162387 groups=["interactable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22702612, 0.11566514, -0.055789143)
+[node name="ArrowUp4" type="StaticBody3D" parent="." unique_id=346427618 groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21689695, 0.099487275, -0.042233244)
 script = ExtResource("2_s433i")
 nr = 3
 
-[node name="model" parent="ArrowUp4" unique_id=640369339 instance=ExtResource("3_40mgl")]
+[node name="model" parent="ArrowUp4" unique_id=46761124 instance=ExtResource("3_40mgl")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.02875717, 0.015987799, 0.107906)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp4" unique_id=1440336030]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014526397, 0.007944375, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp4" unique_id=152267578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030046076, 0.013251185, 0.11233123)
 shape = SubResource("BoxShape3D_40mgl")
 
 [node name="ArrowDown1" type="StaticBody3D" parent="." unique_id=2009056173 groups=["interactable"]]
-transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.19160472, -0.090624265, -0.05605048)
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.19160472, -0.090624265, -0.020803094)
 script = ExtResource("2_s433i")
 up = false
 
@@ -77,44 +77,44 @@ up = false
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.010408282, 0.015987799, 0.107906)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown1" unique_id=1255587597]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014526397, 0.007944375, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008165747, 0.007944375, 0.10876906)
 shape = SubResource("BoxShape3D_40mgl")
 
-[node name="ArrowDown2" type="StaticBody3D" parent="." unique_id=1439944005 groups=["interactable"]]
-transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.058109373, -0.090624265, -0.05605048)
+[node name="ArrowDown2" type="StaticBody3D" parent="." unique_id=524443583 groups=["interactable"]]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.066531226, -0.090624265, -0.020803094)
 script = ExtResource("2_s433i")
 nr = 1
 up = false
 
-[node name="model" parent="ArrowDown2" unique_id=520375674 instance=ExtResource("3_40mgl")]
+[node name="model" parent="ArrowDown2" unique_id=69319104 instance=ExtResource("3_40mgl")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.010408282, 0.015987799, 0.107906)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown2" unique_id=1298239836]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014526397, 0.007944375, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown2" unique_id=11851115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008165747, 0.007944375, 0.10876906)
 shape = SubResource("BoxShape3D_40mgl")
 
-[node name="ArrowDown3" type="StaticBody3D" parent="." unique_id=1624241857 groups=["interactable"]]
-transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0.07720028, -0.090624265, -0.05605048)
+[node name="ArrowDown3" type="StaticBody3D" parent="." unique_id=1824625099 groups=["interactable"]]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0.06211537, -0.090624265, -0.020803094)
 script = ExtResource("2_s433i")
 nr = 2
 up = false
 
-[node name="model" parent="ArrowDown3" unique_id=732740261 instance=ExtResource("3_40mgl")]
+[node name="model" parent="ArrowDown3" unique_id=1123810208 instance=ExtResource("3_40mgl")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.010408282, 0.015987799, 0.107906)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown3" unique_id=1928987609]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014526397, 0.007944375, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown3" unique_id=68157416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008165747, 0.007944375, 0.10876906)
 shape = SubResource("BoxShape3D_40mgl")
 
-[node name="ArrowDown4" type="StaticBody3D" parent="." unique_id=1613341166 groups=["interactable"]]
-transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0.21932516, -0.090624265, -0.05605048)
+[node name="ArrowDown4" type="StaticBody3D" parent="." unique_id=1840449835 groups=["interactable"]]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0.18963298, -0.090624265, -0.020803094)
 script = ExtResource("2_s433i")
 nr = 3
 up = false
 
-[node name="model" parent="ArrowDown4" unique_id=424953051 instance=ExtResource("3_40mgl")]
+[node name="model" parent="ArrowDown4" unique_id=160730794 instance=ExtResource("3_40mgl")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.010408282, 0.015987799, 0.107906)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown4" unique_id=1681616771]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014526397, 0.007944375, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown4" unique_id=376305757]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008165747, 0.007944375, 0.10876906)
 shape = SubResource("BoxShape3D_40mgl")

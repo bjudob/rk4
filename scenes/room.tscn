@@ -8,7 +8,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_14vil"]
 size = Vector3(0.41503906, 1, 1)
 
-[node name="Room" type="Node3D" unique_id=564975233]
+[node name="RoomStart" type="Node3D" unique_id=564975233]
 script = ExtResource("1_14vil")
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=1897413087]

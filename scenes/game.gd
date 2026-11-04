@@ -7,6 +7,7 @@ var player_starting_pos
 @onready var room_ui = $RoomUI
 @onready var new_day_ui = $NewDayUI
 
+@onready var room_start = $Rooms/RoomStart
 @onready var room_trees = $Rooms/RoomTrees
 @onready var room_train = $Rooms/RoomTrain
 @onready var room_candles = $Rooms/RoomCandles
@@ -127,6 +128,7 @@ func load_save():
 func start(load_save: bool):
 	game_ui.visible = true
 	player.capture_mouse()
+	spawn_room(Vector2(0,2), room_start)
 	
 	if !load_save:
 		return

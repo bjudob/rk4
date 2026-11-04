@@ -211,7 +211,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.7527
 [node name="Room00Pos" type="Node3D" parent="Rooms" unique_id=1163338060 groups=["room_00_pos"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 0, 22.5)
 
-[node name="Room" parent="Rooms" unique_id=564975233 instance=ExtResource("4_0tnpc")]
+[node name="RoomStart" parent="Rooms" unique_id=564975233 instance=ExtResource("4_0tnpc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
 
 [node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
