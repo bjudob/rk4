@@ -1,6 +1,5 @@
 extends Node3D
 
-@export var lock_name = "noname"
 @export var solution = "6 6 6 6 "
 
 @onready var display = $Display

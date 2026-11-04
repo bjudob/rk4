@@ -212,27 +212,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 0, 22.5)
 
 [node name="RoomStart" parent="Rooms" unique_id=564975233 instance=ExtResource("4_0tnpc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
+room_name = "StartRoom"
 
 [node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
+room_name = "Trees"
 
 [node name="RoomTrain" parent="Rooms" unique_id=584542378 instance=ExtResource("13_kvuet")]
+room_name = "Train"
 
 [node name="RoomCandles" parent="Rooms" unique_id=2056734870 instance=ExtResource("14_trtic")]
+room_name = "Candles"
+rarity = 1
 
 [node name="RoomRest" parent="Rooms" unique_id=1819664826 instance=ExtResource("16_rysoc")]
-room_name = "room_rest"
+room_name = "Rest Room"
 image = ExtResource("17_5newe")
+rarity = 1
 
 [node name="RoomRedButton" parent="Rooms" unique_id=581924088 instance=ExtResource("17_264po")]
-room_name = "room_red_button"
+room_name = "Red Button"
 
 [node name="RoomParlor" parent="Rooms" unique_id=2016360832 instance=ExtResource("19_5newe")]
+room_name = "Parlor"
+rarity = 1
 
 [node name="RoomWorkshop" parent="Rooms" unique_id=1601642086 instance=ExtResource("20_37s47")]
+rarity = 1
 
 [node name="RoomLibrary" parent="Rooms" unique_id=1547982564 instance=ExtResource("21_bt5mj")]
+rarity = 1
 
 [node name="RoomPrison" parent="Rooms" unique_id=2138134028 instance=ExtResource("22_e1j6l")]
+rarity = 1
 
 [node name="Doors" type="Node3D" parent="." unique_id=440574801]
 

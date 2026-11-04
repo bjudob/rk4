@@ -25,8 +25,10 @@ var save_data = {
 
 # rooms
 var rng
-var rooms = []
-var roomsUsed = []
+var rooms = {}
+var rooms_rnd = []
+var rooms_used = []
+var room_total_weights = 0
 
 # resources
 var days = 1
@@ -42,16 +44,20 @@ const door_scene = preload("door.tscn")
 func _ready() -> void:
 	player_starting_pos = player.position
 	rng = RandomNumberGenerator.new()
-	rooms = [
-		room_trees,
-		room_train,
-		room_candles,
-		room_rest,
-		room_red_button,
-		room_parlor,
-		room_workshop,
-		room_prison
-	]
+	rooms = {
+		room_trees.room_name: room_trees,
+		room_train.room_name: room_train,
+		room_candles.room_name: room_candles,
+		room_rest.room_name: room_rest,
+		room_red_button.room_name: room_red_button,
+		room_parlor.room_name: room_parlor,
+		room_workshop.room_name: room_workshop,
+		room_prison.room_name: room_prison,
+	}
+	for room_name in rooms:
+		room_total_weights = room_total_weights + rooms[room_name].rarity
+		for i in rooms[room_name].rarity:
+			rooms_rnd.append(room_name)
 
 func _process(delta: float) -> void:
 	game_ui.update(days, steps, gems, keys, dices)
@@ -65,7 +71,7 @@ func new_day():
 	steps = steps_default
 	days = days + 1
 	player.position = player_starting_pos
-	roomsUsed = []
+	rooms_used = []
 	for room in rooms:
 		room.reset()
 	var doors = get_tree().get_nodes_in_group("door")
@@ -75,41 +81,46 @@ func new_day():
 
 # rooms
 func select_room(place: Vector2) -> void:
-	var roomsUsedTmp = []
-	for roomUsed in roomsUsed:
-		roomsUsedTmp.append(roomUsed)
+	var rooms_used_tmp = []
+	for roomUsed in rooms_used:
+		rooms_used_tmp.append(roomUsed)
 	
-	var roomsNr = len(rooms) - len(roomsUsedTmp)
+	var room_used_weight = rooms_used_total_weight()
+	var roomsNr = room_total_weights - room_used_weight
 	var rnd1 = rng.randi_range(0, roomsNr-1)
-	var i1 = get_room(rnd1, roomsUsedTmp)
-	roomsUsedTmp.append(i1)
+	var room_name_1 = random_room(rnd1, rooms_used_tmp)
+	rooms_used_tmp.append(room_name_1)
 	
 	roomsNr = roomsNr - 1
 	var rnd2 = rng.randi_range(0, roomsNr-1)
-	var i2 = get_room(rnd2, roomsUsedTmp)
-	roomsUsedTmp.append(i2)
+	var room_name_2 = random_room(rnd2, rooms_used_tmp)
+	rooms_used_tmp.append(room_name_2)
 	
 	roomsNr = roomsNr - 1
 	var rnd3 = rng.randi_range(0, roomsNr-1)
-	var i3 = get_room(rnd3, roomsUsedTmp)
+	var room_name_3 = random_room(rnd3, rooms_used_tmp)
 	
-	room_ui.select_room(place, rooms[i1], rooms[i2], rooms[i3])
-
-func spawn_room(place: Vector2, room: Room) -> void:
-	for i in len(rooms):
-		if room.name == rooms[i].name:
-			roomsUsed.append(i)
-	room.spawn(place)
+	room_ui.select_room(place, rooms[room_name_1], rooms[room_name_2], rooms[room_name_3])
 	
-func get_room(n: int, rUsed: Array):
+func random_room(n: int, rUsed: Array):
 	var m = 0
-	for i in len(rooms):
-		if i in rUsed:
+	for room_name in rooms_rnd:
+		if room_name in rUsed:
 			continue
 		if m==n:
-			return i
+			return room_name
 		m = m + 1
 		
+func rooms_used_total_weight():
+	var weight = 0
+	for room_name in rooms_used:
+		weight = weight + rooms[room_name].rarity
+	return weight
+
+func spawn_room(place: Vector2, room: Room) -> void:
+	rooms_used.append(room.room_name)
+	room.spawn(place)
+
 func save():
 	var save_file = FileAccess.open(save_file_path, FileAccess.WRITE)
 	save_data.days = days
@@ -131,7 +142,7 @@ func load_save():
 func start(load_save: bool):
 	game_ui.visible = true
 	player.capture_mouse()
-	spawn_room(Vector2(0,2), room_start)
+	room_start.spawn(Vector2(0,2))
 	
 	if !load_save:
 		return
