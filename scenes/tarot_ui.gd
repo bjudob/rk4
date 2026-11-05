@@ -1,6 +1,9 @@
 extends CanvasLayer
 
 @onready var hover_sound = $HoverSound
+@onready var highlight_card = $HighlightCard
+var is_highlight = false
+var just_highlighted = false
 
 const NORMAL_COLOR = Color(1, 1, 1, 1)
 const HOVER_COLOR = Color(0.4, 0.4, 0.4, 1)
@@ -28,10 +31,13 @@ var cards = []
 @onready var card19 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row3/Card19
 @onready var card20 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row3/Card20
 
+var tarots = []
+var tarot0 = load("res://assets/tarot/0_the_fool.png")
 
 
 func _ready() -> void:
 	visible = false
+	highlight_card.visible = false
 	
 	cards = [
 		card0,
@@ -56,17 +62,43 @@ func _ready() -> void:
 		card19,
 		card20,
 	]
+	tarots = [
+		tarot0
+	]
 	
 	for i in cards.size():
 		cards[i].mouse_entered.connect(_on_card_mouse_entered.bind(i))
 		cards[i].mouse_exited.connect(_on_card_mouse_exited.bind(i))
+		cards[i].gui_input.connect(_on_card_gui_input.bind(i))
+	
+	show_tarot(0)
 
 func _process(delta: float) -> void:
 	pass
+	if is_highlight and Input.is_action_just_pressed("interact") and !just_highlighted:
+		remove_highlight()
+	just_highlighted = false
 
-func show_ui():
-	visible = true
+func show_tarot(i: int):
+	cards[i].texture = tarots[i]
 	
+func _on_card_gui_input(event: InputEvent, i: int):
+	if not event is InputEventMouseButton or not event.pressed:
+		return
+	highlight_tarot(i)
+	
+func highlight_tarot(i: int):
+	if is_highlight:
+		return
+	is_highlight = true
+	just_highlighted = true
+	highlight_card.visible = true
+	highlight_card.texture = cards[i].texture
+	
+func remove_highlight():
+	is_highlight = false
+	highlight_card.visible = false
+
 func _on_card_mouse_entered(i: int):
 	cards[i].modulate = HOVER_COLOR
 	hover_sound.play()

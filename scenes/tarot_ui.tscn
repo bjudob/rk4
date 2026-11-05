@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dtyha7evnkm14" path="res://assets/tarot/card_back.png" id="1_gqnyx"]
 [ext_resource type="Script" uid="uid://m08iwmvyw8o2" path="res://scenes/tarot_ui.gd" id="1_kghdv"]
 [ext_resource type="AudioStream" uid="uid://b7cs68sw3rpac" path="res://music/crack_mini.wav" id="3_ro06v"]
+[ext_resource type="Texture2D" uid="uid://uvcogvg5esk7" path="res://assets/tarot/0_the_fool.png" id="4_oau3a"]
 
 [node name="TarotUI" type="CanvasLayer" unique_id=885113144]
 script = ExtResource("1_kghdv")
@@ -157,3 +158,8 @@ layout_mode = 2
 
 [node name="HoverSound" type="AudioStreamPlayer3D" parent="." unique_id=54514614]
 stream = ExtResource("3_ro06v")
+
+[node name="HighlightCard" type="Sprite2D" parent="." unique_id=2041221494]
+position = Vector2(1323, 783)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_oau3a")
