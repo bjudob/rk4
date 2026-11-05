@@ -160,6 +160,6 @@ layout_mode = 2
 stream = ExtResource("3_ro06v")
 
 [node name="HighlightCard" type="Sprite2D" parent="." unique_id=2041221494]
-position = Vector2(1323, 783)
-scale = Vector2(0.7, 0.7)
+position = Vector2(1328, 690)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_oau3a")
