@@ -6,6 +6,7 @@ var player_starting_pos
 @onready var game_ui = $GameUI
 @onready var room_ui = $RoomUI
 @onready var new_day_ui = $NewDayUI
+@onready var tarot_ui = $TarotUI
 
 @onready var room_start = $Rooms/RoomStart
 @onready var room_trees = $Rooms/RoomTrees
@@ -61,6 +62,13 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	game_ui.update(days, steps, gems, keys, dices)
+	if Input.is_action_just_pressed("menu"):
+		if tarot_ui.visible:
+			player.unlock_move()
+			tarot_ui.visible = false
+		else:
+			player.lock_move()
+			tarot_ui.visible = true
 
 func add_steps(s: int):
 	steps += s	

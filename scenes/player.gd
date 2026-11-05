@@ -37,10 +37,6 @@ func _ready() -> void:
 	look_rotation.x = head.rotation.x
 
 func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_key_pressed(KEY_ESCAPE):
-		release_mouse()
-	
-	# Look around
 	if mouse_captured and event is InputEventMouseMotion:
 		rotate_look(event.relative)
 
