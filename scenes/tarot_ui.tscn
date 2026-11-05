@@ -32,7 +32,7 @@ layout_mode = 2
 theme_override_constants/separation = 50
 
 [node name="Row1" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TarotContainer/Rows" unique_id=1328706778]
-custom_minimum_size = Vector2(0, 350)
+custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
@@ -72,84 +72,83 @@ layout_mode = 2
 texture = ExtResource("1_gqnyx")
 expand_mode = 3
 
+[node name="Card7" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row1" unique_id=2015103980]
+layout_mode = 2
+texture = ExtResource("1_gqnyx")
+expand_mode = 3
+
+[node name="Card8" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row1" unique_id=378623498]
+layout_mode = 2
+texture = ExtResource("1_gqnyx")
+expand_mode = 3
+
+[node name="Card9" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row1" unique_id=396935788]
+layout_mode = 2
+texture = ExtResource("1_gqnyx")
+expand_mode = 3
+
+[node name="Card10" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row1" unique_id=1193330394]
+layout_mode = 2
+texture = ExtResource("1_gqnyx")
+expand_mode = 3
+
 [node name="Row2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TarotContainer/Rows" unique_id=1206571463]
-custom_minimum_size = Vector2(0, 350)
+custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="Card7" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=372032955]
+[node name="Card11" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=372032955]
 layout_mode = 2
 texture = ExtResource("1_gqnyx")
 expand_mode = 3
 
-[node name="Card8" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=254770260]
+[node name="Card12" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=1781847834]
 layout_mode = 2
 texture = ExtResource("1_gqnyx")
 expand_mode = 3
 
-[node name="Card9" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=1461767008]
+[node name="Card13" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=740222428]
 layout_mode = 2
 texture = ExtResource("1_gqnyx")
 expand_mode = 3
 
-[node name="Card10" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=1238265189]
+[node name="Card14" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=658478011]
 layout_mode = 2
 texture = ExtResource("1_gqnyx")
 expand_mode = 3
 
-[node name="Card11" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=2042225645]
+[node name="Card15" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=558276543]
 layout_mode = 2
 texture = ExtResource("1_gqnyx")
 expand_mode = 3
 
-[node name="Card12" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=2057756084]
+[node name="Card16" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=1127719478]
 layout_mode = 2
 texture = ExtResource("1_gqnyx")
 expand_mode = 3
 
-[node name="Card13" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=1620176066]
+[node name="Card17" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=415898759]
 layout_mode = 2
 texture = ExtResource("1_gqnyx")
 expand_mode = 3
 
-[node name="Row3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TarotContainer/Rows" unique_id=1886644761]
-custom_minimum_size = Vector2(0, 350)
-layout_mode = 2
-theme_override_constants/separation = 50
-alignment = 1
-
-[node name="Card14" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row3" unique_id=1787571379]
+[node name="Card18" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=152455984]
 layout_mode = 2
 texture = ExtResource("1_gqnyx")
 expand_mode = 3
 
-[node name="Card15" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row3" unique_id=2073904933]
+[node name="Card19" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=332518102]
 layout_mode = 2
 texture = ExtResource("1_gqnyx")
 expand_mode = 3
 
-[node name="Card16" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row3" unique_id=433119276]
+[node name="Card20" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=1990668038]
 layout_mode = 2
 texture = ExtResource("1_gqnyx")
 expand_mode = 3
 
-[node name="Card17" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row3" unique_id=2098583992]
-layout_mode = 2
-texture = ExtResource("1_gqnyx")
-expand_mode = 3
-
-[node name="Card18" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row3" unique_id=226137619]
-layout_mode = 2
-texture = ExtResource("1_gqnyx")
-expand_mode = 3
-
-[node name="Card19" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row3" unique_id=1622826648]
-layout_mode = 2
-texture = ExtResource("1_gqnyx")
-expand_mode = 3
-
-[node name="Card20" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row3" unique_id=1994401895]
+[node name="Card21" type="TextureRect" parent="MarginContainer/VBoxContainer/TarotContainer/Rows/Row2" unique_id=1185608421]
 layout_mode = 2
 texture = ExtResource("1_gqnyx")
 expand_mode = 3
@@ -161,6 +160,7 @@ layout_mode = 2
 stream = ExtResource("3_ro06v")
 
 [node name="HighlightCard" type="Sprite2D" parent="." unique_id=2041221494]
+visible = false
 position = Vector2(1328, 690)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_oau3a")

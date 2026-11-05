@@ -45,4 +45,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8392749, 2.034299, -4.9593
 
 [node name="Tarot" parent="." unique_id=1525524012 instance=ExtResource("6_jn645")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1319755, 1.3252211, -3.3053513)
-number = 0
+number = 8
+
+[node name="Tarot2" parent="." unique_id=1918866345 instance=ExtResource("6_jn645")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046560884, 1.3252211, -3.3053513)
+number = 5
+
+[node name="Tarot3" parent="." unique_id=1955541642 instance=ExtResource("6_jn645")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6293169, 1.3252211, -3.3053513)
+number = 3

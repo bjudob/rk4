@@ -21,7 +21,8 @@ var player_starting_pos
 const save_file_path = "user://rk.json"
 var save_data = {
 	"days": 1,
-	"room_start_lock": false
+	"room_start_lock": false,
+	"tarots": []
 }
 
 # rooms
@@ -131,6 +132,7 @@ func save():
 	var save_file = FileAccess.open(save_file_path, FileAccess.WRITE)
 	save_data.days = days
 	save_data.room_start_lock = room_start.lock_solved
+	save_data.tarots = tarot_ui.tarots_found
 	save_file.store_var(save_data.duplicate())
 	save_file.close()
 	
@@ -143,6 +145,7 @@ func load_save():
 	
 	var save_d = data.duplicate()
 	days = save_d.days
+	tarot_ui.RENDER(save_d.tarots)
 	room_start.solve_lock(save_d.room_start_lock)
 	
 func start(load_save: bool):

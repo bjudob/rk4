@@ -18,24 +18,38 @@ var cards = []
 @onready var card4 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row1/Card4
 @onready var card5 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row1/Card5
 @onready var card6 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row1/Card6
-@onready var card7 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card7
-@onready var card8 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card8
-@onready var card9 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card9
-@onready var card10 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card10
+@onready var card7 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row1/Card7
+@onready var card8 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row1/Card8
+@onready var card9 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row1/Card9
+@onready var card10 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row1/Card10
 @onready var card11 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card11
 @onready var card12 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card12
 @onready var card13 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card13
-@onready var card14 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row3/Card14
-@onready var card15 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row3/Card15
-@onready var card16 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row3/Card16
-@onready var card17 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row3/Card17
-@onready var card18 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row3/Card18
-@onready var card19 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row3/Card19
-@onready var card20 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row3/Card20
+@onready var card14 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card14
+@onready var card15 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card15
+@onready var card16 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card16
+@onready var card17 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card17
+@onready var card18 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card18
+@onready var card19 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card19
+@onready var card20 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card20
+@onready var card21 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card21
 
 var tarots = []
 var tarot0 = load("res://assets/tarot/0_the_fool.png")
+var tarot1 = load("res://assets/tarot/1_the_magician.png")
+var tarot2 = load("res://assets/tarot/2_the_high_priestess.png")
+var tarot3 = load("res://assets/tarot/3_the_empress.png")
+var tarot4 = load("res://assets/tarot/4_the_emperor.png")
+var tarot5 = load("res://assets/tarot/5_the_hierophant.png")
+var tarot6 = load("res://assets/tarot/6_the_lovers.png")
+var tarot7 = load("res://assets/tarot/7_the_chariot.png")
+var tarot8 = load("res://assets/tarot/8_strength.png")
+var tarot9 = load("res://assets/tarot/9_the_hermit.png")
+var tarot10 = load("res://assets/tarot/10_the_wheel_of_fortune.png")
+var tarot11 = load("res://assets/tarot/11_justice.png")
+var tarot12 = load("res://assets/tarot/12_the_hanged_man.png")
 
+var tarots_found = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
 
 func _ready() -> void:
 	visible = false
@@ -65,7 +79,19 @@ func _ready() -> void:
 		card20,
 	]
 	tarots = [
-		tarot0
+		tarot0,
+		tarot1,
+		tarot2,
+		tarot3,
+		tarot4,
+		tarot5,
+		tarot6,
+		tarot7,
+		tarot8,
+		tarot9,
+		tarot10,
+		tarot11,
+		tarot12,
 	]
 	
 	for i in cards.size():
@@ -81,9 +107,21 @@ func _process(delta: float) -> void:
 
 func new_tarot(i: int):
 	show_ui()
-	cards[i].texture = tarots[i]
+	tarots_found[i] = true
+	render(tarots_found)
 	highlight_tarot(i)
 	new_tarot_sound.play()
+
+func render(new_tarots_found):
+	tarots_found = new_tarots_found
+	for i in len(tarots_found):
+		if not tarots_found[i]:
+			continue
+		cards[i].texture = tarots[i]
+		for tarot_card in get_tree().get_nodes_in_group("tarot"):
+			if tarot_card.number == i:
+				tarot_card.visible=false
+			
 
 func show_ui():
 	visible = true

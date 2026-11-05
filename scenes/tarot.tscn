@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_6kxwg"]
 size = Vector3(0.4, 0.6, 0.1)
 
-[node name="StaticBody3D" type="StaticBody3D" unique_id=1918866345 groups=["interactable"]]
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1918866345 groups=["interactable", "tarot"]]
 script = ExtResource("2_1oiny")
 
 [node name="model" parent="." unique_id=1770923955 instance=ExtResource("1_yww50")]
