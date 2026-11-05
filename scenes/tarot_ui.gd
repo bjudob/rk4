@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@onready var player = get_tree().get_nodes_in_group("player")[0]
+@onready var new_tarot_sound = $NewTarotSound
 @onready var hover_sound = $HoverSound
 @onready var highlight_card = $HighlightCard
 var is_highlight = false
@@ -70,8 +72,6 @@ func _ready() -> void:
 		cards[i].mouse_entered.connect(_on_card_mouse_entered.bind(i))
 		cards[i].mouse_exited.connect(_on_card_mouse_exited.bind(i))
 		cards[i].gui_input.connect(_on_card_gui_input.bind(i))
-	
-	show_tarot(0)
 
 func _process(delta: float) -> void:
 	pass
@@ -79,9 +79,20 @@ func _process(delta: float) -> void:
 		remove_highlight()
 	just_highlighted = false
 
-func show_tarot(i: int):
+func new_tarot(i: int):
+	show_ui()
 	cards[i].texture = tarots[i]
+	highlight_tarot(i)
+	new_tarot_sound.play()
+
+func show_ui():
+	visible = true
+	player.lock_move()
 	
+func hide_ui():
+	visible = false
+	player.unlock_move()
+
 func _on_card_gui_input(event: InputEvent, i: int):
 	if not event is InputEventMouseButton or not event.pressed:
 		return

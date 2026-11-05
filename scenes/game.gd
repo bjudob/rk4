@@ -64,11 +64,9 @@ func _process(delta: float) -> void:
 	game_ui.update(days, steps, gems, keys, dices)
 	if Input.is_action_just_pressed("menu"):
 		if tarot_ui.visible:
-			player.unlock_move()
-			tarot_ui.visible = false
+			tarot_ui.hide_ui()
 		else:
-			player.lock_move()
-			tarot_ui.visible = true
+			tarot_ui.show_ui()
 
 func add_steps(s: int):
 	steps += s	

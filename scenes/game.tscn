@@ -75,7 +75,7 @@ visible = false
 
 [node name="ScrollUI" parent="." unique_id=780008881 instance=ExtResource("8_qnb83")]
 
-[node name="TarotUI" parent="." unique_id=885113144 instance=ExtResource("9_sww3w")]
+[node name="TarotUI" parent="." unique_id=885113144 groups=["tarot_ui"] instance=ExtResource("9_sww3w")]
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=986475359]
 use_collision = true

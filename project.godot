@@ -30,6 +30,7 @@ room_ui=""
 interactable=""
 door=""
 scroll_ui=""
+tarot_ui=""
 
 [input]
 

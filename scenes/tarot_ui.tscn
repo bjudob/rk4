@@ -4,8 +4,9 @@
 [ext_resource type="Script" uid="uid://m08iwmvyw8o2" path="res://scenes/tarot_ui.gd" id="1_kghdv"]
 [ext_resource type="AudioStream" uid="uid://b7cs68sw3rpac" path="res://music/crack_mini.wav" id="3_ro06v"]
 [ext_resource type="Texture2D" uid="uid://uvcogvg5esk7" path="res://assets/tarot/0_the_fool.png" id="4_oau3a"]
+[ext_resource type="AudioStream" uid="uid://x10j1yxab6t5" path="res://music/christmas_bells_maxi.mp3" id="5_62yyc"]
 
-[node name="TarotUI" type="CanvasLayer" unique_id=885113144]
+[node name="TarotUI" type="CanvasLayer" unique_id=885113144 groups=["tarot_ui"]]
 script = ExtResource("1_kghdv")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1871134193]
@@ -163,3 +164,6 @@ stream = ExtResource("3_ro06v")
 position = Vector2(1328, 690)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_oau3a")
+
+[node name="NewTarotSound" type="AudioStreamPlayer3D" parent="." unique_id=1925858566]
+stream = ExtResource("5_62yyc")

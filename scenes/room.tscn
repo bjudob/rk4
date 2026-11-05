@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bjrfahcivy2ik" path="res://assets/HolidayKit/tree-snow-b.glb" id="2_14vil"]
 [ext_resource type="PackedScene" uid="uid://dm7ijqguc1qe8" path="res://assets/HolidayKit/tree-snow-c.glb" id="3_jxe34"]
 [ext_resource type="PackedScene" uid="uid://wgkwmiacqwlu" path="res://scenes/lock.tscn" id="5_jxe34"]
+[ext_resource type="PackedScene" uid="uid://bpm4fiuf77kxl" path="res://scenes/tarot.tscn" id="6_jn645"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_14vil"]
 size = Vector3(0.41503906, 1, 1)
@@ -41,3 +42,7 @@ shape = SubResource("BoxShape3D_14vil")
 
 [node name="Lock" parent="." unique_id=932196067 instance=ExtResource("5_jxe34")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8392749, 2.034299, -4.959373)
+
+[node name="Tarot" parent="." unique_id=1525524012 instance=ExtResource("6_jn645")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1319755, 1.3252211, -3.3053513)
+number = 0
