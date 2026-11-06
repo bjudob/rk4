@@ -14,6 +14,8 @@ func interact():
 	var place_to_place = place
 	if same_level and player.position.x < position.x:
 		place_to_place.y = place_to_place.y + 1
+	if !same_level and player.position.z > position.z:
+		place_to_place.x = place_to_place.x + 1
 	
 	if not room_selected:
 		game.select_room(place_to_place)
