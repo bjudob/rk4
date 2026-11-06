@@ -7,6 +7,7 @@ var player_starting_pos
 @onready var room_ui = $RoomUI
 @onready var new_day_ui = $NewDayUI
 @onready var tarot_ui = $TarotUI
+@onready var blueprint_ui = $BlueprintUI
 
 @onready var room_start = $Rooms/RoomStart
 @onready var room_trees = $Rooms/RoomTrees
@@ -68,6 +69,11 @@ func _process(delta: float) -> void:
 			tarot_ui.hide_ui()
 		else:
 			tarot_ui.show_ui()
+	elif Input.is_action_just_pressed("map"):
+		if blueprint_ui.visible:
+			blueprint_ui.hide_ui()
+		else:
+			blueprint_ui.show_ui()
 
 func add_steps(s: int):
 	steps += s	
