@@ -133,6 +133,7 @@ func rooms_used_total_weight():
 func spawn_room(place: Vector2, room: Room) -> void:
 	rooms_used.append(room.room_name)
 	room.spawn(place)
+	blueprint_ui.draw_rooms(rooms.values())
 
 func save():
 	var save_file = FileAccess.open(save_file_path, FileAccess.WRITE)

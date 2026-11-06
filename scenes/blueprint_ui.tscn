@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://b4wwmshvudrv1"]
 
-[ext_resource type="Texture2D" uid="uid://chvk541omlbml" path="res://assets/room_icons/tree_room.png" id="1_b6lxe"]
 [ext_resource type="Script" uid="uid://5m7rr315ei7s" path="res://scenes/blueprint_ui.gd" id="1_m41cu"]
 [ext_resource type="Texture2D" uid="uid://jxn0w2s633n8" path="res://assets/room_icons/room_none.png" id="2_m41cu"]
 
@@ -27,7 +26,7 @@ alignment = 1
 
 [node name="Room1" type="TextureRect" parent="RoomLayout/VBoxContainer/Row1" unique_id=2087723533]
 layout_mode = 2
-texture = ExtResource("1_b6lxe")
+texture = ExtResource("2_m41cu")
 expand_mode = 2
 
 [node name="Room2" type="TextureRect" parent="RoomLayout/VBoxContainer/Row1" unique_id=512947878]
@@ -77,6 +76,99 @@ texture = ExtResource("2_m41cu")
 expand_mode = 2
 
 [node name="Room5" type="TextureRect" parent="RoomLayout/VBoxContainer/Row2" unique_id=1497039167]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Row3" type="HBoxContainer" parent="RoomLayout/VBoxContainer" unique_id=1775357065]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Room1" type="TextureRect" parent="RoomLayout/VBoxContainer/Row3" unique_id=1866617118]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room2" type="TextureRect" parent="RoomLayout/VBoxContainer/Row3" unique_id=993889152]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room3" type="TextureRect" parent="RoomLayout/VBoxContainer/Row3" unique_id=534401726]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room4" type="TextureRect" parent="RoomLayout/VBoxContainer/Row3" unique_id=1059554745]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room5" type="TextureRect" parent="RoomLayout/VBoxContainer/Row3" unique_id=1600429492]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Row4" type="HBoxContainer" parent="RoomLayout/VBoxContainer" unique_id=953213042]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Room1" type="TextureRect" parent="RoomLayout/VBoxContainer/Row4" unique_id=743542611]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room2" type="TextureRect" parent="RoomLayout/VBoxContainer/Row4" unique_id=756001255]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room3" type="TextureRect" parent="RoomLayout/VBoxContainer/Row4" unique_id=1117838649]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room4" type="TextureRect" parent="RoomLayout/VBoxContainer/Row4" unique_id=1551055679]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room5" type="TextureRect" parent="RoomLayout/VBoxContainer/Row4" unique_id=1993062018]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Row5" type="HBoxContainer" parent="RoomLayout/VBoxContainer" unique_id=1887279535]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Room1" type="TextureRect" parent="RoomLayout/VBoxContainer/Row5" unique_id=897131748]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room2" type="TextureRect" parent="RoomLayout/VBoxContainer/Row5" unique_id=527488563]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room3" type="TextureRect" parent="RoomLayout/VBoxContainer/Row5" unique_id=770662005]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room4" type="TextureRect" parent="RoomLayout/VBoxContainer/Row5" unique_id=1489659817]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room5" type="TextureRect" parent="RoomLayout/VBoxContainer/Row5" unique_id=474504321]
 layout_mode = 2
 texture = ExtResource("2_m41cu")
 expand_mode = 2
