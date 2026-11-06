@@ -157,6 +157,86 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 2, 22.5)
 operation = 2
 size = Vector3(1, 3, 1.7)
 
+[node name="Door21-22" type="CSGBox3D" parent="Building" unique_id=1168401057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 2, 11.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door22-23" type="CSGBox3D" parent="Building" unique_id=1079723216]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 11.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door23-24" type="CSGBox3D" parent="Building" unique_id=1822123325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, 11.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door24-25" type="CSGBox3D" parent="Building" unique_id=1031449741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 2, 11.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door31-32" type="CSGBox3D" parent="Building" unique_id=116341379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 2, 0.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door32-33" type="CSGBox3D" parent="Building" unique_id=1837844594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 0.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door33-34" type="CSGBox3D" parent="Building" unique_id=1303928839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, 0.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door34-35" type="CSGBox3D" parent="Building" unique_id=225618086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 2, 0.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door41-42" type="CSGBox3D" parent="Building" unique_id=1831803839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 2, -10.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door42-43" type="CSGBox3D" parent="Building" unique_id=1267540506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, -10.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door43-44" type="CSGBox3D" parent="Building" unique_id=969524099]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, -10.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door44-45" type="CSGBox3D" parent="Building" unique_id=1679489409]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 2, -10.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door51-52" type="CSGBox3D" parent="Building" unique_id=795722827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 2, -21.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door52-53" type="CSGBox3D" parent="Building" unique_id=943198414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, -21.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door53-54" type="CSGBox3D" parent="Building" unique_id=1734363753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, -21.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
+[node name="Door54-55" type="CSGBox3D" parent="Building" unique_id=2138481960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 2, -21.5)
+operation = 2
+size = Vector3(1, 3, 1.7)
+
 [node name="Door11-21" type="CSGBox3D" parent="Building" unique_id=779718849]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 2, 17)
 operation = 2
@@ -179,6 +259,81 @@ size = Vector3(1.7, 3, 1)
 
 [node name="Door14-25" type="CSGBox3D" parent="Building" unique_id=475999605]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 2, 17)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door21-31" type="CSGBox3D" parent="Building" unique_id=961289868]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 2, 6)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door22-32" type="CSGBox3D" parent="Building" unique_id=418305947]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 2, 6)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door23-33" type="CSGBox3D" parent="Building" unique_id=966175961]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 6)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door24-34" type="CSGBox3D" parent="Building" unique_id=1295956903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 2, 6)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door25-35" type="CSGBox3D" parent="Building" unique_id=282781285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 2, 6)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door31-41" type="CSGBox3D" parent="Building" unique_id=864114831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 2, -5)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door32-42" type="CSGBox3D" parent="Building" unique_id=1144576305]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 2, -5)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door33-43" type="CSGBox3D" parent="Building" unique_id=674504564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, -5)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door34-44" type="CSGBox3D" parent="Building" unique_id=953404623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 2, -5)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door35-45" type="CSGBox3D" parent="Building" unique_id=488957014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 2, -5)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door41-51" type="CSGBox3D" parent="Building" unique_id=349395870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 2, -16)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door42-52" type="CSGBox3D" parent="Building" unique_id=1340725893]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 2, -16)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door43-53" type="CSGBox3D" parent="Building" unique_id=1831289710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, -16)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door44-54" type="CSGBox3D" parent="Building" unique_id=1067809466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 2, -16)
+operation = 2
+size = Vector3(1.7, 3, 1)
+
+[node name="Door45-55" type="CSGBox3D" parent="Building" unique_id=832511057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 2, -16)
 operation = 2
 size = Vector3(1.7, 3, 1)
 
