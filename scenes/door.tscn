@@ -1,16 +1,17 @@
-[gd_scene format=3 uid="uid://c10op1wmgmcit"]
+[gd_scene format=3 uid="uid://c5jehje2jvvvb"]
 
-[ext_resource type="Script" uid="uid://ckdrbr6hf4511" path="res://scenes/door.gd" id="1_hpvv5"]
+[ext_resource type="PackedScene" uid="uid://bbygytbcbjvy2" path="res://assets/MeshyAI/door.glb" id="1_10uhw"]
+[ext_resource type="Script" uid="uid://lx6lw20jgfh6" path="res://scenes/door.gd" id="1_hpvv5"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_vtaks"]
-size = Vector3(4.462311, 5.262268, 1.31781)
+[sub_resource type="BoxShape3D" id="BoxShape3D_qtnfb"]
+size = Vector3(1.3936768, 2.8251464, 1)
 
-[node name="Door" type="Node3D" unique_id=2112804257 groups=["door"]]
+[node name="DoorI" type="StaticBody3D" unique_id=754407841 groups=["interactable"]]
 script = ExtResource("1_hpvv5")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=2108893628]
-collision_layer = 0
-collision_mask = 2
+[node name="model" parent="." unique_id=593116248 instance=ExtResource("1_10uhw")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1411735232]
-shape = SubResource("BoxShape3D_vtaks")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2014426133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05230713, 0.086556494, 0)
+shape = SubResource("BoxShape3D_qtnfb")
