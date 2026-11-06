@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://b4wwmshvudrv1"]
+
+[ext_resource type="Texture2D" uid="uid://chvk541omlbml" path="res://assets/room_icons/tree_room.png" id="1_b6lxe"]
+[ext_resource type="Texture2D" uid="uid://jxn0w2s633n8" path="res://assets/room_icons/room_none.png" id="2_m41cu"]
+
+[node name="BlueprintUI" type="CanvasLayer" unique_id=1615486318]
+
+[node name="RoomLayout" type="MarginContainer" parent="." unique_id=2043088695]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RoomLayout" unique_id=1434661391]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Row1" type="HBoxContainer" parent="RoomLayout/VBoxContainer" unique_id=1083894693]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Room1" type="TextureRect" parent="RoomLayout/VBoxContainer/Row1" unique_id=2087723533]
+layout_mode = 2
+texture = ExtResource("1_b6lxe")
+expand_mode = 2
+
+[node name="Room2" type="TextureRect" parent="RoomLayout/VBoxContainer/Row1" unique_id=512947878]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room3" type="TextureRect" parent="RoomLayout/VBoxContainer/Row1" unique_id=179974469]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room4" type="TextureRect" parent="RoomLayout/VBoxContainer/Row1" unique_id=1848606987]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room5" type="TextureRect" parent="RoomLayout/VBoxContainer/Row1" unique_id=1193832781]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Row2" type="HBoxContainer" parent="RoomLayout/VBoxContainer" unique_id=1010685016]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Room1" type="TextureRect" parent="RoomLayout/VBoxContainer/Row2" unique_id=1263046525]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room2" type="TextureRect" parent="RoomLayout/VBoxContainer/Row2" unique_id=1037182874]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room3" type="TextureRect" parent="RoomLayout/VBoxContainer/Row2" unique_id=781672249]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room4" type="TextureRect" parent="RoomLayout/VBoxContainer/Row2" unique_id=366750778]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
+
+[node name="Room5" type="TextureRect" parent="RoomLayout/VBoxContainer/Row2" unique_id=1497039167]
+layout_mode = 2
+texture = ExtResource("2_m41cu")
+expand_mode = 2
