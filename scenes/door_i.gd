@@ -1,10 +1,12 @@
 extends Interactable
 
-@onready var game = get_tree().get_nodes_in_group("game")[0]
-@onready var player = get_tree().get_nodes_in_group("player")[0]
-
 @export var same_level = true
 @export var place = Vector2(-1, -1)
+
+@onready var game = get_tree().get_nodes_in_group("game")[0]
+@onready var player = get_tree().get_nodes_in_group("player")[0]
+@onready var collision = $CollisionShape3D
+
 
 var room_selected = false
 
@@ -15,6 +17,8 @@ func interact():
 	
 	if not room_selected:
 		game.select_room(place_to_place)
+		visible = false
+		collision.disabled = true
 		room_selected = true
 	game.add_steps(-1)
 
