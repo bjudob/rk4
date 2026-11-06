@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://cq0lpd0pxl5tm" path="res://scenes/room_library.tscn" id="21_bt5mj"]
 [ext_resource type="PackedScene" uid="uid://8hs5c4uftnhq" path="res://scenes/room_prison.tscn" id="22_e1j6l"]
 [ext_resource type="PackedScene" uid="uid://2fj6eg6b0afj" path="res://assets/Christmas/wall_gingerbread_A.gltf" id="25_pl11u"]
+[ext_resource type="PackedScene" uid="uid://c5a4s5qdmib8o" path="res://scenes/room_fa_szoba.tscn" id="27_suyxu"]
 [ext_resource type="PackedScene" uid="uid://c5jehje2jvvvb" path="res://scenes/door.tscn" id="29_suyxu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
@@ -374,14 +375,17 @@ rarity = 1
 
 [node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
 room_name = "Trees"
+wall_type = 1
 rarity = 100
 
 [node name="RoomTrain" parent="Rooms" unique_id=584542378 instance=ExtResource("13_kvuet")]
 room_name = "Train"
+wall_type = 2
 rarity = 100
 
 [node name="RoomCandles" parent="Rooms" unique_id=2056734870 instance=ExtResource("14_trtic")]
 room_name = "Candles"
+wall_type = 3
 rarity = 1
 
 [node name="RoomRest" parent="Rooms" unique_id=1819664826 instance=ExtResource("16_rysoc")]
@@ -405,6 +409,8 @@ rarity = 1
 
 [node name="RoomPrison" parent="Rooms" unique_id=2138134028 instance=ExtResource("22_e1j6l")]
 rarity = 1
+
+[node name="RoomFaSzoba" parent="Rooms" unique_id=209875925 instance=ExtResource("27_suyxu")]
 
 [node name="Walls" type="Node3D" parent="." unique_id=1946072825]
 

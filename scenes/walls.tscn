@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bssli10d7tx0o"]
+
+[ext_resource type="Script" uid="uid://jcsm1agawsi7" path="res://scenes/walls.gd" id="1_yax5h"]
+
+[node name="Walls" type="Node3D" unique_id=1345010958]
+script = ExtResource("1_yax5h")
+
+[node name="WallRight" type="CSGBox3D" parent="." unique_id=871928001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2, 0)
+use_collision = true
+size = Vector3(1, 5, 2)
+
+[node name="WallLeft" type="CSGBox3D" parent="." unique_id=679224087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 2, 0)
+use_collision = true
+size = Vector3(1, 5, 2)
+
+[node name="WallForward" type="CSGBox3D" parent="." unique_id=2094225358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -5.5)
+use_collision = true
+size = Vector3(2, 5, 1)

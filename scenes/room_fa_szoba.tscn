@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c5a4s5qdmib8o"]
+
+[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_ilhaw"]
+[ext_resource type="PackedScene" uid="uid://recuaeph8s8d" path="res://assets/HolidayKit/tree-snow-a.glb" id="1_rehrt"]
+
+[node name="RoomFaSzoba" type="Node3D" unique_id=209875925]
+script = ExtResource("1_ilhaw")
+wall_type = 7
+
+[node name="ground" type="CSGBox3D" parent="." unique_id=1033388636]
+size = Vector3(10, 1, 10)
+
+[node name="tree-snow-a2" parent="." unique_id=1922761847 instance=ExtResource("1_rehrt")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.15243053, 0.53575134, 0.6638832)

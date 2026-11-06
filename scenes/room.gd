@@ -2,6 +2,7 @@ class_name Room
 extends Node3D
 
 @export var room_name: String = "noname"
+@export var wall_type: Walls.Type = Walls.Type.ALL
 @export var image: Texture2D = load("res://assets/room_icons/tree.png")
 @export var rarity: int = 99
 @export var gem_cost = 0
@@ -9,6 +10,9 @@ extends Node3D
 @onready var game = get_tree().get_nodes_in_group("game")[0]
 @onready var room_00 = get_tree().get_nodes_in_group("room_00_pos")[0]
 @onready var lock = $Lock
+
+const WALLS_SCENE = preload("res://scenes/walls.tscn")
+var walls
 
 var place = Vector2(-1,-1)
 var room_0_place = Vector3(-1,-1,-1)
@@ -18,6 +22,11 @@ var lock_solved = false
 func _ready() -> void:
 	position.y = -100
 	room_0_place = room_00.global_position
+	
+	# add walls
+	walls = WALLS_SCENE.instantiate()
+	add_child(walls)
+	walls.set_type(wall_type)
 
 func spawn(spawn_place: Vector2) -> void:
 	visible = true
