@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://b4wwmshvudrv1"]
 
 [ext_resource type="Texture2D" uid="uid://chvk541omlbml" path="res://assets/room_icons/tree_room.png" id="1_b6lxe"]
+[ext_resource type="Script" uid="uid://5m7rr315ei7s" path="res://scenes/blueprint_ui.gd" id="1_m41cu"]
 [ext_resource type="Texture2D" uid="uid://jxn0w2s633n8" path="res://assets/room_icons/room_none.png" id="2_m41cu"]
 
 [node name="BlueprintUI" type="CanvasLayer" unique_id=1615486318]
+script = ExtResource("1_m41cu")
 
 [node name="RoomLayout" type="MarginContainer" parent="." unique_id=2043088695]
 anchors_preset = 15

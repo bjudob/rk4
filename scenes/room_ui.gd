@@ -2,11 +2,15 @@ extends CanvasLayer
 
 @onready var player = get_tree().get_nodes_in_group("player")[0]
 @onready var game = get_tree().get_nodes_in_group("game")[0]
+@onready var hover_sound = $HoverSound
 
 var room_place = Vector2(-1,-1)
 @onready var room_1_image = $MarginContainer/HBoxContainer/MarginContainer/Room1Image
 @onready var room_2_image = $MarginContainer/HBoxContainer/MarginContainer2/Room2Image
 @onready var room_3_image = $MarginContainer/HBoxContainer/Room3Image
+
+const NORMAL_COLOR = Color(1, 1, 1, 1)
+const HOVER_COLOR = Color(0.4, 0.4, 0.4, 1)
 
 var room_1: Room
 var room_2: Room
@@ -45,3 +49,30 @@ func _on_room_2_image_gui_input(event: InputEvent) -> void:
 func _on_room_3_image_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		spawn_room(room_3)
+		
+
+func _on_room_1_image_mouse_entered() -> void:
+	hover_sound.play()
+	room_1_image.modulate = HOVER_COLOR
+
+
+func _on_room_1_image_mouse_exited() -> void:
+	room_1_image.modulate = NORMAL_COLOR
+
+
+func _on_room_2_image_mouse_entered() -> void:
+	hover_sound.play()
+	room_2_image.modulate = HOVER_COLOR
+
+
+func _on_room_2_image_mouse_exited() -> void:
+	room_2_image.modulate = NORMAL_COLOR
+
+
+func _on_room_3_image_mouse_entered() -> void:
+	hover_sound.play()
+	room_3_image.modulate = HOVER_COLOR
+
+
+func _on_room_3_image_mouse_exited() -> void:
+	room_3_image.modulate = NORMAL_COLOR

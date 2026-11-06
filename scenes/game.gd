@@ -145,7 +145,7 @@ func load_save():
 	
 	var save_d = data.duplicate()
 	days = save_d.days
-	tarot_ui.RENDER(save_d.tarots)
+	tarot_ui.render(save_d.tarots)
 	room_start.solve_lock(save_d.room_start_lock)
 	
 func start(load_save: bool):
