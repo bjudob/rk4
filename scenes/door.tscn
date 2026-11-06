@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_qtnfb"]
 size = Vector3(1.3936768, 2.8251464, 1)
 
-[node name="DoorI" type="StaticBody3D" unique_id=754407841 groups=["interactable"]]
+[node name="Door" type="StaticBody3D" unique_id=754407841 groups=["door", "interactable"]]
 script = ExtResource("1_hpvv5")
 
 [node name="model" parent="." unique_id=593116248 instance=ExtResource("1_10uhw")]

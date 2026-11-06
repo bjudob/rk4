@@ -25,4 +25,6 @@ func interact():
 	game.add_steps(-1)
 
 func reset():
+	visible = true
+	collision.disabled = false
 	room_selected = false
