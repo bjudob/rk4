@@ -19,8 +19,9 @@ func _ready() -> void:
 	position.y = -100
 	room_0_place = room_00.global_position
 
-func spawn(place: Vector2) -> void:
-	self.place = place
+func spawn(spawn_place: Vector2) -> void:
+	visible = true
+	place = spawn_place
 	# hanyadik sor
 	global_position.z = room_0_place.z - 11 * place.x
 	# hanyadik a sorban
@@ -32,6 +33,7 @@ func spawned() -> bool:
 	return place.x!=-1 and place.y!=-1
 	
 func reset():
+	visible = false
 	position.y = -100
 	place = Vector2(-1,-1)
 	for c in get_children():

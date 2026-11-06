@@ -22,9 +22,14 @@ func interact():
 		visible = false
 		collision.disabled = true
 		room_selected = true
-	game.add_steps(-1)
 
 func reset():
 	visible = true
 	collision.disabled = false
 	room_selected = false
+
+
+func _on_step_area_body_entered(body: Node3D) -> void:
+	if !body.is_in_group("player"):
+		return
+	game.add_steps(-1)

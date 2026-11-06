@@ -44,13 +44,13 @@ shape = SubResource("BoxShape3D_14vil")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8392749, 2.034299, -4.959373)
 
 [node name="Tarot" parent="." unique_id=1525524012 instance=ExtResource("6_jn645")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1319755, 1.3252211, -3.3053513)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1667686, 1.3252211, -4.0532217)
 number = 8
 
 [node name="Tarot2" parent="." unique_id=1918866345 instance=ExtResource("6_jn645")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046560884, 1.3252211, -3.3053513)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5670743, 1.3252211, -4.838356)
 number = 5
 
 [node name="Tarot3" parent="." unique_id=1955541642 instance=ExtResource("6_jn645")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6293169, 1.3252211, -3.3053513)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.044717, 1.3252211, -4.80922)
 number = 3

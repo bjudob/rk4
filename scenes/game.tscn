@@ -42,7 +42,6 @@ sky_material = SubResource("ProceduralSkyMaterial_uwrxv")
 background_mode = 2
 sky = SubResource("Sky_yqjtg")
 tonemap_mode = 2
-glow_enabled = true
 
 [node name="Game" type="Node3D" unique_id=427786463 groups=["game"]]
 script = ExtResource("1_vtaks")
