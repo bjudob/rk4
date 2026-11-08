@@ -15,11 +15,12 @@ const HOVER_COLOR = Color(0.4, 0.4, 0.4, 1)
 var room_1: Room
 var room_2: Room
 var room_3: Room
+var entry_direction = Room.EntryDirection.DOWN
 
 func _ready() -> void:
 	visible = false
 
-func select_room(place: Vector2, room1: Room, room2: Room, room3: Room):
+func select_room(place: Vector2, room1: Room, room2: Room, room3: Room, ed: Room.EntryDirection):
 	room_place = place
 	room_1 = room1
 	room_2 = room2
@@ -28,11 +29,12 @@ func select_room(place: Vector2, room1: Room, room2: Room, room3: Room):
 	room_2_image.texture = room2.image
 	room_3_image.texture = room3.image
 	visible = true
+	entry_direction = ed
 	player.lock_move()
 	
 
 func spawn_room(room: Room) -> void:
-	game.spawn_room(room_place, room)
+	game.spawn_room(room_place, room, entry_direction)
 	player.unlock_move()
 	visible = false
 

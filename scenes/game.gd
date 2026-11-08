@@ -94,7 +94,7 @@ func new_day():
 	save()
 
 # rooms
-func select_room(place: Vector2) -> void:
+func select_room(place: Vector2, entry_direction: Room.EntryDirection) -> void:
 	var rooms_used_tmp = []
 	for roomUsed in rooms_used:
 		rooms_used_tmp.append(roomUsed)
@@ -114,7 +114,7 @@ func select_room(place: Vector2) -> void:
 	var rnd3 = rng.randi_range(0, roomsNr-1)
 	var room_name_3 = random_room(rnd3, rooms_used_tmp)
 	
-	room_ui.select_room(place, rooms[room_name_1], rooms[room_name_2], rooms[room_name_3])
+	room_ui.select_room(place, rooms[room_name_1], rooms[room_name_2], rooms[room_name_3], entry_direction)
 	
 func random_room(n: int, rUsed: Array):
 	var m = 0
@@ -131,9 +131,9 @@ func rooms_used_total_weight():
 		weight = weight + rooms[room_name].rarity
 	return weight
 
-func spawn_room(place: Vector2, room: Room) -> void:
+func spawn_room(place: Vector2, room: Room, entry_direction: Room.EntryDirection) -> void:
 	rooms_used.append(room.room_name)
-	room.spawn(place)
+	room.spawn(place, entry_direction)
 	blueprint_ui.draw_rooms(rooms.values())
 
 func save():
@@ -159,7 +159,7 @@ func load_save():
 func start(load_save: bool):
 	game_ui.visible = true
 	player.capture_mouse()
-	room_start.spawn(Vector2(0,2))
+	room_start.spawn(Vector2(0,2), Room.EntryDirection.DOWN)
 	
 	if !load_save:
 		return

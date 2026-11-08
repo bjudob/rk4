@@ -11,6 +11,13 @@ extends Node3D
 @onready var room_00 = get_tree().get_nodes_in_group("room_00_pos")[0]
 @onready var lock = $Lock
 
+enum EntryDirection {
+	LEFT,
+	RIGHT,
+	DOWN,
+	UP
+}
+
 const WALLS_SCENE = preload("res://scenes/walls.tscn")
 var walls
 
@@ -28,7 +35,7 @@ func _ready() -> void:
 	add_child(walls)
 	walls.set_type(wall_type)
 
-func spawn(spawn_place: Vector2) -> void:
+func spawn(spawn_place: Vector2, direction: EntryDirection) -> void:
 	visible = true
 	place = spawn_place
 	# hanyadik sor
@@ -36,12 +43,22 @@ func spawn(spawn_place: Vector2) -> void:
 	# hanyadik a sorban
 	global_position.x = room_0_place.x + 11 * place.y
 	global_position.y = 0
+	# honnan nyitjuk ki
+	if direction == EntryDirection.DOWN:
+		pass
+	elif direction == EntryDirection.UP:
+		rotation_degrees.y = 180
+	elif direction == EntryDirection.LEFT:
+		rotation_degrees.y = -90
+	elif direction == EntryDirection.RIGHT:
+		rotation_degrees.y = 90
 	
 
 func spawned() -> bool:
 	return place.x!=-1 and place.y!=-1
 	
 func reset():
+	rotation_degrees.y = 0
 	visible = false
 	position.y = -100
 	place = Vector2(-1,-1)

@@ -400,6 +400,7 @@ rarity = 1
 
 [node name="RoomRedButton" parent="Rooms" unique_id=581924088 instance=ExtResource("17_264po")]
 room_name = "Red Button"
+wall_type = 7
 rarity = 100
 
 [node name="RoomParlor" parent="Rooms" unique_id=2016360832 instance=ExtResource("19_5newe")]
