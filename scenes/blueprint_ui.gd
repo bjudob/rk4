@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var player = get_tree().get_nodes_in_group("player")[0]
+var room_none = load("res://assets/room_icons/room_none.png")
 
 @onready var blueprints = [
 	[
@@ -44,10 +45,16 @@ func _ready() -> void:
 	visible = false
 
 func draw_rooms(rooms):
+	reset()
 	for room in rooms:
-		#if !room.spawned():
-			#return
+		if !room.spawned():
+			continue
 		blueprints[room.place.x][room.place.y].texture = room.image
+
+func reset():
+	for i in len(blueprints):
+		for j in len(blueprints[i]):
+			blueprints[i][j].texture = room_none
 
 func show_ui():
 	visible = true

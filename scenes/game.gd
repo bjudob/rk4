@@ -90,6 +90,7 @@ func new_day():
 	var doors = get_tree().get_nodes_in_group("door")
 	for door in doors:
 		door.reset()
+	blueprint_ui.draw_rooms(rooms.values())
 	save()
 
 # rooms
