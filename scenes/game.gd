@@ -35,8 +35,8 @@ var room_total_weights = 0
 
 # resources
 var days = 1
-var steps_default = 5
-var steps = 5
+var steps_default = 10
+var steps = 10
 var gems = 20
 var keys = 1
 var dices = 99
@@ -135,6 +135,9 @@ func spawn_room(place: Vector2, room: Room, entry_direction: Room.EntryDirection
 	rooms_used.append(room.room_name)
 	room.spawn(place, entry_direction)
 	blueprint_ui.draw_rooms(rooms.values())
+	
+	for door in get_tree().get_nodes_in_group("door"):
+		door.on_room_spawn(rooms.values())
 
 func save():
 	var save_file = FileAccess.open(save_file_path, FileAccess.WRITE)

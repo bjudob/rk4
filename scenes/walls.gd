@@ -5,6 +5,10 @@ extends Node3D
 @onready var wall_right = $WallRight
 @onready var wall_forward = $WallForward
 
+@onready var body_left = $WallLeft/BodyLeft/CollisionShape3D
+@onready var body_right = $WallRight/BodyRight/CollisionShape3D
+@onready var body_forward = $WallForward/BodyForward/CollisionShape3D
+
 enum Type {
 	ALL,
 	LEFT_FORWARD,
@@ -32,21 +36,33 @@ func set_type(wt: Type):
 			door(wall_left)
 			door(wall_right)
 			door(wall_forward)
+			body_left.disabled = true
+			body_right.disabled = true
+			body_forward.disabled = true
 		Type.LEFT_FORWARD:
 			door(wall_left)
 			door(wall_forward)
+			body_left.disabled = true
+			body_forward.disabled = true
 		Type.RIGHT_FORWARD:
 			door(wall_right)
 			door(wall_forward)
+			body_right.disabled = true
+			body_forward.disabled = true
 		Type.LEFT_RIGHT:
 			door(wall_left)
 			door(wall_right)
+			body_left.disabled = true
+			body_right.disabled = true
 		Type.FORWARD:
 			door(wall_forward)
+			body_forward.disabled = true
 		Type.LEFT:
 			door(wall_left)
+			body_left.disabled = true
 		Type.RIGHT:
 			door(wall_right)
+			body_right.disabled = true
 		Type.DEAD_END:
 			pass
 	

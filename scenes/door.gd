@@ -32,6 +32,28 @@ func interact():
 		collision.disabled = true
 		room_selected = true
 
+func on_room_spawn(rooms):
+	var room_needed_1 = place
+	var room_needed_2 = Vector2(0,0)
+	if same_level:
+		room_needed_2 = Vector2(place.x,place.y+1)
+	else:
+		room_needed_2 = Vector2(place.x+1,place.y)
+		
+	var room_1_found = false
+	var room_2_found = false
+	for room in rooms:
+		if room.place == room_needed_1:
+			room_1_found = true
+		if room.place == room_needed_2:
+			room_2_found = true
+	if room_1_found and room_2_found:
+		visible = false
+		collision.disabled = true
+		room_selected = true
+	
+	
+
 func reset():
 	visible = true
 	collision.disabled = false

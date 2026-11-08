@@ -2,6 +2,15 @@
 
 [ext_resource type="Script" uid="uid://jcsm1agawsi7" path="res://scenes/walls.gd" id="1_yax5h"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_yax5h"]
+size = Vector3(1.2240392, 5.024414, 1.8750212)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0lpna"]
+size = Vector3(1, 5.010376, 1.9746094)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_exnah"]
+size = Vector3(2.0219727, 4.9609375, 1.0587158)
+
 [node name="Walls" type="Node3D" unique_id=1345010958]
 script = ExtResource("1_yax5h")
 
@@ -10,12 +19,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2, 0)
 use_collision = true
 size = Vector3(1, 5, 2)
 
+[node name="BodyRight" type="StaticBody3D" parent="WallRight" unique_id=2054926093]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallRight/BodyRight" unique_id=2042653500]
+shape = SubResource("BoxShape3D_yax5h")
+
 [node name="WallLeft" type="CSGBox3D" parent="." unique_id=679224087]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 2, 0)
 use_collision = true
 size = Vector3(1, 5, 2)
 
+[node name="BodyLeft" type="StaticBody3D" parent="WallLeft" unique_id=1416188447]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallLeft/BodyLeft" unique_id=905111948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.058532715, -0.0087890625)
+shape = SubResource("BoxShape3D_0lpna")
+
 [node name="WallForward" type="CSGBox3D" parent="." unique_id=2094225358]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -5.5)
 use_collision = true
 size = Vector3(2, 5, 1)
+
+[node name="BodyForward" type="StaticBody3D" parent="WallForward" unique_id=1158208714]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallForward/BodyForward" unique_id=1678899256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029052734, -0.009765625, 0.02935791)
+shape = SubResource("BoxShape3D_exnah")

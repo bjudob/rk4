@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5m7rr315ei7s" path="res://scenes/blueprint_ui.gd" id="1_m41cu"]
 [ext_resource type="Texture2D" uid="uid://jxn0w2s633n8" path="res://assets/room_icons/room_none.png" id="2_m41cu"]
+[ext_resource type="Texture2D" uid="uid://lxem56yqwlpo" path="res://jek4all.png" id="3_m41cu"]
 
 [node name="BlueprintUI" type="CanvasLayer" unique_id=1615486318]
 script = ExtResource("1_m41cu")
@@ -172,3 +173,8 @@ expand_mode = 2
 layout_mode = 2
 texture = ExtResource("2_m41cu")
 expand_mode = 2
+
+[node name="Reki" type="Sprite2D" parent="." unique_id=1612807328]
+position = Vector2(1284, 797.00006)
+scale = Vector2(3, 3)
+texture = ExtResource("3_m41cu")

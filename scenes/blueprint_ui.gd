@@ -1,7 +1,11 @@
 extends CanvasLayer
 
 @onready var player = get_tree().get_nodes_in_group("player")[0]
+@onready var reki = $Reki
 var room_none = load("res://assets/room_icons/room_none.png")
+
+const mid_reki_pos = Vector2(1285, 800)
+const scale_factor = 25
 
 @onready var blueprints = [
 	[
@@ -43,6 +47,9 @@ var room_none = load("res://assets/room_icons/room_none.png")
 
 func _ready() -> void:
 	visible = false
+
+func _process(delta: float):
+	reki.position = mid_reki_pos + scale_factor * Vector2(player.global_position.x, player.global_position.z)
 
 func draw_rooms(rooms):
 	reset()
