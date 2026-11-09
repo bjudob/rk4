@@ -35,11 +35,14 @@ var room_total_weights = 0
 
 # resources
 var days = 1
-var steps_default = 10
-var steps = 10
-var gems = 20
-var keys = 1
-var dices = 99
+var steps_default = 15
+var steps = 15
+var candies = 0
+var candies_default = 0
+var keys = 0
+var keys_default = 0
+var dices = 2
+var dices_default = 2
 
 # preload
 const door_scene = preload("door.tscn")
@@ -63,7 +66,7 @@ func _ready() -> void:
 			rooms_rnd.append(room_name)
 
 func _process(delta: float) -> void:
-	game_ui.update(days, steps, gems, keys, dices)
+	game_ui.update(days, steps, candies, keys, dices)
 	if Input.is_action_just_pressed("menu"):
 		if tarot_ui.visible:
 			tarot_ui.hide_ui()

@@ -32,6 +32,7 @@ door=""
 scroll_ui=""
 tarot_ui=""
 tarot=""
+key_ui=""
 
 [input]
 

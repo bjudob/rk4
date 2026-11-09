@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dyx64vxd8kbg1"]
+
+[ext_resource type="Texture2D" uid="uid://bhipmmru8jxu8" path="res://assets/icons/icon_key.png" id="1_6mryq"]
+[ext_resource type="Script" uid="uid://cb38swui3h84w" path="res://scenes/key_ui.gd" id="1_ck676"]
+[ext_resource type="Texture2D" uid="uid://c1dfja4cyu5gc" path="res://assets/icons/button_open_key.png" id="2_qj8y4"]
+[ext_resource type="Texture2D" uid="uid://c66doq1xmnr2" path="res://assets/icons/button_close_key.png" id="3_ck676"]
+[ext_resource type="AudioStream" uid="uid://b7cs68sw3rpac" path="res://music/crack_mini.wav" id="5_0nhi6"]
+
+[node name="KeyUI" type="CanvasLayer" unique_id=2125984063 groups=["key_ui"]]
+script = ExtResource("1_ck676")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=906874988]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 800
+theme_override_constants/margin_top = 300
+theme_override_constants/margin_right = 800
+theme_override_constants/margin_bottom = 300
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=236374374]
+layout_mode = 2
+
+[node name="KeyIcon" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=109227824]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("1_6mryq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=356540003]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="Open" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1638968072]
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("2_qj8y4")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Close" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=30617369]
+custom_minimum_size = Vector2(0, 0.02)
+layout_mode = 2
+mouse_filter = 0
+texture = ExtResource("3_ck676")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HoverSound" type="AudioStreamPlayer3D" parent="." unique_id=216860988]
+stream = ExtResource("5_0nhi6")
+
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainer/Open" to="." method="_on_open_gui_input"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/HBoxContainer/Open" to="." method="_on_open_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/HBoxContainer/Open" to="." method="_on_open_mouse_exited"]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainer/Close" to="." method="_on_close_gui_input"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/HBoxContainer/Close" to="." method="_on_close_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/HBoxContainer/Close" to="." method="_on_close_mouse_exited"]

@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://mhsldww7u3r0" path="res://scenes/tarot_ui.tscn" id="9_sww3w"]
 [ext_resource type="PackedScene" uid="uid://b4wwmshvudrv1" path="res://scenes/blueprint_ui.tscn" id="10_qouja"]
 [ext_resource type="PackedScene" uid="uid://cy558l45lti6d" path="res://scenes/room_ui.tscn" id="11_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://dyx64vxd8kbg1" path="res://scenes/key_ui.tscn" id="11_wljb1"]
 [ext_resource type="PackedScene" uid="uid://dkmf2q0bdlj1k" path="res://scenes/room_trees.tscn" id="12_dinhu"]
 [ext_resource type="PackedScene" uid="uid://coerr0y5yop0s" path="res://scenes/room_train.tscn" id="13_kvuet"]
 [ext_resource type="PackedScene" uid="uid://bv4dfi8ql4u5x" path="res://scenes/room_candles.tscn" id="14_trtic"]
@@ -80,6 +81,8 @@ visible = false
 [node name="TarotUI" parent="." unique_id=885113144 instance=ExtResource("9_sww3w")]
 
 [node name="BlueprintUI" parent="." unique_id=1615486318 instance=ExtResource("10_qouja")]
+
+[node name="KeyUI" parent="." unique_id=2125984063 instance=ExtResource("11_wljb1")]
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=986475359]
 use_collision = true

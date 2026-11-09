@@ -1,18 +1,21 @@
+class_name Door
 extends Interactable
 
 @export var same_level = true
 @export var place = Vector2(-1, -1)
+var entryDirection
+var place_to_place
 
 @onready var game = get_tree().get_nodes_in_group("game")[0]
 @onready var player = get_tree().get_nodes_in_group("player")[0]
+@onready var key_ui = get_tree().get_nodes_in_group("key_ui")[0]
 @onready var collision = $CollisionShape3D
 
-
+var key_needed = true
 var room_selected = false
 
 func interact():
-	var entryDirection = Room.EntryDirection.DOWN
-	var place_to_place = place
+	place_to_place = place
 	if same_level:
 		if  player.position.x < position.x:
 			entryDirection = Room.EntryDirection.LEFT
@@ -26,11 +29,17 @@ func interact():
 		else:
 			entryDirection = Room.EntryDirection.UP
 	
-	if not room_selected:
-		game.select_room(place_to_place, entryDirection)
-		visible = false
-		collision.disabled = true
-		room_selected = true
+	if not key_needed:
+		select_room()
+	else:
+		key_ui.show_ui(self)
+		
+
+func select_room():
+	game.select_room(place_to_place, entryDirection)
+	visible = false
+	collision.disabled = true
+	room_selected = true
 
 func on_room_spawn(rooms):
 	var room_needed_1 = place
