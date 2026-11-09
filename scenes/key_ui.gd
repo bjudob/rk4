@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var player = get_tree().get_nodes_in_group("player")[0]
+@onready var game = get_tree().get_nodes_in_group("game")[0]
 
 @onready var open_button = $MarginContainer/VBoxContainer/HBoxContainer/Open
 @onready var close_button = $MarginContainer/VBoxContainer/HBoxContainer/Close
@@ -29,6 +30,11 @@ func _on_open_mouse_exited() -> void:
 	
 func _on_open_gui_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact"):
+		if game.keys <= 0:
+			hover_sound.play()
+			return
+	
+		game.add_keys(-1)
 		get_viewport().set_input_as_handled()
 		player.unlock_move()
 		player.capture_mouse()

@@ -37,10 +37,10 @@ var room_total_weights = 0
 var days = 1
 var steps_default = 15
 var steps = 15
-var candies = 0
-var candies_default = 0
-var keys = 0
-var keys_default = 0
+var candies = 5
+var candies_default = 5
+var keys = 3
+var keys_default = 3
 var dices = 2
 var dices_default = 2
 
@@ -82,6 +82,15 @@ func add_steps(s: int):
 	steps += s	
 	if steps <= 0:
 		new_day_ui.new_day(days)
+		
+func add_keys(k: int):
+	keys += k
+	
+func add_candies(c: int):
+	candies += c
+	
+func add_dices(d: int):
+	dices += d
 	
 func new_day():
 	steps = steps_default
