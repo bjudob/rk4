@@ -151,7 +151,20 @@ func highlight_tarot(i: int):
 func remove_highlight():
 	is_highlight = false
 	highlight_card.visible = false
+	
+	
+func _on_call_it_a_day_gui_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("interact"):
+		visible = false
+		player.unlock_move()
+		game.show_new_day_ui()
 
+func _on_exit_game_gui_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("interact"):
+		game.save_and_quit()
+
+
+# hover boilerplate
 func _on_card_mouse_entered(i: int):
 	cards[i].modulate = HOVER_COLOR
 	hover_sound.play()
@@ -169,13 +182,6 @@ func _on_call_it_a_day_mouse_exited() -> void:
 	call_it_a_day.modulate = NORMAL_COLOR
 
 
-func _on_call_it_a_day_gui_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("interact"):
-		visible = false
-		player.unlock_move()
-		game.show_new_day_ui()
-
-
 func _on_exit_game_mouse_entered() -> void:
 	exit_game.modulate = HOVER_COLOR
 	hover_sound.play()
@@ -183,7 +189,3 @@ func _on_exit_game_mouse_entered() -> void:
 
 func _on_exit_game_mouse_exited() -> void:
 	exit_game.modulate = NORMAL_COLOR
-
-
-func _on_exit_game_gui_input(event: InputEvent) -> void:
-	pass # Replace with function body.

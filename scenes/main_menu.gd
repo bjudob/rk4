@@ -24,6 +24,8 @@ func _on_exit_gui_input(event: InputEvent) -> void:
 	if (event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT):
 		get_tree().quit()
 
+
+# hover boilerplate
 func _on_play_mouse_entered() -> void:
 	play_button.modulate = HOVER_COLOR
 	hover_sound.play()

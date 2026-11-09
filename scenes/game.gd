@@ -108,6 +108,10 @@ func new_day():
 	blueprint_ui.draw_rooms(rooms.values())
 	save()
 
+func save_and_quit():
+	new_day()
+	get_tree().quit()
+
 # rooms
 func select_room(place: Vector2, entry_direction: Room.EntryDirection) -> void:
 	var rooms_used_tmp = []

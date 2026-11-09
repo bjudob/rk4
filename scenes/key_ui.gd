@@ -20,13 +20,6 @@ func show_ui(d: Door):
 	visible = true
 	player.lock_move()
 
-func _on_open_mouse_entered() -> void:
-	open_button.modulate = HOVER_COLOR
-	hover_sound.play()
-
-func _on_open_mouse_exited() -> void:
-	open_button.modulate = NORMAL_COLOR
-	
 func _on_open_gui_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact"):
 		if game.keys <= 0:
@@ -38,6 +31,21 @@ func _on_open_gui_input(event: InputEvent) -> void:
 		player.unlock_move()
 		door.select_room()
 		visible = false
+		
+func _on_close_gui_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("interact"):
+		get_viewport().set_input_as_handled()
+		player.unlock_move()
+		visible = false
+
+
+# hover boilerplate
+func _on_open_mouse_entered() -> void:
+	open_button.modulate = HOVER_COLOR
+	hover_sound.play()
+
+func _on_open_mouse_exited() -> void:
+	open_button.modulate = NORMAL_COLOR
 
 func _on_close_mouse_entered() -> void:
 	close_button.modulate = HOVER_COLOR
@@ -45,9 +53,3 @@ func _on_close_mouse_entered() -> void:
 
 func _on_close_mouse_exited() -> void:
 	close_button.modulate = NORMAL_COLOR
-
-func _on_close_gui_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("interact"):
-		get_viewport().set_input_as_handled()
-		player.unlock_move()
-		visible = false
