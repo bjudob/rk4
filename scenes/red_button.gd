@@ -1,7 +1,5 @@
 extends Interactable
 
-@onready var game = get_tree().get_nodes_in_group("game")[0]
-
 @onready var anim = $"../AnimationPlayer"
 @onready var sound = $"../RedButtonPushSound"
 

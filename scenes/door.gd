@@ -6,10 +6,7 @@ extends Interactable
 var entryDirection
 var place_to_place
 
-@onready var game = get_tree().get_nodes_in_group("game")[0]
-@onready var player = get_tree().get_nodes_in_group("player")[0]
 @onready var key_ui = get_tree().get_nodes_in_group("key_ui")[0]
-@onready var collision = $CollisionShape3D
 
 var key_needed = true
 var room_selected = false

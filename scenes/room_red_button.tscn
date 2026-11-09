@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://btog1euv555xn" path="res://scenes/red_button.gd" id="2_x8sfy"]
 [ext_resource type="PackedScene" uid="uid://ddd6t2m8tx8uo" path="res://scenes/scroll.tscn" id="5_jdt4i"]
 [ext_resource type="AudioStream" uid="uid://dyr3cft48gdnd" path="res://music/red_button.wav" id="6_uc3pj"]
+[ext_resource type="PackedScene" uid="uid://2v8a7rqsi7dk" path="res://scenes/key.tscn" id="7_t25kh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbeet"]
 albedo_color = Color(1, 0, 0, 1)
@@ -106,3 +107,6 @@ transform = Transform3D(0.79157853, 0.50612795, 0.3424002, 0.017683625, 0.541123
 
 [node name="RedButtonPushSound" type="AudioStreamPlayer3D" parent="." unique_id=437443381]
 stream = ExtResource("6_uc3pj")
+
+[node name="Key" parent="." unique_id=1194844630 instance=ExtResource("7_t25kh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.77117854, 1.0322406)

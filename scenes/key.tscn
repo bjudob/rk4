@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://2v8a7rqsi7dk"]
+
+[ext_resource type="Script" uid="uid://ckhlf3ulkmtp1" path="res://scenes/key.gd" id="1_fttkb"]
+[ext_resource type="PackedScene" uid="uid://c0pljn0nthhmi" path="res://assets/MeshyAI/key.glb" id="1_yk2u2"]
+[ext_resource type="AudioStream" uid="uid://dpxebe82qcy1t" path="res://music/key_sound.ogg" id="3_wy8tx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fttkb"]
+size = Vector3(0.44158936, 0.4809265, 0.43014526)
+
+[node name="Key" type="StaticBody3D" unique_id=1194844630 groups=["interactable"]]
+script = ExtResource("1_fttkb")
+
+[node name="model" parent="." unique_id=850561800 instance=ExtResource("1_yk2u2")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1140612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006072998, 0.021194458, -0.034469604)
+shape = SubResource("BoxShape3D_fttkb")
+
+[node name="KeySound" type="AudioStreamPlayer3D" parent="." unique_id=1293678137]
+stream = ExtResource("3_wy8tx")

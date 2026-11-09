@@ -1,7 +1,11 @@
 class_name Interactable
 extends StaticBody3D
 
+@onready var game = get_tree().get_nodes_in_group("game")[0]
+@onready var player = get_tree().get_nodes_in_group("player")[0]
 @onready var scroll_ui = get_tree().get_nodes_in_group("scroll_ui")[0]
+
+@onready var collision = $CollisionShape3D
 
 const OUTLINE_MATERIAL = preload("res://materials/outline.tres")
 @onready var model = $model
