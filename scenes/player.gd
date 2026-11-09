@@ -40,18 +40,29 @@ func _unhandled_input(event: InputEvent) -> void:
 	if mouse_captured and event is InputEventMouseMotion:
 		rotate_look(event.relative)
 
+	if move_lock:
+		return
+
+	if event.is_action_pressed("interact") and not event.is_echo():
+		if raycast.is_colliding():
+			var target = raycast.get_collider()
+
+			if is_instance_of(target, Interactable):
+				target.interact()
+
 func _handle_raycast():
 	if !raycast.is_colliding():
 		_unfocus(-1)
 		return
+
 	var target = raycast.get_collider()
+
 	if !is_instance_of(target, Interactable):
 		_unfocus(-1)
-		return	
+		return
+
 	_unfocus(target.get_instance_id())
 	target.focus()
-	if Input.is_action_just_pressed("interact"):
-		target.interact()
 
 func _unfocus(skip: int):
 	var interactables = get_tree().get_nodes_in_group("interactable")

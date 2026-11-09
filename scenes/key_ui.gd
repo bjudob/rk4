@@ -30,9 +30,9 @@ func _on_open_mouse_exited() -> void:
 func _on_open_gui_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact"):
 		get_viewport().set_input_as_handled()
-		door.select_room()
 		player.unlock_move()
 		player.capture_mouse()
+		door.select_room()
 		visible = false
 
 func _on_close_mouse_entered() -> void:
