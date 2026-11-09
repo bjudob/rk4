@@ -19,7 +19,6 @@ func show_ui(d: Door):
 	door = d
 	visible = true
 	player.lock_move()
-	player.release_mouse()
 
 func _on_open_mouse_entered() -> void:
 	open_button.modulate = HOVER_COLOR
@@ -37,7 +36,6 @@ func _on_open_gui_input(event: InputEvent) -> void:
 		game.add_keys(-1)
 		get_viewport().set_input_as_handled()
 		player.unlock_move()
-		player.capture_mouse()
 		door.select_room()
 		visible = false
 
@@ -52,5 +50,4 @@ func _on_close_gui_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact"):
 		get_viewport().set_input_as_handled()
 		player.unlock_move()
-		player.capture_mouse()
 		visible = false

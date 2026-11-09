@@ -1,9 +1,13 @@
 extends CanvasLayer
 
 @onready var player = get_tree().get_nodes_in_group("player")[0]
+@onready var game = get_tree().get_nodes_in_group("game")[0]
+
 @onready var new_tarot_sound = $NewTarotSound
 @onready var hover_sound = $HoverSound
 @onready var highlight_card = $HighlightCard
+@onready var call_it_a_day = $MarginContainer/VBoxContainer/ButtonContainer/CallItADay
+@onready var exit_game = $MarginContainer/VBoxContainer/ButtonContainer/ExitGame
 var is_highlight = false
 var just_highlighted = false
 
@@ -154,3 +158,32 @@ func _on_card_mouse_entered(i: int):
 	
 func _on_card_mouse_exited(i: int):
 	cards[i].modulate = NORMAL_COLOR
+
+
+func _on_call_it_a_day_mouse_entered() -> void:
+	call_it_a_day.modulate = HOVER_COLOR
+	hover_sound.play()
+
+
+func _on_call_it_a_day_mouse_exited() -> void:
+	call_it_a_day.modulate = NORMAL_COLOR
+
+
+func _on_call_it_a_day_gui_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("interact"):
+		visible = false
+		player.unlock_move()
+		game.show_new_day_ui()
+
+
+func _on_exit_game_mouse_entered() -> void:
+	exit_game.modulate = HOVER_COLOR
+	hover_sound.play()
+
+
+func _on_exit_game_mouse_exited() -> void:
+	exit_game.modulate = NORMAL_COLOR
+
+
+func _on_exit_game_gui_input(event: InputEvent) -> void:
+	pass # Replace with function body.

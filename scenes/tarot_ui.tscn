@@ -2,8 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://dtyha7evnkm14" path="res://assets/tarot/card_back.png" id="1_gqnyx"]
 [ext_resource type="Script" uid="uid://m08iwmvyw8o2" path="res://scenes/tarot_ui.gd" id="1_kghdv"]
+[ext_resource type="Texture2D" uid="uid://bb21m5wx72vvx" path="res://assets/icons/button_call_it_a_day.png" id="3_m0y7y"]
 [ext_resource type="AudioStream" uid="uid://b7cs68sw3rpac" path="res://music/crack_mini.wav" id="3_ro06v"]
 [ext_resource type="Texture2D" uid="uid://uvcogvg5esk7" path="res://assets/tarot/0_the_fool.png" id="4_oau3a"]
+[ext_resource type="Texture2D" uid="uid://dvv0klsu4cpce" path="res://assets/icons/button_exit.png" id="4_yshep"]
 [ext_resource type="AudioStream" uid="uid://x10j1yxab6t5" path="res://music/christmas_bells_maxi.mp3" id="5_62yyc"]
 
 [node name="TarotUI" type="CanvasLayer" unique_id=885113144 groups=["tarot_ui"]]
@@ -22,6 +24,7 @@ theme_override_constants/margin_bottom = 100
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1421211632]
 layout_mode = 2
+theme_override_constants/separation = 100
 alignment = 1
 
 [node name="TarotContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1142249493]
@@ -154,7 +157,22 @@ texture = ExtResource("1_gqnyx")
 expand_mode = 3
 
 [node name="ButtonContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2004847105]
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="CallItADay" type="TextureRect" parent="MarginContainer/VBoxContainer/ButtonContainer" unique_id=1178939525]
+layout_mode = 2
+texture = ExtResource("3_m0y7y")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="ExitGame" type="TextureRect" parent="MarginContainer/VBoxContainer/ButtonContainer" unique_id=230198657]
+layout_mode = 2
+texture = ExtResource("4_yshep")
+expand_mode = 3
+stretch_mode = 5
 
 [node name="HoverSound" type="AudioStreamPlayer3D" parent="." unique_id=54514614]
 stream = ExtResource("3_ro06v")
@@ -167,3 +185,10 @@ texture = ExtResource("4_oau3a")
 
 [node name="NewTarotSound" type="AudioStreamPlayer3D" parent="." unique_id=1925858566]
 stream = ExtResource("5_62yyc")
+
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/ButtonContainer/CallItADay" to="." method="_on_call_it_a_day_gui_input"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/ButtonContainer/CallItADay" to="." method="_on_call_it_a_day_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/ButtonContainer/CallItADay" to="." method="_on_call_it_a_day_mouse_exited"]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/ButtonContainer/ExitGame" to="." method="_on_exit_game_gui_input"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/ButtonContainer/ExitGame" to="." method="_on_exit_game_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/ButtonContainer/ExitGame" to="." method="_on_exit_game_mouse_exited"]

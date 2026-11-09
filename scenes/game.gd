@@ -81,8 +81,11 @@ func _process(delta: float) -> void:
 func add_steps(s: int):
 	steps += s	
 	if steps <= 0:
-		new_day_ui.new_day(days)
-		
+		show_new_day_ui()
+
+func show_new_day_ui():
+	new_day_ui.new_day(days)
+
 func add_keys(k: int):
 	keys += k
 	
