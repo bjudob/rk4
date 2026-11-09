@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://7imioh0dco84" path="res://scenes/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://due5toren1i3q" path="res://assets/icons/background_szarvas.jpg" id="2_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://bes7ak27whjbe" path="res://assets/icons/title_rk_4.png" id="3_rtw2f"]
-[ext_resource type="Texture2D" uid="uid://djw3rdr8yowx6" path="res://assets/icons/winter_button_play.png" id="4_oa1go"]
-[ext_resource type="Texture2D" uid="uid://dg7p2m2a02cnk" path="res://assets/icons/winter_button_load.png" id="5_tbmy8"]
-[ext_resource type="Texture2D" uid="uid://dfhjrm66v5lm3" path="res://assets/icons/winter_button_exit.png" id="6_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://cig6kt877a10f" path="res://assets/icons/button_new_game.png" id="5_oa1go"]
+[ext_resource type="Texture2D" uid="uid://cccg24iesgcni" path="res://assets/icons/button_continue.png" id="6_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://dvv0klsu4cpce" path="res://assets/icons/button_exit.png" id="7_jk1qb"]
 [ext_resource type="AudioStream" uid="uid://cfokncd1cxwbs" path="res://music/menu_button_hover.mp3" id="7_oa1go"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=856291682]
@@ -29,7 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 1000
+theme_override_constants/margin_left = 1100
 theme_override_constants/margin_top = 600
 theme_override_constants/margin_right = 1000
 
@@ -38,16 +38,25 @@ layout_mode = 2
 alignment = 1
 
 [node name="Play" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1930832832]
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
-texture = ExtResource("4_oa1go")
+texture = ExtResource("5_oa1go")
+expand_mode = 3
+stretch_mode = 4
 
 [node name="Continue" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=238437709]
+custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
-texture = ExtResource("5_tbmy8")
+texture = ExtResource("6_tbmy8")
+expand_mode = 3
+stretch_mode = 4
 
 [node name="Exit" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1435797527]
+custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
-texture = ExtResource("6_jk1qb")
+texture = ExtResource("7_jk1qb")
+expand_mode = 3
+stretch_mode = 4
 
 [connection signal="gui_input" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_gui_input"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_mouse_entered"]

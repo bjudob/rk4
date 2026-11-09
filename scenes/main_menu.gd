@@ -2,6 +2,9 @@ extends CanvasLayer
 
 @onready var game = get_tree().get_nodes_in_group("game")[0]
 
+const NORMAL_COLOR = Color(1, 1, 1, 1)
+const HOVER_COLOR = Color(0.4, 0.4, 0.4, 1)
+
 @onready var play_button = $MarginContainer/VBoxContainer/Play
 @onready var continue_button = $MarginContainer/VBoxContainer/Continue
 @onready var exit_button = $MarginContainer/VBoxContainer/Exit
@@ -22,22 +25,22 @@ func _on_exit_gui_input(event: InputEvent) -> void:
 		get_tree().quit()
 
 func _on_play_mouse_entered() -> void:
-	play_button.texture =  load("res://assets/icons/winter_button_play_hover.png")
+	play_button.modulate = HOVER_COLOR
 	hover_sound.play()
 
 func _on_play_mouse_exited() -> void:
-	play_button.texture =  load("res://assets/icons/winter_button_play.png")
+	play_button.modulate = NORMAL_COLOR
 
 func _on_continue_mouse_entered() -> void:
-	continue_button.texture =  load("res://assets/icons/winter_button_load_hover.png")
+	continue_button.modulate = HOVER_COLOR
 	hover_sound.play()
 	
 func _on_continue_mouse_exited() -> void:
-	continue_button.texture =  load("res://assets/icons/winter_button_load.png")
+	continue_button.modulate = NORMAL_COLOR
 
 func _on_exit_mouse_entered() -> void:
-	exit_button.texture =  load("res://assets/icons/winter_button_exit_hover.png")
+	exit_button.modulate = HOVER_COLOR
 	hover_sound.play()
 
 func _on_exit_mouse_exited() -> void:
-	exit_button.texture =  load("res://assets/icons/winter_button_exit.png")
+	exit_button.modulate = NORMAL_COLOR

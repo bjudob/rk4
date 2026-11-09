@@ -1,6 +1,9 @@
 extends Interactable
 
+@onready var game = get_tree().get_nodes_in_group("game")[0]
+
 @onready var anim = $"../AnimationPlayer"
+@onready var sound = $"../RedButtonPushSound"
 
 var pushed = false
 
@@ -12,6 +15,7 @@ func interact():
 		return
 	pushed = true
 	anim.play("push")
+	sound.play()
 
 func reset():
 	pushed = false

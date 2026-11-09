@@ -5,7 +5,7 @@ extends CanvasLayer
 var room_none = load("res://assets/room_icons/room_none.png")
 
 const mid_reki_pos = Vector2(1285, 800)
-const scale_factor = 25
+const scale_factor = 22.7
 
 @onready var blueprints = [
 	[
