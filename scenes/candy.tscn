@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://brljfq6k8wh6q"]
+
+[ext_resource type="PackedScene" uid="uid://6sm8nw3xwevc" path="res://assets/MeshyAI/candy.glb" id="1_unhbl"]
+[ext_resource type="Script" uid="uid://lj2qprvvh7wm" path="res://scenes/candy.gd" id="1_v72dg"]
+[ext_resource type="AudioStream" uid="uid://ctjgqtrqcd1wg" path="res://music/candy_sound.wav" id="3_kola1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kola1"]
+size = Vector3(0.34786987, 0.46805573, 0.2489624)
+
+[node name="Candy" type="StaticBody3D" unique_id=2147321871]
+script = ExtResource("1_v72dg")
+
+[node name="model" parent="." unique_id=944154092 instance=ExtResource("1_unhbl")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=852969931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017044067, 0.016025543, 0.0043029785)
+shape = SubResource("BoxShape3D_kola1")
+
+[node name="InteractSound" type="AudioStreamPlayer3D" parent="." unique_id=1734875750]
+stream = ExtResource("3_kola1")

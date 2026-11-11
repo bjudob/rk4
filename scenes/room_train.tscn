@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://coskk2nepewdv" path="res://assets/HolidayKit/train-wagon.glb" id="2_ggp3i"]
 [ext_resource type="Texture2D" uid="uid://brb8abmlunha0" path="res://assets/room_icons/trains.png" id="2_t07gh"]
 [ext_resource type="PackedScene" uid="uid://c42eapdgbu46b" path="res://assets/HolidayKit/train-wagon-logs.glb" id="3_t07gh"]
+[ext_resource type="PackedScene" uid="uid://brljfq6k8wh6q" path="res://scenes/candy.tscn" id="3_yjuv5"]
 [ext_resource type="PackedScene" uid="uid://c4mfngnnhrdkf" path="res://assets/HolidayKit/train-tender.glb" id="4_njowa"]
 [ext_resource type="PackedScene" uid="uid://ci3ktpuxq322p" path="res://assets/HolidayKit/sock-green.glb" id="5_p3f07"]
 [ext_resource type="PackedScene" uid="uid://dmcicfthqaeye" path="res://assets/HolidayKit/lights-colored.glb" id="8_hqb0u"]
@@ -35,6 +36,9 @@ image = ExtResource("2_t07gh")
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=1761677655]
 size = Vector3(10, 1, 10)
+
+[node name="Candy" parent="." unique_id=2147321871 instance=ExtResource("3_yjuv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91057074, 0.19775176)
 
 [node name="trainset-rail-detailed-bend2" parent="." unique_id=1759014290 instance=ExtResource("1_6uwl1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5173261, 0.5694561, 3.0057564)
