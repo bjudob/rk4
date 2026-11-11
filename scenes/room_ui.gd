@@ -5,9 +5,13 @@ extends CanvasLayer
 @onready var hover_sound = $HoverSound
 
 var room_place = Vector2(-1,-1)
-@onready var room_1_image = $MarginContainer/HBoxContainer/MarginContainer/Room1Image
-@onready var room_2_image = $MarginContainer/HBoxContainer/MarginContainer2/Room2Image
-@onready var room_3_image = $MarginContainer/HBoxContainer/Room3Image
+@onready var room_1_image = $MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Room1Image
+@onready var room_2_image = $MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Room2Image
+@onready var room_3_image = $MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer/Room3Image
+
+@onready var room_1_label = $MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/Room1Label
+@onready var room_2_label = $MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer/Room2Label
+@onready var room_3_label = $MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/Room3Label
 
 const NORMAL_COLOR = Color(1, 1, 1, 1)
 const HOVER_COLOR = Color(0.4, 0.4, 0.4, 1)
@@ -28,12 +32,18 @@ func select_room(place: Vector2, room1: Room, room2: Room, room3: Room, ed: Room
 	room_1_image.texture = room1.image
 	room_2_image.texture = room2.image
 	room_3_image.texture = room3.image
+	room_1_label.text = str(room1.candy_cost)
+	room_2_label.text = str(room2.candy_cost)
+	room_3_label.text = str(room3.candy_cost)
+	
 	visible = true
 	entry_direction = ed
 	player.lock_move()
 	
 
 func spawn_room(room: Room) -> void:
+	if game.candies < room.candy_cost:
+		return
 	game.spawn_room(room_place, room, entry_direction)
 	player.unlock_move()
 	visible = false

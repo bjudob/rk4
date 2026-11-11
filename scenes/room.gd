@@ -5,7 +5,7 @@ extends Node3D
 @export var wall_type: Walls.Type = Walls.Type.ALL
 @export var image: Texture2D = load("res://assets/room_icons/tree.png")
 @export var rarity: int = 99
-@export var gem_cost = 0
+@export var candy_cost = 0
 
 @onready var game = get_tree().get_nodes_in_group("game")[0]
 @onready var room_00 = get_tree().get_nodes_in_group("room_00_pos")[0]

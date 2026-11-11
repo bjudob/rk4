@@ -154,6 +154,7 @@ func rooms_used_total_weight():
 	return weight
 
 func spawn_room(place: Vector2, room: Room, entry_direction: Room.EntryDirection) -> void:
+	candies -= room.candy_cost
 	rooms_used.append(room.room_name)
 	room.spawn(place, entry_direction)
 	blueprint_ui.draw_rooms(rooms.values())

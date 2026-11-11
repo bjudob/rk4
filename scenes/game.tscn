@@ -384,17 +384,20 @@ rarity = 1
 room_name = "Red Button"
 wall_type = 7
 rarity = 100
+candy_cost = 2
 
 [node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
 room_name = "Trees"
 wall_type = 1
 image = ExtResource("18_sgl2t")
 rarity = 100
+candy_cost = 3
 
 [node name="RoomTrain" parent="Rooms" unique_id=584542378 instance=ExtResource("13_kvuet")]
 room_name = "Train"
 wall_type = 2
 rarity = 100
+candy_cost = 2
 
 [node name="RoomCandles" parent="Rooms" unique_id=2056734870 instance=ExtResource("14_trtic")]
 room_name = "Candles"

@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://cy558l45lti6d"]
 
 [ext_resource type="Script" uid="uid://dk6qtiayynl5i" path="res://scenes/room_ui.gd" id="1_2uyx7"]
-[ext_resource type="Texture2D" uid="uid://bgrahxmanddwv" path="res://assets/room_icons/tree.png" id="1_c1pem"]
+[ext_resource type="Texture2D" uid="uid://5v6a0x75gxt7" path="res://assets/icons/icon_candy_cane.png" id="2_udin7"]
 [ext_resource type="AudioStream" uid="uid://b7cs68sw3rpac" path="res://music/crack_mini.wav" id="3_7atut"]
+[ext_resource type="Texture2D" uid="uid://jxn0w2s633n8" path="res://assets/room_icons/room_none.png" id="3_ig5lg"]
+[ext_resource type="Texture2D" uid="uid://chvk541omlbml" path="res://assets/room_icons/tree_room.png" id="4_7rpdx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_01lfp"]
+font_size = 64
 
 [node name="RoomUI" type="CanvasLayer" unique_id=567577425]
 script = ExtResource("1_2uyx7")
@@ -26,34 +31,101 @@ layout_mode = 2
 layout_mode = 2
 theme_override_constants/margin_right = 50
 
-[node name="Room1Image" type="TextureRect" parent="MarginContainer/HBoxContainer/MarginContainer" unique_id=1396674823]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer" unique_id=1148390127]
 layout_mode = 2
-texture = ExtResource("1_c1pem")
-expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=958800712]
+layout_mode = 2
+alignment = 1
+
+[node name="Room1Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=478272555]
+layout_mode = 2
+text = "1"
+label_settings = SubResource("LabelSettings_01lfp")
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1952933345]
+layout_mode = 2
+texture = ExtResource("2_udin7")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Room1Image" type="TextureRect" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1396674823]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+texture = ExtResource("3_ig5lg")
+expand_mode = 3
+stretch_mode = 5
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer" unique_id=1359270762]
 layout_mode = 2
 theme_override_constants/margin_right = 50
 
-[node name="Room2Image" type="TextureRect" parent="MarginContainer/HBoxContainer/MarginContainer2" unique_id=1727864301]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer2" unique_id=77790397]
 layout_mode = 2
-texture = ExtResource("1_c1pem")
-expand_mode = 2
+alignment = 1
 
-[node name="Room3Image" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=780648003]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=261823291]
 layout_mode = 2
-texture = ExtResource("1_c1pem")
-expand_mode = 2
+alignment = 1
+
+[node name="Room2Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1970286030]
+layout_mode = 2
+text = "1"
+label_settings = SubResource("LabelSettings_01lfp")
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=794299381]
+layout_mode = 2
+texture = ExtResource("2_udin7")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Room2Image" type="TextureRect" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1727864301]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+texture = ExtResource("4_7rpdx")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/HBoxContainer" unique_id=1796402028]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer3" unique_id=2047152839]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer" unique_id=1655697792]
+layout_mode = 2
+alignment = 1
+
+[node name="Room3Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer" unique_id=559333919]
+layout_mode = 2
+text = "1"
+label_settings = SubResource("LabelSettings_01lfp")
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer" unique_id=38698554]
+layout_mode = 2
+texture = ExtResource("2_udin7")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Room3Image" type="TextureRect" parent="MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer" unique_id=780648003]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+texture = ExtResource("4_7rpdx")
+expand_mode = 3
+stretch_mode = 5
 
 [node name="HoverSound" type="AudioStreamPlayer3D" parent="." unique_id=871416433]
 stream = ExtResource("3_7atut")
 
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/MarginContainer/Room1Image" to="." method="_on_room_1_image_gui_input"]
-[connection signal="mouse_entered" from="MarginContainer/HBoxContainer/MarginContainer/Room1Image" to="." method="_on_room_1_image_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/HBoxContainer/MarginContainer/Room1Image" to="." method="_on_room_1_image_mouse_exited"]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/MarginContainer2/Room2Image" to="." method="_on_room_2_image_gui_input"]
-[connection signal="mouse_entered" from="MarginContainer/HBoxContainer/MarginContainer2/Room2Image" to="." method="_on_room_2_image_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/HBoxContainer/MarginContainer2/Room2Image" to="." method="_on_room_2_image_mouse_exited"]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/Room3Image" to="." method="_on_room_3_image_gui_input"]
-[connection signal="mouse_entered" from="MarginContainer/HBoxContainer/Room3Image" to="." method="_on_room_3_image_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/HBoxContainer/Room3Image" to="." method="_on_room_3_image_mouse_exited"]
+[connection signal="gui_input" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Room1Image" to="." method="_on_room_1_image_gui_input"]
+[connection signal="mouse_entered" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Room1Image" to="." method="_on_room_1_image_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/Room1Image" to="." method="_on_room_1_image_mouse_exited"]
+[connection signal="gui_input" from="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Room2Image" to="." method="_on_room_2_image_gui_input"]
+[connection signal="mouse_entered" from="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Room2Image" to="." method="_on_room_2_image_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Room2Image" to="." method="_on_room_2_image_mouse_exited"]
+[connection signal="gui_input" from="MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer/Room3Image" to="." method="_on_room_3_image_gui_input"]
+[connection signal="mouse_entered" from="MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer/Room3Image" to="." method="_on_room_3_image_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/HBoxContainer/MarginContainer3/VBoxContainer/Room3Image" to="." method="_on_room_3_image_mouse_exited"]
