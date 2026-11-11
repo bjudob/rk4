@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ci4atq7uiwj2h"]
+
+[ext_resource type="PackedScene" uid="uid://cg1sdka5qtlhl" path="res://assets/MeshyAI/dice.glb" id="1_27nyo"]
+[ext_resource type="Script" uid="uid://db3o7lg3men3n" path="res://scenes/dice.gd" id="1_mg5ex"]
+[ext_resource type="AudioStream" uid="uid://b4s0r85q1bquw" path="res://music/dice_sound.wav" id="3_oi81l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_27nyo"]
+size = Vector3(0.41731262, 0.30718994, 0.28941345)
+
+[node name="Dice" type="StaticBody3D" unique_id=939750161 groups=["interactable"]]
+script = ExtResource("1_mg5ex")
+
+[node name="model" parent="." unique_id=1925611757 instance=ExtResource("1_27nyo")]
+transform = Transform3D(-0.2, 0, 0, 0, 0.2, -1.7484556e-08, 0, 1.7484556e-08, 0.2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1513207859]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0025558472, -0.0049743652, 0.0009536743)
+shape = SubResource("BoxShape3D_27nyo")
+
+[node name="InteractSound" type="AudioStreamPlayer3D" parent="." unique_id=1890326403]
+stream = ExtResource("3_oi81l")

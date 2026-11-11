@@ -18,7 +18,8 @@ func interact():
 	pass
 	
 func reset():
-	pass
+	visible = true
+	collision.disabled = false
 
 func focus():
 	mesh = get_first_mesh_child(model)

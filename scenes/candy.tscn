@@ -7,7 +7,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_kola1"]
 size = Vector3(0.34786987, 0.46805573, 0.2489624)
 
-[node name="Candy" type="StaticBody3D" unique_id=2147321871]
+[node name="Candy" type="StaticBody3D" unique_id=2147321871 groups=["interactable"]]
 script = ExtResource("1_v72dg")
 
 [node name="model" parent="." unique_id=944154092 instance=ExtResource("1_unhbl")]

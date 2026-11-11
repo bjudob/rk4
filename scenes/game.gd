@@ -97,6 +97,9 @@ func add_dices(d: int):
 	
 func new_day():
 	steps = steps_default
+	keys = keys_default
+	candies = candies_default
+	dices = dices_default
 	days = days + 1
 	player.position = player_starting_pos
 	rooms_used = []

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://k1m7s4irkkat" path="res://assets/room_icons/red_button.png" id="2_kijit"]
 [ext_resource type="Script" uid="uid://btog1euv555xn" path="res://scenes/red_button.gd" id="2_x8sfy"]
 [ext_resource type="PackedScene" uid="uid://ddd6t2m8tx8uo" path="res://scenes/scroll.tscn" id="5_jdt4i"]
+[ext_resource type="Texture2D" uid="uid://brusj11g8m8x0" path="res://assets/scrolls/scroll_hexa_6.png" id="6_3vnu2"]
 [ext_resource type="AudioStream" uid="uid://dyr3cft48gdnd" path="res://music/red_button.wav" id="6_uc3pj"]
 [ext_resource type="PackedScene" uid="uid://2v8a7rqsi7dk" path="res://scenes/key.tscn" id="7_t25kh"]
 
@@ -104,6 +105,7 @@ libraries/ = SubResource("AnimationLibrary_kijit")
 
 [node name="Scroll" parent="." unique_id=1912316633 instance=ExtResource("5_jdt4i")]
 transform = Transform3D(0.79157853, 0.50612795, 0.3424002, 0.017683625, 0.54112303, -0.8407575, -0.61081153, 0.67158043, 0.4193912, 0.11289525, 0.68320346, -1.6825211)
+scroll = ExtResource("6_3vnu2")
 
 [node name="RedButtonPushSound" type="AudioStreamPlayer3D" parent="." unique_id=437443381]
 stream = ExtResource("6_uc3pj")
