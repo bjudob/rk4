@@ -39,19 +39,28 @@ var cards = []
 @onready var card21 = $MarginContainer/VBoxContainer/TarotContainer/Rows/Row2/Card21
 
 var tarots = []
-var tarot0 = load("res://assets/tarot/0_the_fool.png")
-var tarot1 = load("res://assets/tarot/1_the_magician.png")
-var tarot2 = load("res://assets/tarot/2_the_high_priestess.png")
-var tarot3 = load("res://assets/tarot/3_the_empress.png")
-var tarot4 = load("res://assets/tarot/4_the_emperor.png")
-var tarot5 = load("res://assets/tarot/5_the_hierophant.png")
-var tarot6 = load("res://assets/tarot/6_the_lovers.png")
-var tarot7 = load("res://assets/tarot/7_the_chariot.png")
-var tarot8 = load("res://assets/tarot/8_strength.png")
-var tarot9 = load("res://assets/tarot/9_the_hermit.png")
-var tarot10 = load("res://assets/tarot/10_the_wheel_of_fortune.png")
-var tarot11 = load("res://assets/tarot/11_justice.png")
-var tarot12 = load("res://assets/tarot/12_the_hanged_man.png")
+var tarot0 = load("res://assets/tarot_new/0_the_fool.png")
+var tarot1 = load("res://assets/tarot_new/1_the_magician.png")
+var tarot2 = load("res://assets/tarot_new/2_the_high_priestess.png")
+var tarot3 = load("res://assets/tarot_new/3_the_empress.png")
+var tarot4 = load("res://assets/tarot_new/4_the_emperor.png")
+var tarot5 = load("res://assets/tarot_new/5_the_hierophant.png")
+var tarot6 = load("res://assets/tarot_new/6_the_lovers.png")
+var tarot7 = load("res://assets/tarot_new/7_the_chariot.png")
+var tarot8 = load("res://assets/tarot_new/8_strength.png")
+var tarot9 = load("res://assets/tarot_new/9_the_hermit.png")
+var tarot10 = load("res://assets/tarot_new/10_the_wheel_of_fortune.png")
+var tarot11 = load("res://assets/tarot_new/11_justice.png")
+var tarot12 = load("res://assets/tarot_new/12_the_hanged_man.png")
+var tarot13 = load("res://assets/tarot_new/13_death.png")
+var tarot14 = load("res://assets/tarot_new/14_temperance.png")
+var tarot15 = load("res://assets/tarot_new/15_the_devil.png")
+var tarot16 = load("res://assets/tarot_new/16_the_tower.png")
+var tarot17 = load("res://assets/tarot_new/17_the_star.png")
+var tarot18 = load("res://assets/tarot_new/18_the_moon.png")
+var tarot19 = load("res://assets/tarot_new/19_the_sun.png")
+var tarot20 = load("res://assets/tarot_new/20_judgment.png")
+var tarot21 = load("res://assets/tarot_new/21_the_world.png")
 
 var tarots_found = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
 
@@ -96,6 +105,15 @@ func _ready() -> void:
 		tarot10,
 		tarot11,
 		tarot12,
+		tarot13,
+		tarot14,
+		tarot15,
+		tarot16,
+		tarot17,
+		tarot18,
+		tarot19,
+		tarot20,
+		tarot21,
 	]
 	
 	for i in cards.size():
