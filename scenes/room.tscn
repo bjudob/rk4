@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bx4cl7djkqx7r" path="res://assets/Christmas/chair_large_red.gltf" id="9_qtoah"]
 [ext_resource type="Texture2D" uid="uid://y1llvtm36njw" path="res://assets/scrolls/scroll_empty.png" id="9_ybpoa"]
 [ext_resource type="PackedScene" uid="uid://dkah87ysm1alf" path="res://assets/Christmas/present_B_blue.gltf" id="10_tk5fv"]
+[ext_resource type="Texture2D" uid="uid://b16ywxw0m1gb7" path="res://assets/painting/4_1_ar.png" id="11_tk5fv"]
+[ext_resource type="Texture2D" uid="uid://dqfcgyr5d8lch" path="res://assets/painting/4_1_var.png" id="12_w68ji"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_14vil"]
 size = Vector3(0.41503906, 1, 1)
@@ -74,3 +76,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8930674, 0.2612121, 4.38555
 
 [node name="present_B_blue5" parent="." unique_id=1355504027 instance=ExtResource("10_tk5fv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.922439, -0.047466755, 3.9230742)
+
+[node name="Painting1" type="Sprite3D" parent="." unique_id=1302341822]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 2.2527533, 2.5331836, -4.89602)
+texture = ExtResource("11_tk5fv")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=171790412]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 3.0680287, 2.5331836, -4.89602)
+texture = ExtResource("12_w68ji")

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dovq8p4rke474" path="res://assets/Fantasy/Bag.gltf" id="6_35rc5"]
 [ext_resource type="PackedScene" uid="uid://c3a4lrhyg7yjg" path="res://assets/Fantasy/Barrel.gltf" id="7_4gds8"]
 [ext_resource type="PackedScene" uid="uid://mmg34pliv5e3" path="res://assets/Fantasy/Barrel_Holder.gltf" id="8_ttg80"]
+[ext_resource type="Texture2D" uid="uid://b16ywxw0m1gb7" path="res://assets/painting/4_1_ar.png" id="9_cyw86"]
 
 [node name="RoomWorkshop" type="Node3D" unique_id=1601642086]
 script = ExtResource("1_u3r4s")
@@ -49,3 +50,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1604824, 0.5275874, 1.66796
 
 [node name="Barrel_Holder2" parent="." unique_id=564245326 instance=ExtResource("8_ttg80")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7621765, 0.44833946, 3.9574351)
+
+[node name="Painting1" type="Sprite3D" parent="." unique_id=1330573306]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 3.113082, 2.524262, 4.862776)
+texture = ExtResource("9_cyw86")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=1044563295]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 2.0058184, 2.524262, 4.862776)
+texture = ExtResource("9_cyw86")

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b312xpmhfan6i" path="res://assets/HolidayKit/bench.glb" id="1_vxlmp"]
 [ext_resource type="PackedScene" uid="uid://dragf3vt32cku" path="res://assets/HolidayKit/bench-short.glb" id="2_6fdgs"]
 [ext_resource type="PackedScene" uid="uid://q2nyd60foqml" path="res://assets/HolidayKit/floor-wood-snow.glb" id="3_r8jad"]
+[ext_resource type="Texture2D" uid="uid://b16ywxw0m1gb7" path="res://assets/painting/4_1_ar.png" id="5_r8jad"]
 
 [node name="RoomRest" type="Node3D" unique_id=1819664826]
 script = ExtResource("1_6fdgs")
@@ -19,3 +20,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5857325, 0.5133555, -1.6303
 
 [node name="floor-wood-snow2" parent="." unique_id=403200367 instance=ExtResource("3_r8jad")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.673234, 0.5228414, 0.8304057)
+
+[node name="Painting1" type="Sprite3D" parent="." unique_id=188885473]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -3.1081722, 2.6060505, -4.7507887)
+texture = ExtResource("5_r8jad")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=665771909]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -2.1266909, 2.6060505, -4.7507887)
+texture = ExtResource("5_r8jad")

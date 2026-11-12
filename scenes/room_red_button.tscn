@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://brusj11g8m8x0" path="res://assets/scrolls/scroll_hexa_6.png" id="6_3vnu2"]
 [ext_resource type="AudioStream" uid="uid://dyr3cft48gdnd" path="res://music/red_button.wav" id="6_uc3pj"]
 [ext_resource type="PackedScene" uid="uid://2v8a7rqsi7dk" path="res://scenes/key.tscn" id="7_t25kh"]
+[ext_resource type="Texture2D" uid="uid://b16ywxw0m1gb7" path="res://assets/painting/4_1_ar.png" id="9_yoxb2"]
+[ext_resource type="Texture2D" uid="uid://dqfcgyr5d8lch" path="res://assets/painting/4_1_var.png" id="10_eku5b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbeet"]
 albedo_color = Color(1, 0, 0, 1)
@@ -112,3 +114,11 @@ stream = ExtResource("6_uc3pj")
 
 [node name="Key" parent="." unique_id=1194844630 instance=ExtResource("7_t25kh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.77117854, 1.0322406)
+
+[node name="Painting1" type="Sprite3D" parent="." unique_id=961562038]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1.9986515, 3.0226936, -1.4882121)
+texture = ExtResource("9_yoxb2")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=1115527224]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -1.9340317, 3.0226936, -1.4882121)
+texture = ExtResource("10_eku5b")

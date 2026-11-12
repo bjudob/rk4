@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cbyiytw2cv8si" path="res://assets/HolidayKit/lantern-hanging.glb" id="7_54epk"]
 [ext_resource type="PackedScene" uid="uid://dxkcf0lhrkmyq" path="res://assets/HolidayKit/festivus-pole.glb" id="8_bnlbi"]
 [ext_resource type="PackedScene" uid="uid://b312xpmhfan6i" path="res://assets/HolidayKit/bench.glb" id="9_56d6v"]
+[ext_resource type="Texture2D" uid="uid://b16ywxw0m1gb7" path="res://assets/painting/4_1_ar.png" id="10_54epk"]
 
 [node name="RoomCandles" type="Node3D" unique_id=2056734870]
 script = ExtResource("1_tb5ne")
@@ -41,3 +42,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0142822, 0.65250593, 0.988
 
 [node name="bench2" parent="." unique_id=771825809 instance=ExtResource("9_56d6v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.681551, 0.59736824, 0.5404651)
+
+[node name="Painting1" type="Sprite3D" parent="." unique_id=1637635839]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 3.4715433, 2.9943378, -4.7406707)
+texture = ExtResource("10_54epk")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=941797669]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 2.1468408, 2.9943378, -4.726794)
+texture = ExtResource("10_54epk")

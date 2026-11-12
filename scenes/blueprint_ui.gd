@@ -45,6 +45,48 @@ const scale_factor = 22.7
 	]
 ]
 
+@onready var pictures = [
+	[
+		[
+			"res://assets/painting/4_1_ar.png",
+			"res://assets/painting/4_1_var.png"
+		],
+		[
+			"res://assets/painting/4_2_etel.png",
+			"res://assets/painting/4_2_tel.png"
+		],
+		[
+			"res://assets/painting/4_3_arat.png",
+			"res://assets/painting/4_3_garat.png"
+		],
+		[
+			
+		]
+	],
+	[
+		[
+			"res://assets/painting/5_1_agyon.png",
+			"res://assets/painting/5_1_vagyon.png"
+		],
+		[
+			"res://assets/painting/5_2_imak.png",
+			"res://assets/painting/5_2_mak.png"
+		],
+		[
+			"res://assets/painting/5_3_ullo.png",
+			"res://assets/painting/5_3_ulo.png"
+		],
+		[
+			"res://assets/painting/5_4_alom.png",
+			"res://assets/painting/5_4_lom.png"
+		],
+		[
+			"res://assets/painting/5_5_ian.png"
+			"res://assets/painting/5_5_yang.png"
+		]
+	]
+]
+
 func _ready() -> void:
 	visible = false
 

@@ -11,6 +11,9 @@ extends Node3D
 @onready var room_00 = get_tree().get_nodes_in_group("room_00_pos")[0]
 @onready var lock = $Lock
 
+@onready var painting1 = $Painting1
+@onready var painting2 = $Painting2
+
 enum EntryDirection {
 	LEFT,
 	RIGHT,

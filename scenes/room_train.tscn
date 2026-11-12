@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://3lq8cw5qppu3" path="res://assets/HolidayKit/present-b-rectangle.glb" id="14_43prm"]
 [ext_resource type="PackedScene" uid="uid://dstc28n01xn1m" path="res://assets/HolidayKit/present-b-round.glb" id="15_7cfcb"]
 [ext_resource type="PackedScene" uid="uid://c6a754hxrns23" path="res://assets/HolidayKit/reindeer.glb" id="16_vjp3c"]
-[ext_resource type="PackedScene" uid="uid://bmdttlmvvw5ef" path="res://assets/HolidayKit/rocks-large.glb" id="17_ccn6a"]
 [ext_resource type="PackedScene" uid="uid://cskhllg8l7agn" path="res://assets/HolidayKit/sled-long.glb" id="18_67u8o"]
 [ext_resource type="PackedScene" uid="uid://bhq3jx425dwts" path="res://assets/HolidayKit/sled.glb" id="19_uv72q"]
 [ext_resource type="PackedScene" uid="uid://bdsxiut4m23t2" path="res://assets/HolidayKit/snow-bunker.glb" id="20_q5dnl"]
@@ -29,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://b0etr43rakk0e" path="res://assets/HolidayKit/wreath-decorated.glb" id="26_gbj11"]
 [ext_resource type="PackedScene" uid="uid://4op2l6bhr6r8" path="res://assets/HolidayKit/kwanzaa-kikombe.glb" id="26_yjuv5"]
 [ext_resource type="PackedScene" uid="uid://cbyiytw2cv8si" path="res://assets/HolidayKit/lantern-hanging.glb" id="27_7nt65"]
+[ext_resource type="Texture2D" uid="uid://b16ywxw0m1gb7" path="res://assets/painting/4_1_ar.png" id="29_7nt65"]
 
 [node name="RoomTrain" type="Node3D" unique_id=584542378]
 script = ExtResource("1_ggp3i")
@@ -80,9 +80,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8401003, 0.57554555, 1.835
 [node name="reindeer2" parent="." unique_id=1763710288 instance=ExtResource("16_vjp3c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5044732, 0.54416466, 2.5263798)
 
-[node name="rocks-large2" parent="." unique_id=609667427 instance=ExtResource("17_ccn6a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4645233, 0.58350253, 3.6319685)
-
 [node name="sled-long2" parent="." unique_id=1615843247 instance=ExtResource("18_67u8o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4903467, 0.4756565, 3.3928566)
 
@@ -121,3 +118,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 0)
 
 [node name="lantern-hanging2" parent="." unique_id=817691075 instance=ExtResource("27_7nt65")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 1)
+
+[node name="Painting1" type="Sprite3D" parent="." unique_id=1133990417]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 3.12446, 2.442519, -4.8419895)
+texture = ExtResource("29_7nt65")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=1140958233]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1.9817522, 2.442519, -4.8528333)
+texture = ExtResource("29_7nt65")

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dvfam1ft8d2in" path="res://assets/Fantasy/Cage_Small.gltf" id="3_binql"]
 [ext_resource type="PackedScene" uid="uid://bjmi7ckbatmfy" path="res://assets/Christmas/tracks_curve.gltf" id="4_uhcay"]
 [ext_resource type="PackedScene" uid="uid://cjh8g6aan2ee5" path="res://assets/Christmas/present_sphere_B_white.gltf" id="5_ukk3a"]
+[ext_resource type="Texture2D" uid="uid://b16ywxw0m1gb7" path="res://assets/painting/4_1_ar.png" id="6_ukk3a"]
 
 [node name="RoomPrison" type="Node3D" unique_id=2138134028]
 script = ExtResource("1_o4hoa")
@@ -28,3 +29,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.52076316, 0.606951, 2.3506
 
 [node name="present_sphere_B_white2" parent="." unique_id=464467236 instance=ExtResource("5_ukk3a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2631128, 0.92193234, 2.8403215)
+
+[node name="Painting1" type="Sprite3D" parent="." unique_id=55828314]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 2.230105, 4.814113)
+texture = ExtResource("6_ukk3a")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=1032320229]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.88012856, 2.230105, 4.814113)
+texture = ExtResource("6_ukk3a")
