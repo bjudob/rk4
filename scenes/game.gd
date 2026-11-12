@@ -11,6 +11,7 @@ var player_starting_pos
 
 @onready var room_start = $Rooms/RoomStart
 @onready var room_trees = $Rooms/RoomTrees
+@onready var room_gingerbread = $Rooms/RoomGingerbread
 @onready var room_train = $Rooms/RoomTrain
 @onready var room_candles = $Rooms/RoomCandles
 @onready var room_rest = $Rooms/RoomRest
@@ -52,6 +53,7 @@ func _ready() -> void:
 	rng = RandomNumberGenerator.new()
 	rooms = {
 		room_trees.room_name: room_trees,
+		room_gingerbread.room_name: room_gingerbread,
 		room_train.room_name: room_train,
 		room_candles.room_name: room_candles,
 		room_rest.room_name: room_rest,
@@ -108,7 +110,9 @@ func new_day():
 	var doors = get_tree().get_nodes_in_group("door")
 	for door in doors:
 		door.reset()
-	blueprint_ui.draw_rooms(rooms.values())
+	var rooms_to_draw = rooms.values()
+	rooms_to_draw.append(room_start)
+	blueprint_ui.draw_rooms(rooms_to_draw)
 	save()
 
 func save_and_quit():

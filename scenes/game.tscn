@@ -26,10 +26,14 @@
 [ext_resource type="PackedScene" uid="uid://dhiaqq5okvak0" path="res://scenes/room_red_button.tscn" id="17_264po"]
 [ext_resource type="Texture2D" uid="uid://chvk541omlbml" path="res://assets/room_icons/tree_room.png" id="18_sgl2t"]
 [ext_resource type="PackedScene" uid="uid://b6cfra3h2i5a7" path="res://scenes/room_parlor.tscn" id="19_5newe"]
+[ext_resource type="Texture2D" uid="uid://b55c1p38ohviu" path="res://assets/blueprints/blueprint_old_room_start.png" id="19_gxtfn"]
 [ext_resource type="PackedScene" uid="uid://dp8054sjy4wxt" path="res://scenes/room_workshop.tscn" id="20_37s47"]
 [ext_resource type="PackedScene" uid="uid://cq0lpd0pxl5tm" path="res://scenes/room_library.tscn" id="21_bt5mj"]
+[ext_resource type="Texture2D" uid="uid://log4ela1x846" path="res://assets/blueprints/blueprint_red_button.png" id="21_twgab"]
 [ext_resource type="PackedScene" uid="uid://8hs5c4uftnhq" path="res://scenes/room_prison.tscn" id="22_e1j6l"]
+[ext_resource type="PackedScene" uid="uid://bc7x5e5piimp" path="res://scenes/room_gingerbread.tscn" id="22_v2yb1"]
 [ext_resource type="PackedScene" uid="uid://2fj6eg6b0afj" path="res://assets/Christmas/wall_gingerbread_A.gltf" id="25_pl11u"]
+[ext_resource type="Texture2D" uid="uid://dl83i7b8dfsvn" path="res://assets/blueprints/blueprint_gingerbread.png" id="25_twgab"]
 [ext_resource type="PackedScene" uid="uid://c5a4s5qdmib8o" path="res://scenes/room_fa_szoba.tscn" id="27_suyxu"]
 [ext_resource type="PackedScene" uid="uid://c5jehje2jvvvb" path="res://scenes/door.tscn" id="29_suyxu"]
 
@@ -378,25 +382,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 0, 22.5)
 [node name="RoomStart" parent="Rooms" unique_id=564975233 instance=ExtResource("4_0tnpc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
 room_name = "StartRoom"
+image = ExtResource("19_gxtfn")
 rarity = 1
 
 [node name="RoomRedButton" parent="Rooms" unique_id=581924088 instance=ExtResource("17_264po")]
 room_name = "Red Button"
 wall_type = 7
-rarity = 100
+image = ExtResource("21_twgab")
+rarity = 5
 candy_cost = 2
 
 [node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
 room_name = "Trees"
-wall_type = 1
 image = ExtResource("18_sgl2t")
-rarity = 100
+rarity = 5
 candy_cost = 3
+
+[node name="RoomGingerbread" parent="Rooms" unique_id=459795753 instance=ExtResource("22_v2yb1")]
+room_name = "gingerbread"
+wall_type = 7
+image = ExtResource("25_twgab")
+rarity = 5
+candy_cost = 2
 
 [node name="RoomTrain" parent="Rooms" unique_id=584542378 instance=ExtResource("13_kvuet")]
 room_name = "Train"
 wall_type = 2
-rarity = 100
+rarity = 5
 candy_cost = 2
 
 [node name="RoomCandles" parent="Rooms" unique_id=2056734870 instance=ExtResource("14_trtic")]

@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bc7x5e5piimp"]
+
+[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_gdk4i"]
+[ext_resource type="PackedScene" uid="uid://c4bommg5gt4d5" path="res://assets/Christmas/cube_gingerbread_large_A.gltf" id="1_xl85e"]
+[ext_resource type="PackedScene" uid="uid://cnygciop2ishp" path="res://assets/Christmas/gingerbread_house.gltf" id="2_3dqwp"]
+[ext_resource type="PackedScene" uid="uid://cp0vdyevdsfci" path="res://assets/Christmas/gingerbread_house_decorated.gltf" id="3_s3ewa"]
+[ext_resource type="PackedScene" uid="uid://bwdb0e67u02up" path="res://assets/Christmas/gingerbread_man.gltf" id="4_gdk4i"]
+[ext_resource type="PackedScene" uid="uid://dkjt21xl1e7pv" path="res://assets/Christmas/wall_gingerbread_window_A.gltf" id="5_172lv"]
+[ext_resource type="PackedScene" uid="uid://2fj6eg6b0afj" path="res://assets/Christmas/wall_gingerbread_A.gltf" id="6_p64l8"]
+
+[node name="RoomGingerbread" type="Node3D" unique_id=459795753]
+script = ExtResource("1_gdk4i")
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=303980778]
+size = Vector3(10, 1, 10)
+
+[node name="cube_gingerbread_large_A2" parent="." unique_id=1667553476 instance=ExtResource("1_xl85e")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -2.7213695, 0.46129763, 1.782429)
+
+[node name="gingerbread_house2" parent="." unique_id=1275839014 instance=ExtResource("2_3dqwp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.61547256, 0.454072, 0.98708606)
+
+[node name="gingerbread_house_decorated2" parent="." unique_id=1302489185 instance=ExtResource("3_s3ewa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2299564, 0.50965977, -0.706357)
+
+[node name="gingerbread_man2" parent="." unique_id=1646909687 instance=ExtResource("4_gdk4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0424874, 0.5192523, 2.0224695)
+
+[node name="wall_gingerbread_window_A2" parent="." unique_id=1714258431 instance=ExtResource("5_172lv")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 2.3942058, 0.4186449, -5.289055)
+
+[node name="wall_gingerbread_window_A3" parent="." unique_id=2135525391 instance=ExtResource("5_172lv")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -2.6057942, 0.4186449, -5.289055)
+
+[node name="wall_gingerbread_A2" parent="." unique_id=484682251 instance=ExtResource("6_p64l8")]
+transform = Transform3D(-5.6824803e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.6824803e-08, -5.3490176, 0.3034804, -2.4544482)
+
+[node name="wall_gingerbread_A3" parent="." unique_id=1302935079 instance=ExtResource("6_p64l8")]
+transform = Transform3D(-5.6824803e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.6824803e-08, -5.3490176, 0.3034804, 2.3943725)
+
+[node name="wall_gingerbread_A4" parent="." unique_id=208139531 instance=ExtResource("6_p64l8")]
+transform = Transform3D(-5.6824803e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.6824803e-08, 5.551209, 0.3034804, -2.4544482)
+
+[node name="wall_gingerbread_A5" parent="." unique_id=616669383 instance=ExtResource("6_p64l8")]
+transform = Transform3D(-5.6824803e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.6824803e-08, 5.551209, 0.3034804, 2.3943725)
