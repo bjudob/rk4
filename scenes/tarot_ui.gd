@@ -90,6 +90,7 @@ func _ready() -> void:
 		card18,
 		card19,
 		card20,
+		card21
 	]
 	tarots = [
 		tarot0,
