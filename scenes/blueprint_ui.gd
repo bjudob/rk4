@@ -45,71 +45,71 @@ const scale_factor = 22.7
 	]
 ]
 
-@onready var pictures = [
+@onready var paintings = [
 	[
 		[
-			"res://assets/painting/4_1_ar.png",
-			"res://assets/painting/4_1_var.png"
+			load("res://assets/painting/4_1_ar.png"),
+			load("res://assets/painting/4_1_var.png")
 		],
 		[
-			"res://assets/painting/4_2_etel.png",
-			"res://assets/painting/4_2_tel.png"
+			load("res://assets/painting/4_2_etel.png"),
+			load("res://assets/painting/4_2_tel.png")
 		],
 		[
-			"res://assets/painting/4_3_arat.png",
-			"res://assets/painting/4_3_garat.png"
+			load("res://assets/painting/4_3_arat.png"),
+			load("res://assets/painting/4_3_garat.png")
 		],
 		[
-			"res://assets/painting/3_4_acs.png",
-			"res://assets/painting/3_4_racs.png"
+			load("res://assets/painting/3_4_acs.png"),
+			load("res://assets/painting/3_4_racs.png")
 		],
 		[
-			"res://assets/painting/3_5_eg.png",
-			"res://assets/painting/3_5_jeg.png"
+			load("res://assets/painting/3_5_eg.png"),
+			load("res://assets/painting/3_5_jeg.png")
 		]
 	],
 	[
 		[
-			"res://assets/painting/5_1_agyon.png",
-			"res://assets/painting/5_1_vagyon.png"
+			load("res://assets/painting/5_1_agyon.png"),
+			load("res://assets/painting/5_1_vagyon.png")
 		],
 		[
-			"res://assets/painting/5_2_imak.png",
-			"res://assets/painting/5_2_mak.png"
+			load("res://assets/painting/5_2_imak.png"),
+			load("res://assets/painting/5_2_mak.png")
 		],
 		[
-			"res://assets/painting/5_3_ullo.png",
-			"res://assets/painting/5_3_ulo.png"
+			load("res://assets/painting/5_3_ullo.png"),
+			load("res://assets/painting/5_3_ulo.png")
 		],
 		[
-			"res://assets/painting/5_4_alom.png",
-			"res://assets/painting/5_4_lom.png"
+			load("res://assets/painting/5_4_alom.png"),
+			load("res://assets/painting/5_4_lom.png")
 		],
 		[
-			"res://assets/painting/5_5_ian.png",
-			"res://assets/painting/5_5_yang.png"
+			load("res://assets/painting/5_5_ian.png"),
+			load("res://assets/painting/5_5_yang.png")
 		]
 	],
 	[
 		[
-			"res://assets/painting/4_1_ar.png",
-			"res://assets/painting/4_1_var.png"
+			load("res://assets/painting/4_1_ar.png"),
+			load("res://assets/painting/4_1_var.png")
 		],
 		[
-			"res://assets/painting/3_2_at.png",
-			"res://assets/painting/3_2_gat.png"
+			load("res://assets/painting/3_2_at.png"),
+			load("res://assets/painting/3_2_gat.png")
 		],
 		[
-			"res://assets/painting/3_3_boa.png",
-			"res://assets/painting/3_3_oboa.png"
+			load("res://assets/painting/3_3_boa.png"),
+			load("res://assets/painting/3_3_oboa.png")
 		],
 		[
-			"res://assets/painting/3_4_acs.png",
-			"res://assets/painting/3_4_racs.png"
+			load("res://assets/painting/3_4_acs.png"),
+			load("res://assets/painting/3_4_racs.png")
 		],
 		[
-			"res://assets/painting/3_5_eg.png",
-			"res://assets/painting/3_5_jeg.png"
+			load("res://assets/painting/3_5_eg.png"),
+			load("res://assets/painting/3_5_jeg.png")
 		]
 	]
 ]
@@ -126,6 +126,8 @@ func draw_rooms(rooms):
 		if !room.spawned():
 			continue
 		blueprints[room.place.x][room.place.y].texture = room.image
+		room.set_paintings(paintings[room.place.x][room.place.y][0], paintings[room.place.x][room.place.y][1])
+		
 
 func reset():
 	for i in len(blueprints):

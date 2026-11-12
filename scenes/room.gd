@@ -69,6 +69,10 @@ func reset():
 		if !is_instance_of(c, Interactable):
 			continue
 		c.reset()
+
+func set_paintings(t1: Texture, t2: Texture):
+	painting1.texture = t1
+	painting2.texture = t2
 		
 func solve_lock(solved: bool):
 	if !solved:
