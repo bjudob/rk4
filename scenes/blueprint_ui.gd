@@ -60,7 +60,12 @@ const scale_factor = 22.7
 			"res://assets/painting/4_3_garat.png"
 		],
 		[
-			
+			"res://assets/painting/3_4_acs.png",
+			"res://assets/painting/3_4_racs.png"
+		],
+		[
+			"res://assets/painting/3_5_eg.png",
+			"res://assets/painting/3_5_jeg.png"
 		]
 	],
 	[
@@ -81,8 +86,30 @@ const scale_factor = 22.7
 			"res://assets/painting/5_4_lom.png"
 		],
 		[
-			"res://assets/painting/5_5_ian.png"
+			"res://assets/painting/5_5_ian.png",
 			"res://assets/painting/5_5_yang.png"
+		]
+	],
+	[
+		[
+			"res://assets/painting/4_1_ar.png",
+			"res://assets/painting/4_1_var.png"
+		],
+		[
+			"res://assets/painting/3_2_at.png",
+			"res://assets/painting/3_2_gat.png"
+		],
+		[
+			"res://assets/painting/3_3_boa.png",
+			"res://assets/painting/3_3_oboa.png"
+		],
+		[
+			"res://assets/painting/3_4_acs.png",
+			"res://assets/painting/3_4_racs.png"
+		],
+		[
+			"res://assets/painting/3_5_eg.png",
+			"res://assets/painting/3_5_jeg.png"
 		]
 	]
 ]
