@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bk58st7t1yvr5"]
+
+[ext_resource type="Script" uid="uid://dlqjt0icn1qk4" path="res://scenes/phonograph.gd" id="1_jysaa"]
+[ext_resource type="PackedScene" uid="uid://b3bfy1xe5736m" path="res://assets/MeshyAI/phonograph.glb" id="2_b8nvh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aoake"]
+size = Vector3(1, 1.9208374, 1.5316772)
+
+[node name="Phonograph" type="StaticBody3D" unique_id=839195699 groups=["interactable"]]
+script = ExtResource("1_jysaa")
+
+[node name="model" parent="." unique_id=619667192 instance=ExtResource("2_b8nvh")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=950271364]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05331421, 0.019195557)
+shape = SubResource("BoxShape3D_aoake")
+
+[node name="InteractSound" type="AudioStreamPlayer3D" parent="." unique_id=341625538]

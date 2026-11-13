@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://2v8a7rqsi7dk" path="res://scenes/key.tscn" id="7_t25kh"]
 [ext_resource type="Texture2D" uid="uid://b16ywxw0m1gb7" path="res://assets/painting/4_1_ar.png" id="9_yoxb2"]
 [ext_resource type="Texture2D" uid="uid://dqfcgyr5d8lch" path="res://assets/painting/4_1_var.png" id="10_eku5b"]
+[ext_resource type="PackedScene" uid="uid://bk58st7t1yvr5" path="res://scenes/phonograph.tscn" id="11_s088g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbeet"]
 albedo_color = Color(1, 0, 0, 1)
@@ -122,3 +123,6 @@ texture = ExtResource("9_yoxb2")
 [node name="Painting2" type="Sprite3D" parent="." unique_id=1115527224]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -1.9340317, 3.0226936, -1.4882121)
 texture = ExtResource("10_eku5b")
+
+[node name="Phonograph" parent="." unique_id=839195699 instance=ExtResource("11_s088g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1122456, 1.438974, 1.6562617)
