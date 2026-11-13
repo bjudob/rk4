@@ -19,6 +19,8 @@ var player_starting_pos
 @onready var room_parlor = $Rooms/RoomParlor
 @onready var room_workshop = $Rooms/RoomWorkshop
 @onready var room_prison = $Rooms/RoomPrison
+@onready var room_reverse = $Rooms/RoomReverse
+@onready var room_snowman = $Rooms/RoomSnowman
 
 const save_file_path = "user://rk.json"
 var save_data = {
@@ -61,6 +63,8 @@ func _ready() -> void:
 		room_parlor.room_name: room_parlor,
 		room_workshop.room_name: room_workshop,
 		room_prison.room_name: room_prison,
+		room_reverse.room_name: room_reverse,
+		room_reverse.room_name: room_reverse,
 	}
 	for room_name in rooms:
 		room_total_weights = room_total_weights + rooms[room_name].rarity

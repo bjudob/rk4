@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dlqjt0icn1qk4" path="res://scenes/phonograph.gd" id="1_jysaa"]
 [ext_resource type="PackedScene" uid="uid://b3bfy1xe5736m" path="res://assets/MeshyAI/phonograph.glb" id="2_b8nvh"]
+[ext_resource type="AudioStream" uid="uid://nspxah7nce5w" path="res://music/Zenepuzzle.mp3" id="3_b8nvh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aoake"]
 size = Vector3(1, 1.9208374, 1.5316772)
@@ -16,3 +17,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05331421, 0.019195557)
 shape = SubResource("BoxShape3D_aoake")
 
 [node name="InteractSound" type="AudioStreamPlayer3D" parent="." unique_id=341625538]
+stream = ExtResource("3_b8nvh")

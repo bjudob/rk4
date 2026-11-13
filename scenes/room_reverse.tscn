@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cbl43c1887x0s"]
+
+[ext_resource type="Script" uid="uid://bw2xtebw3wuul" path="res://scenes/room_reverse.gd" id="1_14rir"]
+[ext_resource type="PackedScene" uid="uid://b6q14bnuywkbd" path="res://assets/Fantasy/Bed_Twin1.gltf" id="2_i3ab1"]
+[ext_resource type="PackedScene" uid="uid://dwlcho1sxkv67" path="res://assets/HolidayKit/tree-decorated.glb" id="3_oe5r4"]
+[ext_resource type="PackedScene" uid="uid://ci3ktpuxq322p" path="res://assets/HolidayKit/sock-green.glb" id="4_ov25y"]
+[ext_resource type="PackedScene" uid="uid://te4uhh1d8svl" path="res://assets/HolidayKit/nutcracker.glb" id="5_o14ps"]
+[ext_resource type="Texture2D" uid="uid://cmknpxtsypshu" path="res://assets/painting/3_2_at.png" id="6_7yfpk"]
+[ext_resource type="PackedScene" uid="uid://3lq8cw5qppu3" path="res://assets/HolidayKit/present-b-rectangle.glb" id="7_yapyi"]
+[ext_resource type="PackedScene" uid="uid://cdeltu2a44kur" path="res://assets/HolidayKit/snow-flat.glb" id="8_sjfk1"]
+
+[node name="RoomReverse" type="Node3D" unique_id=368277754]
+script = ExtResource("1_14rir")
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=672190787]
+size = Vector3(10, 1, 10)
+
+[node name="GroundUp" type="CSGBox3D" parent="." unique_id=924940377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+size = Vector3(10, 1, 10)
+
+[node name="Bed_Twin12" parent="." unique_id=614985975 instance=ExtResource("2_i3ab1")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, -2.3403285, 4.3658257, 1.4409049)
+
+[node name="tree-decorated2" parent="." unique_id=1667198677 instance=ExtResource("3_oe5r4")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0.48442197, 4.469868, 1.6962886)
+
+[node name="sock-green2" parent="." unique_id=2133644272 instance=ExtResource("4_ov25y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.92375755, 3.2549765, 2.0959182)
+
+[node name="nutcracker2" parent="." unique_id=413560265 instance=ExtResource("5_o14ps")]
+transform = Transform3D(-1, -7.642742e-15, 8.742278e-08, 0, -1, -8.742278e-08, 8.742278e-08, -8.742278e-08, 1, 1.9138734, 4.468433, -2.6172948)
+
+[node name="nutcracker3" parent="." unique_id=203617889 instance=ExtResource("5_o14ps")]
+transform = Transform3D(-1, -7.642742e-15, 8.742278e-08, 0, -1, -8.742278e-08, 8.742278e-08, -8.742278e-08, 1, 1.1835566, 4.468433, -2.6172948)
+
+[node name="nutcracker4" parent="." unique_id=1467396942 instance=ExtResource("5_o14ps")]
+transform = Transform3D(-1, -7.642742e-15, 8.742278e-08, 0, -1, -8.742278e-08, 8.742278e-08, -8.742278e-08, 1, 0.41831255, 4.468433, -2.6172948)
+
+[node name="Painting1" type="Sprite3D" parent="." unique_id=1125393367]
+transform = Transform3D(0.05, 0, 0, 0, -2.1855695e-09, -0.05, 0, 0.05, -2.1855695e-09, -2.4438307, 4.4, -0.4718624)
+texture = ExtResource("6_7yfpk")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=1996560035]
+transform = Transform3D(0.05, 0, 0, 0, -2.1855695e-09, -0.05, 0, 0.05, -2.1855695e-09, -2.4438307, 4.4, -1.2163635)
+texture = ExtResource("6_7yfpk")
+
+[node name="present-b-rectangle2" parent="." unique_id=1059600522 instance=ExtResource("7_yapyi")]
+transform = Transform3D(1.5, 0, 0, 0, -1.5, 1.3113416e-07, 0, -1.3113416e-07, -1.5, 2.527796, 4.4810033, 1.8791795)
+
+[node name="snow-flat2" parent="." unique_id=1079726537 instance=ExtResource("8_sjfk1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4.2730885, 3.4345555)
