@@ -44,8 +44,8 @@ var candies = 5
 var candies_default = 5
 var keys = 3
 var keys_default = 3
-var dices = 2
-var dices_default = 2
+var dices = 20
+var dices_default = 20
 
 # preload
 const door_scene = preload("door.tscn")

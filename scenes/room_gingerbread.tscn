@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://dkjt21xl1e7pv" path="res://assets/Christmas/wall_gingerbread_window_A.gltf" id="5_172lv"]
 [ext_resource type="PackedScene" uid="uid://2fj6eg6b0afj" path="res://assets/Christmas/wall_gingerbread_A.gltf" id="6_p64l8"]
 [ext_resource type="Texture2D" uid="uid://b16ywxw0m1gb7" path="res://assets/painting/4_1_ar.png" id="8_172lv"]
+[ext_resource type="PackedScene" uid="uid://ddd6t2m8tx8uo" path="res://scenes/scroll.tscn" id="9_p64l8"]
+[ext_resource type="Texture2D" uid="uid://b1shdff7unqmh" path="res://assets/music_puzzle/pop_7.png" id="10_64et2"]
+[ext_resource type="PackedScene" uid="uid://bk58st7t1yvr5" path="res://scenes/phonograph.tscn" id="11_ba6ln"]
+[ext_resource type="AudioStream" uid="uid://ghjr6vcyvwr1" path="res://music/Zenepuzzle2.mp3" id="12_cgiyi"]
 
 [node name="RoomGingerbread" type="Node3D" unique_id=459795753]
 script = ExtResource("1_gdk4i")
@@ -52,3 +56,11 @@ texture = ExtResource("8_172lv")
 [node name="Painting2" type="Sprite3D" parent="." unique_id=917645886]
 transform = Transform3D(-2.1855695e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.1855695e-09, 4.8434877, 3.0413165, -1.8216357)
 texture = ExtResource("8_172lv")
+
+[node name="Scroll" parent="." unique_id=1912316633 instance=ExtResource("9_p64l8")]
+transform = Transform3D(1, 0, 0, 0, 0.8181999, -0.5749339, 0, 0.5749339, 0.8181999, -1.1626699, 0.9281144, -1.3891319)
+scroll = ExtResource("10_64et2")
+
+[node name="Phonograph" parent="." unique_id=839195699 instance=ExtResource("11_ba6ln")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0544093, 1.3934069, -2.8523006)
+music = ExtResource("12_cgiyi")
