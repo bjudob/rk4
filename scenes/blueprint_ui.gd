@@ -48,52 +48,52 @@ const scale_factor = 22.7
 @onready var paintings = [
 	[
 		[
-			load("res://assets/painting/4_1_ar.png"),
-			load("res://assets/painting/4_1_var.png")
+			load("res://assets/painting/1_1_lap.png"),
+			load("res://assets/painting/1_1_alap.png")
 		],
 		[
-			load("res://assets/painting/4_2_etel.png"),
-			load("res://assets/painting/4_2_tel.png")
+			load("res://assets/painting/1_2_szal.png"),
+			load("res://assets/painting/1_2_szall.png")
 		],
 		[
-			load("res://assets/painting/4_3_arat.png"),
-			load("res://assets/painting/4_3_garat.png")
+			load("res://assets/painting/1_3_pok.png"),
+			load("res://assets/painting/1_3_apok.png")
 		],
 		[
-			load("res://assets/painting/3_4_acs.png"),
-			load("res://assets/painting/3_4_racs.png")
+			load("res://assets/painting/1_4_olet.png"),
+			load("res://assets/painting/1_4_otlet.png")
 		],
 		[
-			load("res://assets/painting/3_5_eg.png"),
-			load("res://assets/painting/3_5_jeg.png")
+			load("res://assets/painting/1_5_tor.png"),
+			load("res://assets/painting/1_5_tort.png")
 		]
 	],
 	[
 		[
-			load("res://assets/painting/5_1_agyon.png"),
-			load("res://assets/painting/5_1_vagyon.png")
+			load("res://assets/painting/2_1_fuggo.png"),
+			load("res://assets/painting/2_1_fuggony.png")
 		],
 		[
-			load("res://assets/painting/5_2_imak.png"),
-			load("res://assets/painting/5_2_mak.png")
+			load("res://assets/painting/2_2_csorog.png"),
+			load("res://assets/painting/2_2_acsorog.png")
 		],
 		[
-			load("res://assets/painting/5_3_ullo.png"),
-			load("res://assets/painting/5_3_ulo.png")
+			load("res://assets/painting/2_3_ad.png"),
+			load("res://assets/painting/2_3_vad.png")
 		],
 		[
-			load("res://assets/painting/5_4_alom.png"),
-			load("res://assets/painting/5_4_lom.png")
+			load("res://assets/painting/2_4_rom.png"),
+			load("res://assets/painting/2_4_orom.png")
 		],
 		[
-			load("res://assets/painting/5_5_ian.png"),
-			load("res://assets/painting/5_5_yang.png")
+			load("res://assets/painting/2_5_eres.png"),
+			load("res://assets/painting/2_5_egres.png")
 		]
 	],
 	[
 		[
-			load("res://assets/painting/4_1_ar.png"),
-			load("res://assets/painting/4_1_var.png")
+			load("res://assets/painting/3_1_ram.png"),
+			load("res://assets/painting/3_1_uram.png")
 		],
 		[
 			load("res://assets/painting/3_2_at.png"),
@@ -110,6 +110,50 @@ const scale_factor = 22.7
 		[
 			load("res://assets/painting/3_5_eg.png"),
 			load("res://assets/painting/3_5_jeg.png")
+		]
+	],
+		[
+		[
+			load("res://assets/painting/4_1_ar.png"),
+			load("res://assets/painting/4_1_var.png")
+		],
+		[
+			load("res://assets/painting/4_2_tel.png"),
+			load("res://assets/painting/4_2_etel.png")
+		],
+		[
+			load("res://assets/painting/4_3_arat.png"),
+			load("res://assets/painting/4_3_garat.png")
+		],
+		[
+			load("res://assets/painting/4_4_eles.png"),
+			load("res://assets/painting/4_4_les.png")
+		],
+		[
+			load("res://assets/painting/4_5_apos.png"),
+			load("res://assets/painting/4_5_napos.png")
+		]
+	],
+		[
+		[
+			load("res://assets/painting/5_1_agyon.png"),
+			load("res://assets/painting/5_1_vagyon.png")
+		],
+		[
+			load("res://assets/painting/5_2_mak.png"),
+			load("res://assets/painting/5_2_imak.png")
+		],
+		[
+			load("res://assets/painting/5_3_ulo.png"),
+			load("res://assets/painting/5_3_ullo.png")
+		],
+		[
+			load("res://assets/painting/5_4_lom.png"),
+			load("res://assets/painting/5_4_alom.png")
+		],
+		[
+			load("res://assets/painting/5_5_ian.png"),
+			load("res://assets/painting/5_5_yang.png")
 		]
 	]
 ]
