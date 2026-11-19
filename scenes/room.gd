@@ -14,6 +14,7 @@ extends Node3D
 @onready var painting1 = $Painting1
 @onready var painting2 = $Painting2
 
+var entry_direction = EntryDirection.DOWN
 enum EntryDirection {
 	LEFT,
 	RIGHT,
@@ -39,6 +40,7 @@ func _ready() -> void:
 	walls.set_type(wall_type)
 
 func spawn(spawn_place: Vector2, direction: EntryDirection) -> void:
+	entry_direction = direction
 	visible = true
 	place = spawn_place
 	# hanyadik sor

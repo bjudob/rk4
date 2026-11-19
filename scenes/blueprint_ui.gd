@@ -172,10 +172,24 @@ func draw_rooms(rooms):
 		blueprints[room.place.x][room.place.y].texture = room.image
 		room.set_paintings(paintings[room.place.x][room.place.y][0], paintings[room.place.x][room.place.y][1])
 		
+		# direction
+		blueprints[room.place.x][room.place.y].pivot_offset = blueprints[room.place.x][room.place.y].size / 2.0
+		
+		if room.entry_direction == Room.EntryDirection.DOWN:
+			pass
+		elif room.entry_direction == Room.EntryDirection.UP:
+			blueprints[room.place.x][room.place.y].rotation_degrees  = 180
+		elif room.entry_direction == Room.EntryDirection.LEFT:
+			blueprints[room.place.x][room.place.y].rotation_degrees  = 90
+		elif room.entry_direction == Room.EntryDirection.RIGHT:
+			blueprints[room.place.x][room.place.y].rotation_degrees  = -90
 
 func reset():
 	for i in len(blueprints):
 		for j in len(blueprints[i]):
+			# start room
+			if i == 0  and j == 2:
+				continue
 			blueprints[i][j].texture = room_none
 
 func show_ui():

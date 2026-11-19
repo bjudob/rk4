@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bx4cl7djkqx7r" path="res://assets/Christmas/chair_large_red.gltf" id="9_qtoah"]
 [ext_resource type="Texture2D" uid="uid://y1llvtm36njw" path="res://assets/scrolls/scroll_empty.png" id="9_ybpoa"]
 [ext_resource type="PackedScene" uid="uid://dkah87ysm1alf" path="res://assets/Christmas/present_B_blue.gltf" id="10_tk5fv"]
-[ext_resource type="Texture2D" uid="uid://b16ywxw0m1gb7" path="res://assets/painting/4_1_ar.png" id="11_tk5fv"]
-[ext_resource type="Texture2D" uid="uid://dqfcgyr5d8lch" path="res://assets/painting/4_1_var.png" id="12_w68ji"]
+[ext_resource type="Texture2D" uid="uid://bjn83nb1i6qi6" path="res://assets/painting/1_3_pok.png" id="11_tk5fv"]
+[ext_resource type="Texture2D" uid="uid://ckt1epg67xm40" path="res://assets/painting/1_3_apok.png" id="12_w68ji"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_14vil"]
 size = Vector3(0.41503906, 1, 1)
