@@ -882,6 +882,7 @@ candy_cost = 2
 
 [node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
 room_name = "Trees"
+wall_type = 3
 image = ExtResource("18_sgl2t")
 rarity = 5
 

@@ -169,20 +169,23 @@ func draw_rooms(rooms):
 	for room in rooms:
 		if !room.spawned():
 			continue
-		blueprints[room.place.x][room.place.y].texture = room.image
+			
 		room.set_paintings(paintings[room.place.x][room.place.y][0], paintings[room.place.x][room.place.y][1])
 		
-		# direction
-		blueprints[room.place.x][room.place.y].pivot_offset = blueprints[room.place.x][room.place.y].size / 2.0
+		# Get a copy of the image data so we don't mutate the original room.image resource
+		var img: Image = room.image.get_image()
 		
-		if room.entry_direction == Room.EntryDirection.DOWN:
-			pass
-		elif room.entry_direction == Room.EntryDirection.UP:
-			blueprints[room.place.x][room.place.y].rotation_degrees  = 180
-		elif room.entry_direction == Room.EntryDirection.LEFT:
-			blueprints[room.place.x][room.place.y].rotation_degrees  = 90
-		elif room.entry_direction == Room.EntryDirection.RIGHT:
-			blueprints[room.place.x][room.place.y].rotation_degrees  = -90
+		match room.entry_direction:
+			Room.EntryDirection.DOWN:
+				pass
+			Room.EntryDirection.UP:
+				img.rotate_180()
+			Room.EntryDirection.LEFT:
+				img.rotate_90(CLOCKWISE)
+			Room.EntryDirection.RIGHT:
+				img.rotate_90(COUNTERCLOCKWISE)
+				
+		blueprints[room.place.x][room.place.y].texture = ImageTexture.create_from_image(img)
 
 func reset():
 	for i in len(blueprints):
