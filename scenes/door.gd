@@ -8,8 +8,11 @@ var place_to_place
 
 @onready var key_ui = get_tree().get_nodes_in_group("key_ui")[0]
 
-var key_needed = true
+var key_needed = false
 var room_selected = false
+
+func _ready():
+	random_key()
 
 func interact():
 	place_to_place = place
@@ -57,16 +60,22 @@ func on_room_spawn(rooms):
 		visible = false
 		collision.disabled = true
 		room_selected = true
-	
-	
 
 func reset():
 	visible = true
 	collision.disabled = false
 	room_selected = false
+	random_key()
 
 
 func _on_step_area_body_entered(body: Node3D) -> void:
 	if !body.is_in_group("player"):
 		return
 	game.add_steps(-1)
+	
+func random_key():
+	var random_number = randi_range(1, 100)
+	if random_number > place.x * 20:
+		key_needed = false
+	else:
+		key_needed = true
