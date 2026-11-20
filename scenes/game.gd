@@ -67,6 +67,7 @@ func _ready() -> void:
 		room_reverse.room_name: room_reverse,
 		room_reverse.room_name: room_reverse,
 		room_bonfire.room_name: room_bonfire,
+		room_snowman.room_name: room_snowman,
 	}
 	for room_name in rooms:
 		room_total_weights = room_total_weights + rooms[room_name].rarity

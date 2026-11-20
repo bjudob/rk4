@@ -869,17 +869,17 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.7527
 [node name="Room00Pos" type="Node3D" parent="Rooms" unique_id=1163338060 groups=["room_00_pos"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 0, 22.5)
 
-[node name="RoomBonfire" parent="Rooms" unique_id=1826765749 instance=ExtResource("18_pr1ej")]
-room_name = "bonfire"
-wall_type = 6
-image = ExtResource("19_05nbr")
-rarity = 10
-
 [node name="RoomStart" parent="Rooms" unique_id=564975233 instance=ExtResource("4_0tnpc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
 room_name = "StartRoom"
 image = ExtResource("21_05nbr")
 rarity = 1
+
+[node name="RoomBonfire" parent="Rooms" unique_id=1826765749 instance=ExtResource("18_pr1ej")]
+room_name = "bonfire"
+wall_type = 6
+image = ExtResource("19_05nbr")
+rarity = 10
 
 [node name="RoomRedButton" parent="Rooms" unique_id=581924088 instance=ExtResource("17_264po")]
 room_name = "Red Button"
@@ -887,6 +887,10 @@ wall_type = 7
 image = ExtResource("21_twgab")
 rarity = 5
 candy_cost = 2
+
+[node name="RoomSnowman" parent="Rooms" unique_id=1405148680 instance=ExtResource("37_7025r")]
+image = ExtResource("38_m4url")
+rarity = 5
 
 [node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
 room_name = "Trees"
@@ -936,12 +940,6 @@ rarity = 1
 image = ExtResource("36_8ool0")
 rarity = 10
 candy_cost = 1
-
-[node name="RoomSnowman" parent="Rooms" unique_id=1405148680 instance=ExtResource("37_7025r")]
-room_name = "snowman"
-wall_type = 5
-image = ExtResource("38_m4url")
-rarity = 5
 
 [node name="Walls" type="Node3D" parent="." unique_id=1946072825]
 
