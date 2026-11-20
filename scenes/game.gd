@@ -210,4 +210,15 @@ func red_button_pushed():
 	candies = 0
 	dices = 0
 	keys = 0
-	
+
+func get_neighbor_rooms(place: Vector2):
+	var p1 = place + Vector2(0,1)
+	var p2 = place + Vector2(1,0)
+	var p3 = place + Vector2(0,-1)
+	var p4 = place + Vector2(-1,0)
+	var n_rooms = []
+	for room_name in rooms:
+		if rooms[room_name].place == p1 ||  rooms[room_name].place == p2 ||  rooms[room_name].place == p3 || rooms[room_name].place == p4:
+			n_rooms.append(rooms[room_name])
+		
+	return n_rooms

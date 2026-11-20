@@ -4,9 +4,13 @@ extends Room
 
 func _process(delta: float) -> void:
 	super._process(delta)
-
-func spawn(spawn_place: Vector2, direction: EntryDirection) -> void:
-	super.spawn(spawn_place, direction)
+	if !spawned():
+		return
+	var n_rooms = game.get_neighbor_rooms(place)
+	for room in n_rooms:
+		if room.is_burning:
+			continue
+		room.burn()
 
 func reset():
 	super.reset()

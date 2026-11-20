@@ -44,6 +44,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7679187, 0.55334187, 1.373
 transform = Transform3D(1, 0, 0, 0, 0.22804505, 0.9736506, 0, -0.9736506, 0.22804505, -1.5843203, 0.6600857, 0.9036274)
 scroll = ExtResource("7_2mjca")
 
+[node name="snowman_hat" parent="Assets/Melted" unique_id=632121575 instance=ExtResource("17_qgsuo")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.8578774, 0.8176768, 0.59144855)
+
 [node name="Snow" type="Node3D" parent="Assets" unique_id=1686796793]
 visible = false
 
@@ -84,6 +87,3 @@ texture = ExtResource("11_8j0ur")
 [node name="Painting2" type="Sprite3D" parent="." unique_id=1088434367]
 transform = Transform3D(-2.1855695e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.1855695e-09, 4.872376, 2.7937922, 1.0866623)
 texture = ExtResource("11_8j0ur")
-
-[node name="snowman_hat" parent="." unique_id=632121575 instance=ExtResource("17_qgsuo")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.8578774, 0.8176768, 0.59144855)

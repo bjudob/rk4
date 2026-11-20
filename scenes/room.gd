@@ -49,7 +49,7 @@ func _ready() -> void:
 	if lock!=null and !lock.solved:
 		tarot.disable()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if tarot!=null and game.is_tarot_found(tarot.number):
 		tarot.disable()
 
@@ -77,6 +77,8 @@ func spawned() -> bool:
 	return place.x!=-1 and place.y!=-1
 	
 func reset():
+	is_burning = false
+	is_reversed = false
 	rotation_degrees.y = 0
 	visible = false
 	position.y = -100
