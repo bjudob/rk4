@@ -10,8 +10,8 @@ extends Node3D
 @onready var game = get_tree().get_nodes_in_group("game")[0]
 @onready var room_00 = get_tree().get_nodes_in_group("room_00_pos")[0]
 
-@onready var painting1 = $Painting1
-@onready var painting2 = $Painting2
+@onready var painting1 = get_node_or_null("Painting1")
+@onready var painting2 = get_node_or_null("Painting2")
 
 @onready var lock = get_node_or_null("Lock")
 @onready var tarot = get_node_or_null("Tarot")

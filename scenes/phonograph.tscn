@@ -18,5 +18,5 @@ shape = SubResource("BoxShape3D_aoake")
 
 [node name="InteractSound" type="AudioStreamPlayer3D" parent="." unique_id=341625538]
 stream = ExtResource("3_b8nvh")
-volume_db = -20.0
+volume_db = -15.0
 max_distance = 10.0
