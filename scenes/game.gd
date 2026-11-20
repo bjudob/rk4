@@ -199,6 +199,7 @@ func start(load_save: bool):
 		return
 	load_save()
 	
-	
+func is_tarot_found(tarot_nr: int):
+	return tarot_ui.is_found(tarot_nr)
 	
 	

@@ -8,7 +8,7 @@ extends Node3D
 @onready var solution_sound = $SolutionSound
 var solved = false
 
-var nrs = [1, 1, 1, 1]
+var nrs = [0, 0, 0, 0]
 
 func _ready() -> void:
 	unlock_symbol.visible = false

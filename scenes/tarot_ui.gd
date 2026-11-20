@@ -8,6 +8,7 @@ extends CanvasLayer
 @onready var highlight_card = $HighlightCard
 @onready var call_it_a_day = $MarginContainer/VBoxContainer/ButtonContainer/CallItADay
 @onready var exit_game = $MarginContainer/VBoxContainer/ButtonContainer/ExitGame
+@onready var back = $MarginContainer/VBoxContainer/ButtonContainer/Back
 var is_highlight = false
 var just_highlighted = false
 
@@ -145,6 +146,8 @@ func render(new_tarots_found):
 			if tarot_card.number == i:
 				tarot_card.visible=false
 			
+func is_found(tarot_nr: int):
+	return tarots_found[tarot_nr]
 
 func show_ui():
 	visible = true
@@ -182,6 +185,9 @@ func _on_exit_game_gui_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact"):
 		game.save_and_quit()
 
+func _on_back_gui_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("interact"):
+		hide_ui()
 
 # hover boilerplate
 func _on_card_mouse_entered(i: int):
@@ -208,3 +214,12 @@ func _on_exit_game_mouse_entered() -> void:
 
 func _on_exit_game_mouse_exited() -> void:
 	exit_game.modulate = NORMAL_COLOR
+
+
+func _on_back_mouse_entered() -> void:
+	back.modulate = HOVER_COLOR
+	hover_sound.play()
+
+
+func _on_back_mouse_exited() -> void:
+	back.modulate = NORMAL_COLOR

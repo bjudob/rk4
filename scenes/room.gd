@@ -9,10 +9,12 @@ extends Node3D
 
 @onready var game = get_tree().get_nodes_in_group("game")[0]
 @onready var room_00 = get_tree().get_nodes_in_group("room_00_pos")[0]
-@onready var lock = $Lock
 
 @onready var painting1 = $Painting1
 @onready var painting2 = $Painting2
+
+@onready var lock = get_node_or_null("Lock")
+@onready var tarot = get_node_or_null("Tarot")
 
 var entry_direction = EntryDirection.DOWN
 enum EntryDirection {
@@ -38,6 +40,14 @@ func _ready() -> void:
 	walls = WALLS_SCENE.instantiate()
 	add_child(walls)
 	walls.set_type(wall_type)
+	
+	# setup lock
+	if lock!=null and !lock.solved:
+		tarot.disable()
+
+func _process(delta: float) -> void:
+	if tarot!=null and game.is_tarot_found(tarot.number):
+		tarot.disable()
 
 func spawn(spawn_place: Vector2, direction: EntryDirection) -> void:
 	entry_direction = direction
@@ -79,5 +89,6 @@ func set_paintings(t1: Texture, t2: Texture):
 func solve_lock(solved: bool):
 	if !solved:
 		return
+	tarot.enable()
 	lock_solved = true
 	lock.solve()

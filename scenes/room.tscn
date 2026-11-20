@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dkah87ysm1alf" path="res://assets/Christmas/present_B_blue.gltf" id="10_tk5fv"]
 [ext_resource type="Texture2D" uid="uid://bjn83nb1i6qi6" path="res://assets/painting/1_3_pok.png" id="11_tk5fv"]
 [ext_resource type="Texture2D" uid="uid://ckt1epg67xm40" path="res://assets/painting/1_3_apok.png" id="12_w68ji"]
+[ext_resource type="Texture2D" uid="uid://1n0tsspnnuy6" path="res://assets/lock_helpers/lock_1_1.png" id="13_w68ji"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_14vil"]
 size = Vector3(0.41503906, 1, 1)
@@ -33,18 +34,11 @@ shape = SubResource("BoxShape3D_14vil")
 
 [node name="Lock" parent="." unique_id=932196067 instance=ExtResource("5_jxe34")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8392749, 2.034299, -4.959373)
+solution = "0 0 0 2 "
 
 [node name="Tarot" parent="." unique_id=1525524012 instance=ExtResource("6_jn645")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1667686, 1.3252211, -4.0532217)
-number = 1
-
-[node name="Tarot2" parent="." unique_id=1918866345 instance=ExtResource("6_jn645")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5670743, 1.3252211, -4.838356)
-number = 15
-
-[node name="Tarot3" parent="." unique_id=1955541642 instance=ExtResource("6_jn645")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.044717, 1.3252211, -4.80922)
-number = 21
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8116622, 2.0752025, -4.8365865)
+number = 0
 
 [node name="snow-flat2" parent="." unique_id=1079726537 instance=ExtResource("5_ybpoa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19797254, 0.52427554, 1.730408)
@@ -84,3 +78,7 @@ texture = ExtResource("11_tk5fv")
 [node name="Painting2" type="Sprite3D" parent="." unique_id=171790412]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 3.0680287, 2.5331836, -4.89602)
 texture = ExtResource("12_w68ji")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1586526097]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, -1.8389609, 2.4435637, -4.933443)
+texture = ExtResource("13_w68ji")

@@ -14,3 +14,11 @@ func _process(delta: float) -> void:
 
 func interact():
 	tarot_ui.new_tarot(number)
+
+func disable():
+	visible = false
+	$CollisionShape3D.disabled = true
+
+func enable():
+	visible = true
+	$CollisionShape3D.disabled = false
