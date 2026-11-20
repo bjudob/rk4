@@ -99,7 +99,7 @@ func solve_lock(solved: bool):
 	
 # room effects
 func burn():
-	pass
+	is_burning = true
 	
 func revert():
-	pass
+	is_reversed = true

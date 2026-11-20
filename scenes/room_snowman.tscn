@@ -1,44 +1,69 @@
 [gd_scene format=3 uid="uid://dbqcdyoyo7bmn"]
 
-[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_v3m2d"]
+[ext_resource type="Script" uid="uid://bb62pmdl1lye1" path="res://scenes/room_snowman.gd" id="1_figou"]
 [ext_resource type="PackedScene" uid="uid://tjexkjdclitk" path="res://assets/Christmas/snowball.gltf" id="2_2m7yi"]
+[ext_resource type="PackedScene" uid="uid://bpd10tbrfdybn" path="res://assets/HolidayKit/snow-pile.glb" id="2_figou"]
 [ext_resource type="PackedScene" uid="uid://cwdxgh4suadmc" path="res://assets/Christmas/snowball_pile.gltf" id="3_5duvc"]
+[ext_resource type="PackedScene" uid="uid://cdeltu2a44kur" path="res://assets/HolidayKit/snow-flat.glb" id="3_6kwi1"]
 [ext_resource type="PackedScene" uid="uid://c4vkngi4unjs2" path="res://assets/Christmas/snowman_A.gltf" id="4_4sbgp"]
+[ext_resource type="PackedScene" uid="uid://cf1jsfp5yo6kx" path="res://assets/HolidayKit/snow-flat-large.glb" id="4_u6prb"]
 [ext_resource type="PackedScene" uid="uid://cryjcf8yhclkq" path="res://assets/Christmas/snowman_B.gltf" id="5_3gxvc"]
 [ext_resource type="PackedScene" uid="uid://bjvqesa4fcnx5" path="res://assets/Christmas/lantern_decorated.gltf" id="6_3gxvc"]
+[ext_resource type="PackedScene" uid="uid://ddd6t2m8tx8uo" path="res://scenes/scroll.tscn" id="6_mdtyn"]
+[ext_resource type="Texture2D" uid="uid://b4lwf0idcnv8" path="res://assets/music_puzzle/folk_3.png" id="7_2mjca"]
 [ext_resource type="PackedScene" uid="uid://b5tqiqwswsig0" path="res://assets/Christmas/hot_chocolate.gltf" id="7_5jkfs"]
 [ext_resource type="PackedScene" uid="uid://doohaww0bxr2r" path="res://assets/Christmas/candy_B_blue.gltf" id="8_vduyr"]
 [ext_resource type="PackedScene" uid="uid://j67w84621pts" path="res://assets/Christmas/bell.gltf" id="9_5jkfs"]
 [ext_resource type="PackedScene" uid="uid://brljfq6k8wh6q" path="res://scenes/candy.tscn" id="10_vduyr"]
 [ext_resource type="Texture2D" uid="uid://cmknpxtsypshu" path="res://assets/painting/3_2_at.png" id="11_8j0ur"]
+[ext_resource type="PackedScene" uid="uid://c4cnpvvphww1m" path="res://assets/MeshyAI/snowman_hat.glb" id="17_qgsuo"]
 
 [node name="RoomSnowman" type="Node3D" unique_id=1405148680]
-script = ExtResource("1_v3m2d")
-room_name = "snowman"
-wall_type = 5
+script = ExtResource("1_figou")
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=1393910504]
 size = Vector3(10, 1, 10)
 
 [node name="Assets" type="Node3D" parent="." unique_id=2079720468]
 
-[node name="snowball2" parent="Assets" unique_id=2090824616 instance=ExtResource("2_2m7yi")]
+[node name="Melted" type="Node3D" parent="Assets" unique_id=1198281219]
+
+[node name="snow-pile2" parent="Assets/Melted" unique_id=2027550287 instance=ExtResource("2_figou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9542546, 0.559059, 1.836601)
+
+[node name="snow-flat2" parent="Assets/Melted" unique_id=1079726537 instance=ExtResource("3_6kwi1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5307319, 0.52059805, 0.9829941)
+
+[node name="snow-flat-large2" parent="Assets/Melted" unique_id=1306275708 instance=ExtResource("4_u6prb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3030161, 0.47709727, 0.76075554)
+
+[node name="hot_chocolate2" parent="Assets/Melted" unique_id=323109949 instance=ExtResource("7_5jkfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7679187, 0.55334187, 1.3731424)
+
+[node name="Scroll" parent="Assets/Melted" unique_id=1912316633 instance=ExtResource("6_mdtyn")]
+transform = Transform3D(1, 0, 0, 0, 0.22804505, 0.9736506, 0, -0.9736506, 0.22804505, -1.5843203, 0.6600857, 0.9036274)
+scroll = ExtResource("7_2mjca")
+
+[node name="Snow" type="Node3D" parent="Assets" unique_id=1686796793]
+visible = false
+
+[node name="snowball2" parent="Assets/Snow" unique_id=2090824616 instance=ExtResource("2_2m7yi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0938804, 0.64928126, 1.4820575)
 
-[node name="snowball_pile2" parent="Assets" unique_id=1907791694 instance=ExtResource("3_5duvc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.87635, 1.1920929e-07, 1.8888245)
+[node name="snowball_pile2" parent="Assets/Snow" unique_id=1907791694 instance=ExtResource("3_5duvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.87635, 0.44603646, 1.8888245)
 
-[node name="snowman_A2" parent="Assets" unique_id=2075420894 instance=ExtResource("4_4sbgp")]
+[node name="snowman_A2" parent="Assets/Snow" unique_id=2075420894 instance=ExtResource("4_4sbgp")]
 transform = Transform3D(0.6635607, 0, -0.74812245, 0, 1, 0, 0.74812245, 0, 0.6635607, 1.6582836, 0.49923778, 0.5361712)
 
-[node name="snowman_B2" parent="Assets" unique_id=281674432 instance=ExtResource("5_3gxvc")]
+[node name="snowman_B2" parent="Assets/Snow" unique_id=281674432 instance=ExtResource("5_3gxvc")]
 transform = Transform3D(0.49698913, 0, 0.8677568, 0, 1, 0, -0.8677568, 0, 0.49698913, -1.2810682, 0.49174166, 0.79448795)
+
+[node name="hot_chocolate2" parent="Assets/Snow" unique_id=817523593 instance=ExtResource("7_5jkfs")]
+transform = Transform3D(0.7239913, 0, -0.6898091, 0, 1, 0, 0.6898091, 0, 0.7239913, -1.3486603, 1.4352596, 1.6666467)
 
 [node name="lantern_decorated2" parent="Assets" unique_id=1570586591 instance=ExtResource("6_3gxvc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.49852, 0, 3.2918396)
-
-[node name="hot_chocolate2" parent="Assets" unique_id=323109949 instance=ExtResource("7_5jkfs")]
-transform = Transform3D(0.7239913, 0, -0.6898091, 0, 1, 0, 0.6898091, 0, 0.7239913, -1.3486603, 1.4352596, 1.6666467)
 
 [node name="candy_B_blue2" parent="Assets" unique_id=1690279741 instance=ExtResource("8_vduyr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9377694, 0.51627994, 2.6363494)
@@ -59,3 +84,6 @@ texture = ExtResource("11_8j0ur")
 [node name="Painting2" type="Sprite3D" parent="." unique_id=1088434367]
 transform = Transform3D(-2.1855695e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.1855695e-09, 4.872376, 2.7937922, 1.0866623)
 texture = ExtResource("11_8j0ur")
+
+[node name="snowman_hat" parent="." unique_id=632121575 instance=ExtResource("17_qgsuo")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.8578774, 0.8176768, 0.59144855)

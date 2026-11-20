@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://br4gp5enpulih" path="res://assets/painting/1_1_alap.png" id="4_ane40"]
 [ext_resource type="Texture2D" uid="uid://c0jpjjrmisdgp" path="res://assets/painting/1_1_lap.png" id="5_34li6"]
 [ext_resource type="PackedScene" uid="uid://bpm4fiuf77kxl" path="res://scenes/tarot.tscn" id="6_34li6"]
+[ext_resource type="PackedScene" uid="uid://ddd6t2m8tx8uo" path="res://scenes/scroll.tscn" id="7_udjmk"]
+[ext_resource type="Texture2D" uid="uid://btjdng8viutdr" path="res://assets/music_puzzle/metal_6.png" id="8_ccb0g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ane40"]
 size = Vector3(1, 1.4208984, 0.4901123)
@@ -41,5 +43,9 @@ texture = ExtResource("5_34li6")
 [node name="Tarot" parent="." unique_id=1918866345 instance=ExtResource("6_34li6")]
 transform = Transform3D(0.99721265, 0.07461324, 0, -0.0104731275, 0.13997428, -0.99009985, -0.07387455, 0.98733985, 0.14036553, -4.2810717, 0.57293344, -4.351905)
 number = 13
+
+[node name="Scroll" parent="." unique_id=1912316633 instance=ExtResource("7_udjmk")]
+transform = Transform3D(0.87447584, 0, -0.48506907, 0, 1, 0, 0.48506907, 0, 0.87447584, 1.1364722, 0.6823447, -4.6501293)
+scroll = ExtResource("8_ccb0g")
 
 [connection signal="finished" from="FireSound" to="." method="_on_fire_sound_finished"]
