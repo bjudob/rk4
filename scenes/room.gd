@@ -31,6 +31,10 @@ var place = Vector2(-1,-1)
 var room_0_place = Vector3(-1,-1,-1)
 var lock_solved = false
 
+# room effect
+var is_burning = false
+var is_reversed = false
+
 
 func _ready() -> void:
 	position.y = -100
@@ -92,3 +96,10 @@ func solve_lock(solved: bool):
 	tarot.enable()
 	lock_solved = true
 	lock.solve()
+	
+# room effects
+func burn():
+	pass
+	
+func revert():
+	pass

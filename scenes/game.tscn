@@ -25,7 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://cgw1ntsb46ljk" path="res://assets/room_icons/room_rest.png" id="17_5newe"]
 [ext_resource type="PackedScene" uid="uid://dhiaqq5okvak0" path="res://scenes/room_red_button.tscn" id="17_264po"]
 [ext_resource type="PackedScene" uid="uid://b2y32odtteps5" path="res://assets/Christmas/roof_gingerbread_left.gltf" id="18_8ool0"]
+[ext_resource type="PackedScene" uid="uid://bjkcmcw0jbods" path="res://scenes/room_bonfire.tscn" id="18_pr1ej"]
 [ext_resource type="Texture2D" uid="uid://chvk541omlbml" path="res://assets/room_icons/tree_room.png" id="18_sgl2t"]
+[ext_resource type="Texture2D" uid="uid://bbb7803c1hjcv" path="res://assets/blueprints/blueprint_bonfire.png" id="19_05nbr"]
 [ext_resource type="PackedScene" uid="uid://b6cfra3h2i5a7" path="res://scenes/room_parlor.tscn" id="19_5newe"]
 [ext_resource type="Texture2D" uid="uid://b55c1p38ohviu" path="res://assets/blueprints/blueprint_old_room_start.png" id="19_gxtfn"]
 [ext_resource type="PackedScene" uid="uid://dp8054sjy4wxt" path="res://scenes/room_workshop.tscn" id="20_37s47"]
@@ -866,6 +868,12 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.7527
 
 [node name="Room00Pos" type="Node3D" parent="Rooms" unique_id=1163338060 groups=["room_00_pos"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 0, 22.5)
+
+[node name="RoomBonfire" parent="Rooms" unique_id=1826765749 instance=ExtResource("18_pr1ej")]
+room_name = "bonfire"
+wall_type = 6
+image = ExtResource("19_05nbr")
+rarity = 10
 
 [node name="RoomStart" parent="Rooms" unique_id=564975233 instance=ExtResource("4_0tnpc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)

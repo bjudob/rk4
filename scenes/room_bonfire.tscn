@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bjkcmcw0jbods"]
+
+[ext_resource type="Script" uid="uid://dsh5mho5mfp4h" path="res://scenes/room_bonfire.gd" id="1_xse67"]
+[ext_resource type="PackedScene" uid="uid://dyaupbvmgklil" path="res://assets/MeshyAI/bonfire.glb" id="2_xse67"]
+[ext_resource type="AudioStream" uid="uid://dso5qogpqhtkc" path="res://music/bonfire.wav" id="3_35xgh"]
+[ext_resource type="Texture2D" uid="uid://br4gp5enpulih" path="res://assets/painting/1_1_alap.png" id="4_ane40"]
+[ext_resource type="Texture2D" uid="uid://c0jpjjrmisdgp" path="res://assets/painting/1_1_lap.png" id="5_34li6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ane40"]
+size = Vector3(1, 1.4208984, 1)
+
+[node name="RoomBonfire" type="Node3D" unique_id=1826765749]
+script = ExtResource("1_xse67")
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=1721124331]
+size = Vector3(10, 1, 10)
+
+[node name="bonfire" parent="." unique_id=1387297006 instance=ExtResource("2_xse67")]
+transform = Transform3D(2.9525027, 0, 2.6986527, 0, 4, 0, -2.6986527, 0, 2.9525027, -3.61366, 4.0835524, -3.187695)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="bonfire" unique_id=508071913]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bonfire/StaticBody3D" unique_id=2070827756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.21044922, 0)
+shape = SubResource("BoxShape3D_ane40")
+
+[node name="FireSound" type="AudioStreamPlayer3D" parent="." unique_id=1603757784]
+stream = ExtResource("3_35xgh")
+autoplay = true
+max_distance = 8.0
+
+[node name="Painting1" type="Sprite3D" parent="." unique_id=681676955]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 2.8470168, -4.867195)
+texture = ExtResource("4_ane40")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=969779007]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -4.839002, 2.8470168, 0.0005016327)
+texture = ExtResource("5_34li6")
+
+[connection signal="finished" from="FireSound" to="." method="_on_fire_sound_finished"]
