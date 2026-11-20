@@ -33,6 +33,7 @@ scroll_ui=""
 tarot_ui=""
 tarot=""
 key_ui=""
+room_bonfire=""
 
 [input]
 

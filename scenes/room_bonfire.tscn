@@ -5,11 +5,12 @@
 [ext_resource type="AudioStream" uid="uid://dso5qogpqhtkc" path="res://music/bonfire.wav" id="3_35xgh"]
 [ext_resource type="Texture2D" uid="uid://br4gp5enpulih" path="res://assets/painting/1_1_alap.png" id="4_ane40"]
 [ext_resource type="Texture2D" uid="uid://c0jpjjrmisdgp" path="res://assets/painting/1_1_lap.png" id="5_34li6"]
+[ext_resource type="PackedScene" uid="uid://bpm4fiuf77kxl" path="res://scenes/tarot.tscn" id="6_34li6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ane40"]
-size = Vector3(1, 1.4208984, 1)
+size = Vector3(1, 1.4208984, 0.4901123)
 
-[node name="RoomBonfire" type="Node3D" unique_id=1826765749]
+[node name="RoomBonfire" type="Node3D" unique_id=1826765749 groups=["room_bonfire"]]
 script = ExtResource("1_xse67")
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=1721124331]
@@ -21,7 +22,7 @@ transform = Transform3D(2.9525027, 0, 2.6986527, 0, 4, 0, -2.6986527, 0, 2.95250
 [node name="StaticBody3D" type="StaticBody3D" parent="bonfire" unique_id=508071913]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="bonfire/StaticBody3D" unique_id=2070827756]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.21044922, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9604645e-08, -0.21044922, 0.25494385)
 shape = SubResource("BoxShape3D_ane40")
 
 [node name="FireSound" type="AudioStreamPlayer3D" parent="." unique_id=1603757784]
@@ -36,5 +37,9 @@ texture = ExtResource("4_ane40")
 [node name="Painting2" type="Sprite3D" parent="." unique_id=969779007]
 transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -4.839002, 2.8470168, 0.0005016327)
 texture = ExtResource("5_34li6")
+
+[node name="Tarot" parent="." unique_id=1918866345 instance=ExtResource("6_34li6")]
+transform = Transform3D(0.99721265, 0.07461324, 0, -0.0104731275, 0.13997428, -0.99009985, -0.07387455, 0.98733985, 0.14036553, -4.2810717, 0.57293344, -4.351905)
+number = 13
 
 [connection signal="finished" from="FireSound" to="." method="_on_fire_sound_finished"]

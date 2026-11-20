@@ -104,6 +104,11 @@ text = "DO NOT PUSH
 THE
 RED BUTTON"
 
+[node name="Label3D2" type="Label3D" parent="." unique_id=762629846]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 1.7146314, 0.9840673, -1.2780304)
+text = "*unless you want to walk into fire"
+font_size = 14
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1355358297]
 libraries/ = SubResource("AnimationLibrary_kijit")
 

@@ -29,8 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://chvk541omlbml" path="res://assets/room_icons/tree_room.png" id="18_sgl2t"]
 [ext_resource type="Texture2D" uid="uid://bbb7803c1hjcv" path="res://assets/blueprints/blueprint_bonfire.png" id="19_05nbr"]
 [ext_resource type="PackedScene" uid="uid://b6cfra3h2i5a7" path="res://scenes/room_parlor.tscn" id="19_5newe"]
-[ext_resource type="Texture2D" uid="uid://b55c1p38ohviu" path="res://assets/blueprints/blueprint_old_room_start.png" id="19_gxtfn"]
 [ext_resource type="PackedScene" uid="uid://dp8054sjy4wxt" path="res://scenes/room_workshop.tscn" id="20_37s47"]
+[ext_resource type="Texture2D" uid="uid://dqywyq05gb53b" path="res://assets/blueprints/blueprint_start_room.png" id="21_05nbr"]
 [ext_resource type="PackedScene" uid="uid://cq0lpd0pxl5tm" path="res://scenes/room_library.tscn" id="21_bt5mj"]
 [ext_resource type="Texture2D" uid="uid://log4ela1x846" path="res://assets/blueprints/blueprint_red_button.png" id="21_twgab"]
 [ext_resource type="PackedScene" uid="uid://8hs5c4uftnhq" path="res://scenes/room_prison.tscn" id="22_e1j6l"]
@@ -878,7 +878,7 @@ rarity = 10
 [node name="RoomStart" parent="Rooms" unique_id=564975233 instance=ExtResource("4_0tnpc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.53)
 room_name = "StartRoom"
-image = ExtResource("19_gxtfn")
+image = ExtResource("21_05nbr")
 rarity = 1
 
 [node name="RoomRedButton" parent="Rooms" unique_id=581924088 instance=ExtResource("17_264po")]

@@ -41,8 +41,8 @@ var room_total_weights = 0
 var days = 1
 var steps_default = 15
 var steps = 15
-var candies = 5
-var candies_default = 5
+var candies = 10
+var candies_default = 10
 var keys = 3
 var keys_default = 3
 var dices = 20
@@ -204,4 +204,9 @@ func start(load_save: bool):
 func is_tarot_found(tarot_nr: int):
 	return tarot_ui.is_found(tarot_nr)
 	
+func red_button_pushed():
+	steps = 5
+	candies = 0
+	dices = 0
+	keys = 0
 	
