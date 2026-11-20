@@ -74,7 +74,7 @@ func _ready() -> void:
 		for i in rooms[room_name].rarity:
 			rooms_rnd.append(room_name)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	game_ui.update(days, steps, candies, keys, dices)
 	if Input.is_action_just_pressed("menu"):
 		if tarot_ui.visible:

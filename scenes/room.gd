@@ -77,8 +77,12 @@ func spawned() -> bool:
 	return place.x!=-1 and place.y!=-1
 	
 func reset():
+	if is_reversed:
+		for c in get_children():
+			c.position.y = c.position.y + 6
 	is_burning = false
 	is_reversed = false
+	rotation_degrees.z = 0
 	rotation_degrees.y = 0
 	visible = false
 	position.y = -100
@@ -103,5 +107,9 @@ func solve_lock(solved: bool):
 func burn():
 	is_burning = true
 	
-func revert():
+func reverse():
 	is_reversed = true
+	rotation_degrees.z = 180
+	for c in get_children():
+		if c is Node3D:
+			c.position.y = c.position.y - 6

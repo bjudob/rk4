@@ -938,6 +938,7 @@ rarity = 1
 [node name="RoomFaSzoba" parent="Rooms" unique_id=209875925 instance=ExtResource("27_suyxu")]
 
 [node name="RoomReverse" parent="Rooms" unique_id=368277754 instance=ExtResource("35_02fa5")]
+room_name = "reverse"
 image = ExtResource("36_8ool0")
 rarity = 10
 candy_cost = 1
