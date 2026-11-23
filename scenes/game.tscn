@@ -892,6 +892,12 @@ image = ExtResource("21_twgab")
 rarity = 5
 candy_cost = 2
 
+[node name="RoomReverse" parent="Rooms" unique_id=368277754 instance=ExtResource("35_02fa5")]
+room_name = "reverse"
+image = ExtResource("36_8ool0")
+rarity = 10
+candy_cost = 1
+
 [node name="RoomSnowman" parent="Rooms" unique_id=1405148680 instance=ExtResource("37_7025r")]
 wall_type = 5
 image = ExtResource("38_m4url")
@@ -900,6 +906,12 @@ rarity = 5
 [node name="RoomMiniBuildings" parent="Rooms" unique_id=1967786906 instance=ExtResource("26_0sl42")]
 wall_type = 4
 image = ExtResource("27_oaba0")
+rarity = 10
+
+[node name="RoomPlush" parent="Rooms" unique_id=1667126646 instance=ExtResource("43_458eo")]
+room_name = "plush"
+wall_type = 5
+image = ExtResource("44_h3rex")
 rarity = 10
 
 [node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
@@ -945,18 +957,6 @@ rarity = 1
 rarity = 1
 
 [node name="RoomFaSzoba" parent="Rooms" unique_id=209875925 instance=ExtResource("27_suyxu")]
-
-[node name="RoomReverse" parent="Rooms" unique_id=368277754 instance=ExtResource("35_02fa5")]
-room_name = "reverse"
-image = ExtResource("36_8ool0")
-rarity = 10
-candy_cost = 1
-
-[node name="RoomPlush" parent="Rooms" unique_id=1667126646 instance=ExtResource("43_458eo")]
-room_name = "plush"
-wall_type = 1
-image = ExtResource("44_h3rex")
-rarity = 10
 
 [node name="Walls" type="Node3D" parent="." unique_id=1946072825]
 

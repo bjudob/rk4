@@ -71,6 +71,7 @@ func spawn(spawn_place: Vector2, direction: EntryDirection) -> void:
 		rotation_degrees.y = -90
 	elif direction == EntryDirection.RIGHT:
 		rotation_degrees.y = 90
+	on_spawn()
 	
 
 func spawned() -> bool:
@@ -102,7 +103,11 @@ func solve_lock(solved: bool):
 	tarot.enable()
 	lock_solved = true
 	lock.solve()
-	
+
+# spawn bonuses
+func on_spawn():
+	pass
+
 # room effects
 func burn():
 	is_burning = true
