@@ -3,7 +3,6 @@
 [ext_resource type="AudioStream" uid="uid://d2a5v77f02v66" path="res://music/Instrumental Christmas Music Peder B. Helland - O Holy Night (Album).mp3" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://c3ralf23uxqie" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://duiebyo7sx707" path="res://scenes/game.gd" id="1_vtaks"]
-[ext_resource type="PackedScene" uid="uid://by6xy7d4fuupj" path="res://assets/MeshyAI/santa_dead.glb" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cu4fpylqjyvl3" path="res://scenes/main_menu.tscn" id="3_bhx41"]
 [ext_resource type="PackedScene" uid="uid://dl7hgxfcu67s4" path="res://scenes/room.tscn" id="4_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://dujvmh1fokw3t" path="res://assets/HolidayKit/tree.glb" id="4_gee14"]
@@ -47,6 +46,12 @@
 [ext_resource type="Texture2D" uid="uid://c5ujsp84vsvdm" path="res://assets/blueprints/blueprint_snowman.png" id="38_m4url"]
 [ext_resource type="PackedScene" uid="uid://bv30mdkue1tiw" path="res://scenes/room_plush.tscn" id="43_458eo"]
 [ext_resource type="Texture2D" uid="uid://d3l2oafvwjqg8" path="res://assets/blueprints/blueprint_plush.png" id="44_h3rex"]
+[ext_resource type="PackedScene" uid="uid://c67dey5tq2h5l" path="res://assets/MeshyAI/shop_candies.glb" id="47_8qswn"]
+[ext_resource type="PackedScene" uid="uid://brljfq6k8wh6q" path="res://scenes/candy.tscn" id="48_pf7vy"]
+[ext_resource type="PackedScene" uid="uid://duuxx27aj4tl4" path="res://assets/MeshyAI/shop_dices.glb" id="48_rm0al"]
+[ext_resource type="PackedScene" uid="uid://dsedkpwoe387t" path="res://assets/MeshyAI/shop_keys.glb" id="49_i4re6"]
+[ext_resource type="PackedScene" uid="uid://2v8a7rqsi7dk" path="res://scenes/key.tscn" id="50_o8ni1"]
+[ext_resource type="PackedScene" uid="uid://ci4atq7uiwj2h" path="res://scenes/dice.tscn" id="52_3hbvx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_top_color = Color(0.2543043, 0.42400897, 0.8124737, 1)
@@ -865,9 +870,6 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 13.601067, 0.5000005, 57.7145
 [node name="tree-snow-b9" parent="Trees" unique_id=2138295399 instance=ExtResource("6_vtaks")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 12.118847, 0.5, 58.722984)
 
-[node name="santa_dead" parent="." unique_id=1755617714 instance=ExtResource("2_yqjtg")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.1980295, 1.7723966, 29.752752)
-
 [node name="Rooms" type="Node3D" parent="." unique_id=683950956]
 
 [node name="Room00Pos" type="Node3D" parent="Rooms" unique_id=1163338060 groups=["room_00_pos"]]
@@ -1348,3 +1350,32 @@ size = Vector3(350, 300, 1)
 transform = Transform3D(-4.371139e-08, 0.5, 0.8660254, 0, 0.8660254, -0.5, -1, -2.1855694e-08, -3.7855173e-08, 114.24577, -141.16667, -6.2842255)
 use_collision = true
 size = Vector3(350, 300, 1)
+
+[node name="Shops" type="Node3D" parent="." unique_id=360412798]
+
+[node name="shop_candies" parent="Shops" unique_id=179088039 instance=ExtResource("47_8qswn")]
+transform = Transform3D(1.4761337, 0, -1.3494552, 0, 2, 0, 1.3494552, 0, 1.4761337, 7.1527658, 2.4112906, 30.30994)
+
+[node name="Candy" parent="Shops/shop_candies" unique_id=2147321871 instance=ExtResource("48_pf7vy")]
+transform = Transform3D(0.99793714, 0, 0.064201385, 0, 1, 0, -0.064201385, 0, 0.99793714, 0.12319946, -0.30314422, 0.115021706)
+
+[node name="Candy2" parent="Shops/shop_candies" unique_id=1377601820 instance=ExtResource("48_pf7vy")]
+transform = Transform3D(0.99793714, 0, 0.064201385, 0, 1, 0, -0.064201385, 0, 0.99793714, -0.1113081, -0.30314422, 0.32940483)
+
+[node name="shop_keys" parent="Shops" unique_id=263893663 instance=ExtResource("49_i4re6")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 9.418836, 2.3502424, 34.496414)
+
+[node name="Key" parent="Shops/shop_keys" unique_id=1194844630 instance=ExtResource("50_o8ni1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.28639174, 0.6079674)
+
+[node name="shop_dices" parent="Shops" unique_id=854094888 instance=ExtResource("48_rm0al")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 9.029964, 2.3059926, 38.4927)
+
+[node name="Dice" parent="Shops/shop_dices" unique_id=939750161 instance=ExtResource("52_3hbvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18601227, -0.312343, 0)
+
+[node name="Dice2" parent="Shops/shop_dices" unique_id=1334587392 instance=ExtResource("52_3hbvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08380127, -0.312343, 0)
+
+[node name="Dice3" parent="Shops/shop_dices" unique_id=1471416674 instance=ExtResource("52_3hbvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3225975, -0.312343, 0)
