@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bv30mdkue1tiw"]
+
+[ext_resource type="Script" uid="uid://ctabxv8kgt1i7" path="res://scenes/room_plush.gd" id="1_m81t7"]
+[ext_resource type="PackedScene" uid="uid://jhqfxss32raa" path="res://assets/Fantasy/Bed_Twin2.gltf" id="1_pt3w0"]
+[ext_resource type="PackedScene" uid="uid://b2oawuj31pfxs" path="res://assets/MeshyAI/toto.glb" id="3_m81t7"]
+[ext_resource type="PackedScene" uid="uid://c1gc55inxtavp" path="res://assets/MeshyAI/pufi.glb" id="4_txu8y"]
+[ext_resource type="PackedScene" uid="uid://duwadlf2w4lyh" path="res://assets/MeshyAI/goni.glb" id="5_8w4pk"]
+[ext_resource type="Texture2D" uid="uid://br4gp5enpulih" path="res://assets/painting/1_1_alap.png" id="6_8w4pk"]
+[ext_resource type="Texture2D" uid="uid://c0jpjjrmisdgp" path="res://assets/painting/1_1_lap.png" id="7_v064f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8w4pk"]
+size = Vector3(1.4800415, 1.3466797, 2.9245605)
+
+[node name="RoomPlush" type="Node3D" unique_id=1667126646]
+script = ExtResource("1_m81t7")
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=1574660211]
+size = Vector3(10, 1, 10)
+
+[node name="Assets" type="Node3D" parent="." unique_id=524176114]
+
+[node name="Bed_Twin22" parent="Assets" unique_id=579292010 instance=ExtResource("1_pt3w0")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.13240314, 0.43105793, 0.38549995)
+
+[node name="toto" parent="Assets" unique_id=429716524 instance=ExtResource("3_m81t7")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.6091235, 1.6327015, -0.8368325)
+
+[node name="pufi" parent="Assets" unique_id=2008074199 instance=ExtResource("4_txu8y")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.12536776, 1.39809, -0.29423755)
+
+[node name="goni" parent="Assets" unique_id=1763722714 instance=ExtResource("5_8w4pk")]
+transform = Transform3D(0.4, 0, 0, 0, 0.03480665, 0.39848277, 0, -0.39848277, 0.03480665, 0.16052356, 1.2414478, 0.895548)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Assets" unique_id=798660925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1439179, 0.63960576)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Assets/StaticBody3D" unique_id=287487025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035491943, -0.17333984, -0.41589355)
+shape = SubResource("BoxShape3D_8w4pk")
+
+[node name="Painting1" type="Sprite3D" parent="." unique_id=294293099]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 4.8208795, 3.0297847, -1.4487168)
+texture = ExtResource("6_8w4pk")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=1148352543]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 4.8208795, 3.0297847, 0.9265667)
+texture = ExtResource("7_v064f")

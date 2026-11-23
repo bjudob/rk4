@@ -45,6 +45,8 @@
 [ext_resource type="Texture2D" uid="uid://c6nibk5a2kla5" path="res://assets/blueprints/blueprint_reverse_room.png" id="36_8ool0"]
 [ext_resource type="PackedScene" uid="uid://dbqcdyoyo7bmn" path="res://scenes/room_snowman.tscn" id="37_7025r"]
 [ext_resource type="Texture2D" uid="uid://c5ujsp84vsvdm" path="res://assets/blueprints/blueprint_snowman.png" id="38_m4url"]
+[ext_resource type="PackedScene" uid="uid://bv30mdkue1tiw" path="res://scenes/room_plush.tscn" id="43_458eo"]
+[ext_resource type="Texture2D" uid="uid://d3l2oafvwjqg8" path="res://assets/blueprints/blueprint_plush.png" id="44_h3rex"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_top_color = Color(0.2543043, 0.42400897, 0.8124737, 1)
@@ -949,6 +951,12 @@ room_name = "reverse"
 image = ExtResource("36_8ool0")
 rarity = 10
 candy_cost = 1
+
+[node name="RoomPlush" parent="Rooms" unique_id=1667126646 instance=ExtResource("43_458eo")]
+room_name = "plush"
+wall_type = 1
+image = ExtResource("44_h3rex")
+rarity = 10
 
 [node name="Walls" type="Node3D" parent="." unique_id=1946072825]
 

@@ -23,6 +23,7 @@ var player_starting_pos
 @onready var room_snowman = $Rooms/RoomSnowman
 @onready var room_bonfire = $Rooms/RoomBonfire
 @onready var room_mini_buildings = $Rooms/RoomMiniBuildings
+@onready var room_plush = $Rooms/RoomPlush
 
 const save_file_path = "user://rk.json"
 var save_data = {
@@ -70,6 +71,7 @@ func _ready() -> void:
 		room_bonfire.room_name: room_bonfire,
 		room_snowman.room_name: room_snowman,
 		room_mini_buildings.room_name: room_mini_buildings,
+		room_plush.room_name: room_plush,
 	}
 	for room_name in rooms:
 		room_total_weights = room_total_weights + rooms[room_name].rarity
