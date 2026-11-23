@@ -17,7 +17,7 @@ script = ExtResource("1_yax5h")
 [node name="WallRight" type="CSGBox3D" parent="." unique_id=871928001]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 0)
 use_collision = true
-size = Vector3(1, 5, 2)
+size = Vector3(1, 15, 2)
 
 [node name="BodyRight" type="StaticBody3D" parent="WallRight" unique_id=2054926093]
 
@@ -27,7 +27,7 @@ shape = SubResource("BoxShape3D_yax5h")
 [node name="WallLeft" type="CSGBox3D" parent="." unique_id=679224087]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 0)
 use_collision = true
-size = Vector3(1, 5, 2)
+size = Vector3(1, 15, 2)
 
 [node name="BodyLeft" type="StaticBody3D" parent="WallLeft" unique_id=1416188447]
 
@@ -38,7 +38,7 @@ shape = SubResource("BoxShape3D_0lpna")
 [node name="WallForward" type="CSGBox3D" parent="." unique_id=2094225358]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.5)
 use_collision = true
-size = Vector3(2, 5, 1)
+size = Vector3(2, 15, 1)
 
 [node name="BodyForward" type="StaticBody3D" parent="WallForward" unique_id=1158208714]
 

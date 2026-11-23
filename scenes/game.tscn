@@ -895,7 +895,7 @@ candy_cost = 2
 [node name="RoomReverse" parent="Rooms" unique_id=368277754 instance=ExtResource("35_02fa5")]
 room_name = "reverse"
 image = ExtResource("36_8ool0")
-rarity = 10
+rarity = 30
 candy_cost = 1
 
 [node name="RoomSnowman" parent="Rooms" unique_id=1405148680 instance=ExtResource("37_7025r")]
