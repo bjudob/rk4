@@ -52,6 +52,8 @@
 [ext_resource type="PackedScene" uid="uid://dsedkpwoe387t" path="res://assets/MeshyAI/shop_keys.glb" id="49_i4re6"]
 [ext_resource type="PackedScene" uid="uid://2v8a7rqsi7dk" path="res://scenes/key.tscn" id="50_o8ni1"]
 [ext_resource type="PackedScene" uid="uid://ci4atq7uiwj2h" path="res://scenes/dice.tscn" id="52_3hbvx"]
+[ext_resource type="PackedScene" uid="uid://drnjesthnya30" path="res://assets/MeshyAI/cat_devil.glb" id="53_o8ni1"]
+[ext_resource type="PackedScene" uid="uid://bpm4fiuf77kxl" path="res://scenes/tarot.tscn" id="54_3hbvx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_top_color = Color(0.2543043, 0.42400897, 0.8124737, 1)
@@ -66,6 +68,9 @@ sky_material = SubResource("ProceduralSkyMaterial_uwrxv")
 background_mode = 2
 sky = SubResource("Sky_yqjtg")
 tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3hbvx"]
+albedo_color = Color(1, 0.29803923, 0.23921569, 1)
 
 [node name="Game" type="Node3D" unique_id=427786463 groups=["game"]]
 script = ExtResource("1_vtaks")
@@ -1330,26 +1335,31 @@ transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -13.173483, 16.612196, -18.04
 transform = Transform3D(-7, 0, -1.0569706e-06, 0, 7, 0, 1.0569706e-06, 0, -7, 13.699499, 16.612196, -18.041656)
 
 [node name="Slider" type="Node3D" parent="." unique_id=1033800246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.977299, 0)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Slider" unique_id=75007759]
-transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 0, -147.31285, 101.02161)
+transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 0, -166.60612, 101.02161)
 use_collision = true
-size = Vector3(350, 300, 1)
+size = Vector3(350, 400, 1)
+material = SubResource("StandardMaterial3D_3hbvx")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Slider" unique_id=744752964]
-transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, -141.16667, -96.60887)
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, -160.45995, -96.60887)
 use_collision = true
-size = Vector3(350, 300, 1)
+size = Vector3(350, 400, 1)
+material = SubResource("StandardMaterial3D_3hbvx")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Slider" unique_id=2010450762]
-transform = Transform3D(-4.371139e-08, -0.5, 0.8660254, 0, 0.8660254, 0.5, -1, 2.1855694e-08, -3.7855173e-08, -121.7512, -141.16667, 6.3580856)
+transform = Transform3D(-4.371139e-08, -0.5, 0.8660254, 0, 0.8660254, 0.5, -1, 2.1855694e-08, -3.7855173e-08, -121.7512, -160.45995, 6.3580856)
 use_collision = true
-size = Vector3(350, 300, 1)
+size = Vector3(350, 400, 1)
+material = SubResource("StandardMaterial3D_3hbvx")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Slider" unique_id=626698684]
-transform = Transform3D(-4.371139e-08, 0.5, 0.8660254, 0, 0.8660254, -0.5, -1, -2.1855694e-08, -3.7855173e-08, 114.24577, -141.16667, -6.2842255)
+transform = Transform3D(-4.371139e-08, 0.5, 0.8660254, 0, 0.8660254, -0.5, -1, -2.1855694e-08, -3.7855173e-08, 114.24577, -160.45995, -6.2842255)
 use_collision = true
-size = Vector3(350, 300, 1)
+size = Vector3(350, 400, 1)
+material = SubResource("StandardMaterial3D_3hbvx")
 
 [node name="Shops" type="Node3D" parent="." unique_id=360412798]
 
@@ -1379,3 +1389,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08380127, -0.312343, 0)
 
 [node name="Dice3" parent="Shops/shop_dices" unique_id=1471416674 instance=ExtResource("52_3hbvx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3225975, -0.312343, 0)
+
+[node name="Underground" type="Node3D" parent="." unique_id=93872733]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2681904, -303.39746, 2.3761482)
+
+[node name="Ground" type="CSGBox3D" parent="Underground" unique_id=38583352]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -38.614136, 1.9254704)
+use_collision = true
+size = Vector3(50, 1, 20)
+
+[node name="cat_devil" parent="Underground" unique_id=1162064692 instance=ExtResource("53_o8ni1")]
+transform = Transform3D(-1.3113416e-07, 0, -3, 0, 3, 0, 3, 0, -1.3113416e-07, 15.423576, -35.310425, 1.4228458)
+
+[node name="Tarot" parent="Underground" unique_id=1918866345 instance=ExtResource("54_3hbvx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -35.05841, 1.9351101)
+number = 21
