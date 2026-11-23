@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dj3txl70qxh7"]
+
+[ext_resource type="PackedScene" uid="uid://chrv208f8054" path="res://assets/buildings/building_acropolis.glb" id="1_asf5b"]
+[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_pnq4s"]
+[ext_resource type="PackedScene" uid="uid://cmniqa0mvse0s" path="res://assets/buildings/building_aya_sofia.glb" id="2_2rjwm"]
+[ext_resource type="PackedScene" uid="uid://bwwe06mfo6tsh" path="res://assets/buildings/building_big_ben.glb" id="3_ni2t3"]
+[ext_resource type="PackedScene" uid="uid://co0x53aeb7yww" path="res://assets/buildings/building_colosseum.glb" id="4_uio2g"]
+[ext_resource type="PackedScene" uid="uid://cl3hvtge1qmmm" path="res://assets/buildings/building_mallorca.glb" id="5_a181a"]
+[ext_resource type="PackedScene" uid="uid://irrjfctl35lb" path="res://assets/buildings/building_napi.glb" id="6_c58kr"]
+[ext_resource type="PackedScene" uid="uid://clw3cthoynj8q" path="res://assets/buildings/1.glb" id="7_lpjjh"]
+[ext_resource type="PackedScene" uid="uid://2nannpe8i3kr" path="res://assets/buildings/2.glb" id="8_pnq4s"]
+[ext_resource type="PackedScene" uid="uid://3mi2gwpn51li" path="res://assets/buildings/3.glb" id="9_cdyol"]
+[ext_resource type="PackedScene" uid="uid://byenali5e4jku" path="res://assets/buildings/4.glb" id="10_ippvs"]
+[ext_resource type="PackedScene" uid="uid://sk7j6o6g8lvd" path="res://assets/buildings/5.glb" id="11_h4cre"]
+[ext_resource type="PackedScene" uid="uid://bwdo46bbie7qr" path="res://assets/buildings/6.glb" id="12_ofky1"]
+[ext_resource type="Texture2D" uid="uid://br4gp5enpulih" path="res://assets/painting/1_1_alap.png" id="14_ippvs"]
+[ext_resource type="Texture2D" uid="uid://c0jpjjrmisdgp" path="res://assets/painting/1_1_lap.png" id="15_h4cre"]
+
+[node name="RoomMiniBuildings" type="Node3D" unique_id=1967786906]
+script = ExtResource("1_pnq4s")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2001474093]
+size = Vector3(10, 1, 10)
+
+[node name="Assets" type="Node3D" parent="." unique_id=1559010950]
+
+[node name="building_acropolis" parent="Assets" unique_id=1341379451 instance=ExtResource("1_asf5b")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -3.0574756, 0.9405556, 2.8977213)
+
+[node name="building_aya_sofia" parent="Assets" unique_id=1964160912 instance=ExtResource("2_2rjwm")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 2.5057528, 1.253356, 2.9250388)
+
+[node name="building_big_ben" parent="Assets" unique_id=553694198 instance=ExtResource("3_ni2t3")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -2.5918386, 1.5786519, -0.10097432)
+
+[node name="building_colosseum" parent="Assets" unique_id=311372169 instance=ExtResource("4_uio2g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5017338, 1.1269574, -0.10583389)
+
+[node name="building_mallorca" parent="Assets" unique_id=943268228 instance=ExtResource("5_a181a")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -2.8075712, 1.244328, -2.7536178)
+
+[node name="building_napi" parent="Assets" unique_id=156740741 instance=ExtResource("6_c58kr")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 2.5101962, 1.0075364, -2.9357498)
+
+[node name="1" parent="Assets" unique_id=1933056933 instance=ExtResource("7_lpjjh")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1.5653224, 0.7882364, 2.9365351)
+
+[node name="2" parent="Assets" unique_id=114896655 instance=ExtResource("8_pnq4s")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.8361559, 0.74171233, 2.943612)
+
+[node name="3" parent="Assets" unique_id=1253176359 instance=ExtResource("9_cdyol")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1.6516984, 0.7995961, -0.08501005)
+
+[node name="4" parent="Assets" unique_id=955504143 instance=ExtResource("10_ippvs")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.80103546, 0.768636, -0.13352823)
+
+[node name="5" parent="Assets" unique_id=145451755 instance=ExtResource("11_h4cre")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1.4327664, 0.7628865, -3.0537252)
+
+[node name="6" parent="Assets" unique_id=748432374 instance=ExtResource("12_ofky1")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.8014859, 0.7803011, -2.8249805)
+
+[node name="Painting1" type="Sprite3D" parent="." unique_id=1245440024]
+transform = Transform3D(-2.1855695e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.1855695e-09, 3.4835033, 0.91696036, -0.146752)
+texture = ExtResource("14_ippvs")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=1486054116]
+transform = Transform3D(-2.1855695e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.1855695e-09, 3.3470004, 0.8557111, 2.6388497)
+texture = ExtResource("15_h4cre")

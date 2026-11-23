@@ -37,6 +37,8 @@
 [ext_resource type="PackedScene" uid="uid://bc7x5e5piimp" path="res://scenes/room_gingerbread.tscn" id="22_v2yb1"]
 [ext_resource type="PackedScene" uid="uid://2fj6eg6b0afj" path="res://assets/Christmas/wall_gingerbread_A.gltf" id="25_pl11u"]
 [ext_resource type="Texture2D" uid="uid://dl83i7b8dfsvn" path="res://assets/blueprints/blueprint_gingerbread.png" id="25_twgab"]
+[ext_resource type="PackedScene" uid="uid://dj3txl70qxh7" path="res://scenes/room_mini_buildings.tscn" id="26_0sl42"]
+[ext_resource type="Texture2D" uid="uid://dklb3gx73vrco" path="res://assets/blueprints/blueprints_mini_buildigns.png" id="27_oaba0"]
 [ext_resource type="PackedScene" uid="uid://c5a4s5qdmib8o" path="res://scenes/room_fa_szoba.tscn" id="27_suyxu"]
 [ext_resource type="PackedScene" uid="uid://c5jehje2jvvvb" path="res://scenes/door.tscn" id="29_suyxu"]
 [ext_resource type="PackedScene" uid="uid://cbl43c1887x0s" path="res://scenes/room_reverse.tscn" id="35_02fa5"]
@@ -892,6 +894,11 @@ candy_cost = 2
 wall_type = 5
 image = ExtResource("38_m4url")
 rarity = 5
+
+[node name="RoomMiniBuildings" parent="Rooms" unique_id=1967786906 instance=ExtResource("26_0sl42")]
+wall_type = 4
+image = ExtResource("27_oaba0")
+rarity = 10
 
 [node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
 room_name = "Trees"
