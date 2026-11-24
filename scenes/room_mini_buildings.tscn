@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://chrv208f8054" path="res://assets/buildings/building_acropolis.glb" id="1_asf5b"]
 [ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_pnq4s"]
 [ext_resource type="PackedScene" uid="uid://cmniqa0mvse0s" path="res://assets/buildings/building_aya_sofia.glb" id="2_2rjwm"]
+[ext_resource type="PackedScene" uid="uid://bpm4fiuf77kxl" path="res://scenes/tarot.tscn" id="2_ofky1"]
 [ext_resource type="PackedScene" uid="uid://bwwe06mfo6tsh" path="res://assets/buildings/building_big_ben.glb" id="3_ni2t3"]
 [ext_resource type="PackedScene" uid="uid://co0x53aeb7yww" path="res://assets/buildings/building_colosseum.glb" id="4_uio2g"]
 [ext_resource type="PackedScene" uid="uid://cl3hvtge1qmmm" path="res://assets/buildings/building_mallorca.glb" id="5_a181a"]
@@ -15,12 +16,21 @@
 [ext_resource type="PackedScene" uid="uid://bwdo46bbie7qr" path="res://assets/buildings/6.glb" id="12_ofky1"]
 [ext_resource type="Texture2D" uid="uid://br4gp5enpulih" path="res://assets/painting/1_1_alap.png" id="14_ippvs"]
 [ext_resource type="Texture2D" uid="uid://c0jpjjrmisdgp" path="res://assets/painting/1_1_lap.png" id="15_h4cre"]
+[ext_resource type="PackedScene" uid="uid://dy28b8yy4b0nv" path="res://scenes/lock6.tscn" id="16_h4cre"]
 
 [node name="RoomMiniBuildings" type="Node3D" unique_id=1967786906]
 script = ExtResource("1_pnq4s")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2001474093]
 size = Vector3(10, 1, 10)
+
+[node name="Lock" parent="." unique_id=932196067 instance=ExtResource("16_h4cre")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.9176707, 2.1372418, 0)
+solution = "2 4 6 3 1 5 "
+
+[node name="Tarot" parent="." unique_id=1918866345 instance=ExtResource("2_ofky1")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 0, 1.5115154, 0)
+number = 2
 
 [node name="Assets" type="Node3D" parent="." unique_id=1559010950]
 
