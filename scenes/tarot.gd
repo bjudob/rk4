@@ -13,6 +13,7 @@ func _process(delta: float) -> void:
 	pass
 
 func interact():
+	disable()
 	tarot_ui.new_tarot(number)
 
 func disable():
