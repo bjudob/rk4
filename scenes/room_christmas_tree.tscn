@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://br4gp5enpulih" path="res://assets/painting/1_1_alap.png" id="21_t5b8d"]
 [ext_resource type="PackedScene" uid="uid://ddd6t2m8tx8uo" path="res://scenes/scroll.tscn" id="22_x6dwx"]
 [ext_resource type="Texture2D" uid="uid://2jpqvoebn6v4" path="res://assets/scrolls/scroll_penta_7.png" id="23_3wnr1"]
+[ext_resource type="Texture2D" uid="uid://b4jod3htdah2b" path="res://assets/papers/piece_4.png" id="25_xaayk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u4gho"]
 size = Vector3(1, 5.9072266, 1)
@@ -146,5 +147,10 @@ texture = ExtResource("21_t5b8d")
 [node name="Scroll" parent="." unique_id=1912316633 instance=ExtResource("22_x6dwx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2775025, 0.7509457)
 scroll = ExtResource("23_3wnr1")
+
+[node name="Scroll2" parent="." unique_id=68527773 instance=ExtResource("22_x6dwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.669628, 1.2554543)
+paper_piece = 3
+scroll = ExtResource("25_xaayk")
 
 [connection signal="timeout" from="Csillagszoro/Timer" to="Csillagszoro" method="_on_timer_timeout"]

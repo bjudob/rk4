@@ -91,4 +91,5 @@ texture = ExtResource("11_8j0ur")
 
 [node name="Scroll" parent="." unique_id=1170908107 instance=ExtResource("6_mdtyn")]
 transform = Transform3D(2, 0, 0, 0, 1.4221145, 1.4062682, 0, -1.4062682, 1.4221145, -2.2254553, 4.821492, 3.3733056)
+paper_piece = 1
 scroll = ExtResource("18_6kwi1")

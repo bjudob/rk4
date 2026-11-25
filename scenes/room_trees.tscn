@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bgrahxmanddwv" path="res://assets/room_icons/tree.png" id="2_aoftf"]
 [ext_resource type="PackedScene" uid="uid://dm7ijqguc1qe8" path="res://assets/HolidayKit/tree-snow-c.glb" id="3_aoftf"]
 [ext_resource type="Texture2D" uid="uid://b16ywxw0m1gb7" path="res://assets/painting/4_1_ar.png" id="6_aoftf"]
+[ext_resource type="PackedScene" uid="uid://ddd6t2m8tx8uo" path="res://scenes/scroll.tscn" id="7_bv7tp"]
+[ext_resource type="Texture2D" uid="uid://b8837qbtmo5wh" path="res://assets/papers/piece_3.png" id="8_l7ac2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3e8lf"]
 size = Vector3(0.8899536, 1, 3.8770142)
@@ -182,3 +184,8 @@ texture = ExtResource("6_aoftf")
 [node name="Painting2" type="Sprite3D" parent="." unique_id=1360233935]
 transform = Transform3D(-2.1855695e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.1855695e-09, 4.8934264, 1.5200136, -3.053726)
 texture = ExtResource("6_aoftf")
+
+[node name="Scroll" parent="." unique_id=1912316633 groups=["room_reverse"] instance=ExtResource("7_bv7tp")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 4.9, 0)
+paper_piece = 2
+scroll = ExtResource("8_l7ac2")

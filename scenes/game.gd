@@ -31,7 +31,8 @@ var save_data = {
 	"days": 1,
 	"room_start_lock": false,
 	"room_mini_buildings_lock": false,
-	"tarots": []
+	"tarots": [],
+	"paper_pieces": [false, false, false, false]
 }
 
 # rooms
@@ -183,9 +184,15 @@ func spawn_room(place: Vector2, room: Room, entry_direction: Room.EntryDirection
 func save():
 	var save_file = FileAccess.open(save_file_path, FileAccess.WRITE)
 	save_data.days = days
+
+	# collectables 	
+	save_data.tarots = tarot_ui.tarots_found
+	save_data.paper_pieces = room_reverse.paper_pieces
+	
+	# locks
 	save_data.room_start_lock = room_start.lock_solved
 	save_data.room_mini_buildings_lock = room_mini_buildings.lock_solved
-	save_data.tarots = tarot_ui.tarots_found
+	
 	save_file.store_var(save_data.duplicate())
 	save_file.close()
 	
@@ -198,7 +205,12 @@ func load_save():
 	
 	var save_d = data.duplicate()
 	days = save_d.days
+	
+	# collectables
 	tarot_ui.render(save_d.tarots)
+	room_reverse.paper_pieces = save_d.paper_pieces
+	
+	# locks
 	room_start.solve_lock(save_d.room_start_lock)
 	room_mini_buildings.solve_lock(save_d.room_mini_buildings_lock)
 	

@@ -34,6 +34,7 @@ tarot_ui=""
 tarot=""
 key_ui=""
 room_bonfire=""
+reverse_room=""
 
 [input]
 
