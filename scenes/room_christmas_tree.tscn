@@ -32,7 +32,7 @@ size = Vector3(1, 5.9072266, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_fimup"]
 size = Vector3(1.3061523, 0.90844727, 0.124572754)
 
-[node name="RoomChristmasTree" type="Node3D" unique_id=115034833]
+[node name="RoomChristmasTree" type="Node3D" unique_id=115034833 groups=["room_reverse"]]
 script = ExtResource("1_016x0")
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=1139156386]
@@ -130,7 +130,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7391342, 0.84578896, -0.027
 shape = SubResource("BoxShape3D_fimup")
 
 [node name="Timer" type="Timer" parent="Csillagszoro" unique_id=922890359]
-wait_time = 30.0
+wait_time = 20.0
 
 [node name="Tarot" parent="Csillagszoro" unique_id=1918866345 instance=ExtResource("21_3wnr1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.547649, 0.69323754, 0.20125252)
