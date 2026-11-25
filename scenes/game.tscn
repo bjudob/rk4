@@ -75,7 +75,7 @@ fog_density = 0.02
 fog_sky_affect = 0.7
 
 [sub_resource type="Gradient" id="Gradient_3hbvx"]
-offsets = PackedFloat32Array(0.2875458, 0.7161172)
+offsets = PackedFloat32Array(0.24725275, 0.41941392)
 colors = PackedColorArray(1, 1, 1, 1, 0.36078432, 0.36078432, 0.36078432, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_q8j3a"]
@@ -91,9 +91,15 @@ albedo_texture = SubResource("GradientTexture2D_q8j3a")
 billboard_mode = 1
 billboard_keep_scale = true
 
+[sub_resource type="Gradient" id="Gradient_q8j3a"]
+colors = PackedColorArray(1, 1, 1, 1, 0.34108633, 0.34108615, 0.341086, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ms3bu"]
+gradient = SubResource("Gradient_q8j3a")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3hbvx"]
 emission_shape = 3
-emission_box_extents = Vector3(200, 1, 200)
+emission_box_extents = Vector3(100, 1, 100)
 direction = Vector3(0, -1, 0)
 initial_velocity_min = 3.0
 initial_velocity_max = 6.0
@@ -105,6 +111,7 @@ tangential_accel_max = 7.9999976
 damping_max = 4.0
 scale_min = 0.049999997
 scale_max = 0.25
+color_ramp = SubResource("GradientTexture1D_ms3bu")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ms3bu"]
 
@@ -124,8 +131,9 @@ autoplay = true
 [node name="Snow" type="GPUParticles3D" parent="." unique_id=926231184]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 60, 0)
 material_override = SubResource("StandardMaterial3D_q8j3a")
-amount = 2048
-lifetime = 10.0
+amount = 10000
+lifetime = 15.0
+visibility_aabb = AABB(-687.5071, -918.6769, -757.46906, 1428.6842, 921.67, 1538.2148)
 process_material = SubResource("ParticleProcessMaterial_3hbvx")
 draw_pass_1 = SubResource("CapsuleMesh_ms3bu")
 
