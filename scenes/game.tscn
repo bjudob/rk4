@@ -963,9 +963,10 @@ rarity = 30
 candy_cost = 1
 
 [node name="RoomSnowman" parent="Rooms" unique_id=1405148680 instance=ExtResource("37_7025r")]
+room_name = "snowman"
 wall_type = 5
 image = ExtResource("38_m4url")
-rarity = 5
+rarity = 10
 
 [node name="RoomMiniBuildings" parent="Rooms" unique_id=1967786906 instance=ExtResource("26_0sl42")]
 wall_type = 4

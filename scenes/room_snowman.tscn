@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://brljfq6k8wh6q" path="res://scenes/candy.tscn" id="10_vduyr"]
 [ext_resource type="Texture2D" uid="uid://cmknpxtsypshu" path="res://assets/painting/3_2_at.png" id="11_8j0ur"]
 [ext_resource type="PackedScene" uid="uid://c4cnpvvphww1m" path="res://assets/MeshyAI/snowman_hat.glb" id="17_qgsuo"]
+[ext_resource type="Texture2D" uid="uid://ctxp65s48weri" path="res://assets/papers/piece_2.png" id="18_6kwi1"]
 
 [node name="RoomSnowman" type="Node3D" unique_id=1405148680]
 script = ExtResource("1_figou")
@@ -66,7 +67,7 @@ transform = Transform3D(0.49698913, 0, 0.8677568, 0, 1, 0, -0.8677568, 0, 0.4969
 transform = Transform3D(0.7239913, 0, -0.6898091, 0, 1, 0, 0.6898091, 0, 0.7239913, -1.3486603, 1.4352596, 1.6666467)
 
 [node name="lantern_decorated2" parent="Assets" unique_id=1570586591 instance=ExtResource("6_3gxvc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.49852, 0, 3.2918396)
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -2.49852, 0, 3.2918396)
 
 [node name="candy_B_blue2" parent="Assets" unique_id=1690279741 instance=ExtResource("8_vduyr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9377694, 0.51627994, 2.6363494)
@@ -87,3 +88,7 @@ texture = ExtResource("11_8j0ur")
 [node name="Painting2" type="Sprite3D" parent="." unique_id=1088434367]
 transform = Transform3D(-2.1855695e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.1855695e-09, 4.872376, 2.7937922, 1.0866623)
 texture = ExtResource("11_8j0ur")
+
+[node name="Scroll" parent="." unique_id=1170908107 instance=ExtResource("6_mdtyn")]
+transform = Transform3D(2, 0, 0, 0, 1.4221145, 1.4062682, 0, -1.4062682, 1.4221145, -2.2254553, 4.821492, 3.3733056)
+scroll = ExtResource("18_6kwi1")

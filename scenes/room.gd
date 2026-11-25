@@ -79,8 +79,7 @@ func spawned() -> bool:
 	
 func reset():
 	if is_reversed:
-		for c in get_children():
-			c.position.y = c.position.y + 6
+		flip_room()
 	is_burning = false
 	is_reversed = false
 	rotation_degrees.z = 0
@@ -113,8 +112,17 @@ func burn():
 	is_burning = true
 	
 func reverse():
-	is_reversed = true
-	rotation_degrees.z = 180
-	for c in get_children():
-		if c is Node3D:
-			c.position.y = c.position.y - 6
+	if not is_reversed:
+		flip_room()
+
+func flip_room():
+	var center = Vector3(0, 3, 0)
+	var pivot = to_global(center)
+
+	var t = transform
+	t.basis.y = -t.basis.y
+	transform = t
+
+	global_position += pivot - to_global(center)
+
+	is_reversed = not is_reversed

@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://duwadlf2w4lyh" path="res://assets/MeshyAI/goni.glb" id="5_8w4pk"]
 [ext_resource type="Texture2D" uid="uid://br4gp5enpulih" path="res://assets/painting/1_1_alap.png" id="6_8w4pk"]
 [ext_resource type="Texture2D" uid="uid://c0jpjjrmisdgp" path="res://assets/painting/1_1_lap.png" id="7_v064f"]
+[ext_resource type="PackedScene" uid="uid://ddd6t2m8tx8uo" path="res://scenes/scroll.tscn" id="8_v064f"]
+[ext_resource type="Texture2D" uid="uid://dlrtg4v42rvsn" path="res://assets/papers/piece_1.png" id="9_lidlr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8w4pk"]
 size = Vector3(1.4800415, 1.3466797, 2.9245605)
@@ -45,3 +47,7 @@ texture = ExtResource("6_8w4pk")
 [node name="Painting2" type="Sprite3D" parent="." unique_id=1148352543]
 transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 4.8208795, 3.0297847, 0.9265667)
 texture = ExtResource("7_v064f")
+
+[node name="Scroll" parent="." unique_id=1912316633 instance=ExtResource("8_v064f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.9, 0)
+scroll = ExtResource("9_lidlr")
