@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://eoak3cswfm5w"]
+
+[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_016x0"]
+[ext_resource type="PackedScene" uid="uid://c4hnxr6ogd23i" path="res://assets/Christmas/christmas_tree_decorated.gltf" id="2_u4gho"]
+[ext_resource type="Script" uid="uid://gaf884ycm6wp" path="res://scenes/csillagszoro.gd" id="3_fimup"]
+[ext_resource type="PackedScene" uid="uid://cgjkga380s1qg" path="res://assets/MeshyAI/csillagszoro.glb" id="3_m7eds"]
+[ext_resource type="PackedScene" uid="uid://b8daikt4pcwmb" path="res://assets/HolidayKit/present-a-cube.glb" id="5_0omkh"]
+[ext_resource type="PackedScene" uid="uid://vcwqpfh5hvos" path="res://assets/HolidayKit/present-a-round.glb" id="6_t5b8d"]
+[ext_resource type="PackedScene" uid="uid://b5vsei0ti4b0i" path="res://assets/HolidayKit/present-b-cube.glb" id="7_b23s3"]
+[ext_resource type="PackedScene" uid="uid://dstc28n01xn1m" path="res://assets/HolidayKit/present-b-round.glb" id="8_x6dwx"]
+[ext_resource type="PackedScene" uid="uid://cec4a1yftle0i" path="res://assets/HolidayKit/present-a-rectangle.glb" id="9_3wnr1"]
+[ext_resource type="PackedScene" uid="uid://wttkr7f2gerr" path="res://assets/Christmas/present_F_blue.gltf" id="10_xaayk"]
+[ext_resource type="PackedScene" uid="uid://bb8im2gi84liv" path="res://assets/Christmas/present_F_yellow.gltf" id="11_ko3mq"]
+[ext_resource type="PackedScene" uid="uid://c5241b8ar0o7e" path="res://assets/Christmas/present_sphere_A_blue.gltf" id="12_46fk7"]
+[ext_resource type="PackedScene" uid="uid://cjh8g6aan2ee5" path="res://assets/Christmas/present_sphere_B_white.gltf" id="13_mcgbn"]
+[ext_resource type="PackedScene" uid="uid://bp1oui51yce4v" path="res://assets/Christmas/present_sphere_A_white.gltf" id="14_gjved"]
+[ext_resource type="PackedScene" uid="uid://cfiuobl4svs5h" path="res://assets/Christmas/present_A_red.gltf" id="15_y45n6"]
+[ext_resource type="PackedScene" uid="uid://byerybw2svvfw" path="res://assets/Christmas/present_A_green.gltf" id="16_6p6wa"]
+[ext_resource type="PackedScene" uid="uid://dkah87ysm1alf" path="res://assets/Christmas/present_B_blue.gltf" id="17_pw1rm"]
+[ext_resource type="PackedScene" uid="uid://b8i82jwen2uxa" path="res://assets/Christmas/present_C_blue.gltf" id="18_86pt1"]
+[ext_resource type="PackedScene" uid="uid://csgw0sdyq5cqr" path="res://assets/Christmas/present_C_green.gltf" id="19_pps0n"]
+[ext_resource type="PackedScene" uid="uid://byphabr30dlqs" path="res://assets/Christmas/present_C_red.gltf" id="20_bnkyk"]
+[ext_resource type="PackedScene" uid="uid://bpm4fiuf77kxl" path="res://scenes/tarot.tscn" id="21_3wnr1"]
+[ext_resource type="Texture2D" uid="uid://br4gp5enpulih" path="res://assets/painting/1_1_alap.png" id="21_t5b8d"]
+[ext_resource type="PackedScene" uid="uid://ddd6t2m8tx8uo" path="res://scenes/scroll.tscn" id="22_x6dwx"]
+[ext_resource type="Texture2D" uid="uid://2jpqvoebn6v4" path="res://assets/scrolls/scroll_penta_7.png" id="23_3wnr1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u4gho"]
+size = Vector3(1, 5.9072266, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fimup"]
+size = Vector3(1.3061523, 0.90844727, 0.124572754)
+
+[node name="RoomChristmasTree" type="Node3D" unique_id=115034833]
+script = ExtResource("1_016x0")
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=1139156386]
+size = Vector3(10, 1, 10)
+
+[node name="Assets" type="Node3D" parent="." unique_id=278756950]
+
+[node name="christmas_tree_decorated2" parent="Assets" unique_id=1883685039 instance=ExtResource("2_u4gho")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0.0036082268, 0.47205842, 0.45964813)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Assets" unique_id=465201597]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Assets/StaticBody3D" unique_id=1234863272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4536133, 0)
+shape = SubResource("BoxShape3D_u4gho")
+
+[node name="present-a-cube2" parent="Assets" unique_id=1064665684 instance=ExtResource("5_0omkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9139624, 0.5406809, 4.1022196)
+
+[node name="present-a-round2" parent="Assets" unique_id=2012893553 instance=ExtResource("6_t5b8d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3034017, 0.5699444, 2.598074)
+
+[node name="present-b-cube2" parent="Assets" unique_id=107949556 instance=ExtResource("7_b23s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14197725, 0.48227477, 2.7793612)
+
+[node name="present-b-round2" parent="Assets" unique_id=1829730369 instance=ExtResource("8_x6dwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4572551, 0.48403883, -2.0133486)
+
+[node name="present-b-cube3" parent="Assets" unique_id=1654028500 instance=ExtResource("7_b23s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4503212, 0.568388, 2.3745227)
+
+[node name="present-b-round3" parent="Assets" unique_id=1343270680 instance=ExtResource("8_x6dwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2697473, 0.52041554, -3.665763)
+
+[node name="present-a-cube3" parent="Assets" unique_id=2083042055 instance=ExtResource("5_0omkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7557284, 0.466156, 3.7788825)
+
+[node name="present-a-cube4" parent="Assets" unique_id=1736119686 instance=ExtResource("5_0omkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6217256, 0.4117657, -2.845746)
+
+[node name="present-a-rectangle2" parent="Assets" unique_id=1483260242 instance=ExtResource("9_3wnr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6791182, 0.48887312, -1.172123)
+
+[node name="present-b-cube4" parent="Assets" unique_id=1900220537 instance=ExtResource("7_b23s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3574324, 0.4479004, 3.723221)
+
+[node name="present-a-cube5" parent="Assets" unique_id=666015151 instance=ExtResource("5_0omkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7883424, 0.441782, -3.3312201)
+
+[node name="present-b-round4" parent="Assets" unique_id=135486455 instance=ExtResource("8_x6dwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4094034, 0.53324866, -3.5114958)
+
+[node name="present_F_blue2" parent="Assets" unique_id=1118533984 instance=ExtResource("10_xaayk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.549538, 0.48401904, -4.231103)
+
+[node name="present_F_yellow2" parent="Assets" unique_id=1101773663 instance=ExtResource("11_ko3mq")]
+transform = Transform3D(0.9998174, 0, 0.019110192, 0, 1, 0, -0.019110192, 0, 0.9998174, -3.3111424, 0.4304371, -4.1720476)
+
+[node name="present_sphere_A_blue2" parent="Assets" unique_id=1707484362 instance=ExtResource("12_46fk7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.524711, 0.72212505, -1.6601396)
+
+[node name="present_sphere_B_white2" parent="Assets" unique_id=464467236 instance=ExtResource("13_mcgbn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6322088, 0.8459766, 0.025563717)
+
+[node name="present_sphere_A_white2" parent="Assets" unique_id=367073889 instance=ExtResource("14_gjved")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.197484, 0.76710176, -0.34472418)
+
+[node name="present_A_red2" parent="Assets" unique_id=1762592027 instance=ExtResource("15_y45n6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29174942, 0.49677873, -4.3357253)
+
+[node name="present_A_green2" parent="Assets" unique_id=216893438 instance=ExtResource("16_6p6wa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21183, 0.46787167, -0.51353407)
+
+[node name="present_B_blue2" parent="Assets" unique_id=1861429959 instance=ExtResource("17_pw1rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.732092, 0.008570194, 1.7222409)
+
+[node name="present_C_blue2" parent="Assets" unique_id=1620112844 instance=ExtResource("18_86pt1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3844541, 0.43363738, 3.3944995)
+
+[node name="present_C_green2" parent="Assets" unique_id=1079126504 instance=ExtResource("19_pps0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3426595, 0.4460523, 1.931912)
+
+[node name="present_C_red2" parent="Assets" unique_id=461065955 instance=ExtResource("20_bnkyk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.737365, 0.37939882, 3.4686732)
+
+[node name="Csillagszoro" type="StaticBody3D" parent="." unique_id=1371242114 groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5776411, 1.3353074, -0.19404268)
+script = ExtResource("3_fimup")
+
+[node name="model" parent="Csillagszoro" unique_id=483953417 instance=ExtResource("3_m7eds")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42345512, 0.47760212, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Csillagszoro" unique_id=492145352]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7391342, 0.84578896, -0.02798462)
+shape = SubResource("BoxShape3D_fimup")
+
+[node name="Timer" type="Timer" parent="Csillagszoro" unique_id=922890359]
+wait_time = 30.0
+
+[node name="Tarot" parent="Csillagszoro" unique_id=1918866345 instance=ExtResource("21_3wnr1")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.547649, 0.69323754, 0.20125252)
+number = 1
+
+[node name="Painting1" type="Sprite3D" parent="." unique_id=1174250421]
+transform = Transform3D(-4.371139e-09, -0.1, 4.371139e-09, 0, -4.371139e-09, -0.1, 0.1, -4.371139e-09, 1.9106854e-16, -3.240236, 0.7578404, -4.1143103)
+texture = ExtResource("21_t5b8d")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=1679075754]
+transform = Transform3D(-4.371139e-09, 0.1, -4.371139e-09, 0, -4.371139e-09, -0.1, -0.1, -4.371139e-09, 1.9106854e-16, 2.3750145, 0.8191352, -4.1143103)
+texture = ExtResource("21_t5b8d")
+
+[node name="Scroll" parent="." unique_id=1912316633 instance=ExtResource("22_x6dwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2775025, 0.7509457)
+scroll = ExtResource("23_3wnr1")
+
+[connection signal="timeout" from="Csillagszoro/Timer" to="Csillagszoro" method="_on_timer_timeout"]

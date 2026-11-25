@@ -40,6 +40,8 @@
 [ext_resource type="Texture2D" uid="uid://dklb3gx73vrco" path="res://assets/blueprints/blueprints_mini_buildigns.png" id="27_oaba0"]
 [ext_resource type="PackedScene" uid="uid://c5a4s5qdmib8o" path="res://scenes/room_fa_szoba.tscn" id="27_suyxu"]
 [ext_resource type="PackedScene" uid="uid://c5jehje2jvvvb" path="res://scenes/door.tscn" id="29_suyxu"]
+[ext_resource type="PackedScene" uid="uid://eoak3cswfm5w" path="res://scenes/room_christmas_tree.tscn" id="31_ms3bu"]
+[ext_resource type="Texture2D" uid="uid://c0a3gv8fxte5h" path="res://assets/blueprints/blueprint_christmas_tree.png" id="32_7ixpq"]
 [ext_resource type="PackedScene" uid="uid://cbl43c1887x0s" path="res://scenes/room_reverse.tscn" id="35_02fa5"]
 [ext_resource type="Texture2D" uid="uid://c6nibk5a2kla5" path="res://assets/blueprints/blueprint_reverse_room.png" id="36_8ool0"]
 [ext_resource type="PackedScene" uid="uid://dbqcdyoyo7bmn" path="res://scenes/room_snowman.tscn" id="37_7025r"]
@@ -975,6 +977,12 @@ room_name = "plush"
 wall_type = 5
 image = ExtResource("44_h3rex")
 rarity = 10
+
+[node name="RoomChristmasTree" parent="Rooms" unique_id=115034833 instance=ExtResource("31_ms3bu")]
+room_name = "christmas_tree"
+wall_type = 2
+image = ExtResource("32_7ixpq")
+rarity = 20
 
 [node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
 room_name = "Trees"

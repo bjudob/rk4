@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cdeltu2a44kur" path="res://assets/HolidayKit/snow-flat.glb" id="8_sjfk1"]
 [ext_resource type="PackedScene" uid="uid://dh828iavaqxjr" path="res://assets/Fantasy/BookStand.gltf" id="9_pn8kd"]
 [ext_resource type="PackedScene" uid="uid://ddd6t2m8tx8uo" path="res://scenes/scroll.tscn" id="10_6e8rk"]
-[ext_resource type="Texture2D" uid="uid://y1llvtm36njw" path="res://assets/scrolls/scroll_empty.png" id="11_j4v2o"]
+[ext_resource type="Texture2D" uid="uid://sc5mb0g4vh2f" path="res://assets/papers/combined.png" id="11_j4v2o"]
 
 [node name="RoomReverse" type="Node3D" unique_id=368277754]
 script = ExtResource("1_14rir")

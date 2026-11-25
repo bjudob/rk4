@@ -30,7 +30,7 @@ solution = "2 4 6 3 1 5 "
 
 [node name="Tarot" parent="." unique_id=1918866345 instance=ExtResource("2_ofky1")]
 transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 0, 1.5115154, 0)
-number = 2
+number = 6
 
 [node name="Assets" type="Node3D" parent="." unique_id=1559010950]
 
