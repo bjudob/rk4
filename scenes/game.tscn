@@ -68,6 +68,45 @@ sky_material = SubResource("ProceduralSkyMaterial_uwrxv")
 background_mode = 2
 sky = SubResource("Sky_yqjtg")
 tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.5337375, 0.54042596, 0.6459065, 1)
+fog_sun_scatter = 0.5
+fog_density = 0.02
+fog_sky_affect = 0.7
+
+[sub_resource type="Gradient" id="Gradient_3hbvx"]
+offsets = PackedFloat32Array(0.2875458, 0.7161172)
+colors = PackedColorArray(1, 1, 1, 1, 0.36078432, 0.36078432, 0.36078432, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_q8j3a"]
+gradient = SubResource("Gradient_3hbvx")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q8j3a"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = SubResource("GradientTexture2D_q8j3a")
+billboard_mode = 1
+billboard_keep_scale = true
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3hbvx"]
+emission_shape = 3
+emission_box_extents = Vector3(200, 1, 200)
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 3.0
+initial_velocity_max = 6.0
+gravity = Vector3(0, -5, 0)
+radial_accel_min = -4.0000024
+radial_accel_max = 3.9999976
+tangential_accel_min = -8.000002
+tangential_accel_max = 7.9999976
+damping_max = 4.0
+scale_min = 0.049999997
+scale_max = 0.25
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ms3bu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3hbvx"]
 albedo_color = Color(1, 0.29803923, 0.23921569, 1)
@@ -81,6 +120,14 @@ environment = SubResource("Environment_lnu2h")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=53743505]
 stream = ExtResource("1_lnu2h")
 autoplay = true
+
+[node name="Snow" type="GPUParticles3D" parent="." unique_id=926231184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 60, 0)
+material_override = SubResource("StandardMaterial3D_q8j3a")
+amount = 2048
+lifetime = 10.0
+process_material = SubResource("ParticleProcessMaterial_3hbvx")
+draw_pass_1 = SubResource("CapsuleMesh_ms3bu")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1100774870]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
