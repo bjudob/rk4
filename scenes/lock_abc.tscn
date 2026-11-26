@@ -1,0 +1,189 @@
+[gd_scene format=3 uid="uid://cr1okuslol7d0"]
+
+[ext_resource type="Script" uid="uid://dsqcd23pko8y5" path="res://scenes/lock_abc.gd" id="1_kocx1"]
+[ext_resource type="Script" uid="uid://byt0dilh06hdu" path="res://scenes/arrow.gd" id="2_p2unv"]
+[ext_resource type="PackedScene" uid="uid://cuhqh036buypt" path="res://assets/MeshyAI/arrow_bad.glb" id="3_h2ijg"]
+[ext_resource type="AudioStream" uid="uid://bjs27wchux210" path="res://music/key_lock.wav" id="4_05c3y"]
+[ext_resource type="PackedScene" uid="uid://c5jx5l8trktdn" path="res://assets/MeshyAI/locked.glb" id="5_kdr3o"]
+[ext_resource type="PackedScene" uid="uid://crq6lxac7curk" path="res://assets/MeshyAI/unlock.glb" id="6_260u5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_60jus"]
+albedo_color = Color(0.99634, 0.00014342964, 0.8123091, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_40mgl"]
+size = Vector3(0.117918395, 0.20299645, 0.0054687504)
+
+[node name="LockAbc" type="Node3D" unique_id=932196067]
+script = ExtResource("1_kocx1")
+solution = "t o t o r o "
+options_1 = ["a", "o", "r", "t"]
+options_2 = ["a", "o", "r", "t"]
+options_3 = ["a", "o", "r", "t"]
+options_4 = ["a", "o", "r", "t"]
+options_5 = ["a", "o", "r", "t"]
+options_6 = ["a", "o", "r", "t"]
+
+[node name="Base" type="CSGBox3D" parent="." unique_id=2015530876]
+size = Vector3(0.85, 0.6, 0.1)
+material = SubResource("StandardMaterial3D_60jus")
+
+[node name="Display" type="Label3D" parent="." unique_id=1224344396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032112777, 0, 0.053428173)
+text = "1 2 3 4 5 6"
+
+[node name="ArrowUp1" type="StaticBody3D" parent="." unique_id=1174217768 groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27236688, 0.099487275, -0.042233244)
+script = ExtResource("2_p2unv")
+
+[node name="model" parent="ArrowUp1" unique_id=1130633368 instance=ExtResource("3_h2ijg")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.02875717, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp1" unique_id=1464404759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030046076, 0.013251185, 0.11233123)
+shape = SubResource("BoxShape3D_40mgl")
+
+[node name="ArrowUp2" type="StaticBody3D" parent="." unique_id=624391086 groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13757528, 0.099487275, -0.042233244)
+script = ExtResource("2_p2unv")
+nr = 1
+
+[node name="model" parent="ArrowUp2" unique_id=1281009463 instance=ExtResource("3_h2ijg")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.02875717, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp2" unique_id=1486457132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030046076, 0.013251185, 0.11233123)
+shape = SubResource("BoxShape3D_40mgl")
+
+[node name="ArrowUp3" type="StaticBody3D" parent="." unique_id=730033860 groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006912917, 0.099487275, -0.042233244)
+script = ExtResource("2_p2unv")
+nr = 2
+
+[node name="model" parent="ArrowUp3" unique_id=1472647030 instance=ExtResource("3_h2ijg")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.02875717, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp3" unique_id=1457062805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030046076, 0.013251185, 0.11233123)
+shape = SubResource("BoxShape3D_40mgl")
+
+[node name="ArrowUp4" type="StaticBody3D" parent="." unique_id=346427618 groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.123887435, 0.099487275, -0.042233244)
+script = ExtResource("2_p2unv")
+nr = 3
+
+[node name="model" parent="ArrowUp4" unique_id=46761124 instance=ExtResource("3_h2ijg")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.02875717, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp4" unique_id=152267578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030046076, 0.013251185, 0.11233123)
+shape = SubResource("BoxShape3D_40mgl")
+
+[node name="ArrowUp5" type="StaticBody3D" parent="." unique_id=1863767116 groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25086612, 0.099487275, -0.042233244)
+script = ExtResource("2_p2unv")
+nr = 4
+
+[node name="model" parent="ArrowUp5" unique_id=2084154814 instance=ExtResource("3_h2ijg")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.02875717, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp5" unique_id=808193886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030046076, 0.013251185, 0.11233123)
+shape = SubResource("BoxShape3D_40mgl")
+
+[node name="ArrowUp6" type="StaticBody3D" parent="." unique_id=950963153 groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37655544, 0.099487275, -0.042233244)
+script = ExtResource("2_p2unv")
+nr = 5
+
+[node name="model" parent="ArrowUp6" unique_id=673228076 instance=ExtResource("3_h2ijg")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.02875717, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowUp6" unique_id=1675376508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030046076, 0.013251185, 0.11233123)
+shape = SubResource("BoxShape3D_40mgl")
+
+[node name="ArrowDown1" type="StaticBody3D" parent="." unique_id=2009056173 groups=["interactable"]]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.28461424, -0.090624265, -0.020803094)
+script = ExtResource("2_p2unv")
+up = false
+
+[node name="model" parent="ArrowDown1" unique_id=368945645 instance=ExtResource("3_h2ijg")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.010408282, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown1" unique_id=1255587597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008165747, 0.007944375, 0.10876906)
+shape = SubResource("BoxShape3D_40mgl")
+
+[node name="ArrowDown2" type="StaticBody3D" parent="." unique_id=524443583 groups=["interactable"]]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.15954074, -0.090624265, -0.020803094)
+script = ExtResource("2_p2unv")
+nr = 1
+up = false
+
+[node name="model" parent="ArrowDown2" unique_id=69319104 instance=ExtResource("3_h2ijg")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.010408282, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown2" unique_id=11851115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008165747, 0.007944375, 0.10876906)
+shape = SubResource("BoxShape3D_40mgl")
+
+[node name="ArrowDown3" type="StaticBody3D" parent="." unique_id=1824625099 groups=["interactable"]]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.030894145, -0.090624265, -0.020803094)
+script = ExtResource("2_p2unv")
+nr = 2
+up = false
+
+[node name="model" parent="ArrowDown3" unique_id=1123810208 instance=ExtResource("3_h2ijg")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.010408282, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown3" unique_id=68157416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008165747, 0.007944375, 0.10876906)
+shape = SubResource("BoxShape3D_40mgl")
+
+[node name="ArrowDown4" type="StaticBody3D" parent="." unique_id=1840449835 groups=["interactable"]]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0.096623465, -0.090624265, -0.020803094)
+script = ExtResource("2_p2unv")
+nr = 3
+up = false
+
+[node name="model" parent="ArrowDown4" unique_id=160730794 instance=ExtResource("3_h2ijg")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.010408282, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown4" unique_id=376305757]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008165747, 0.007944375, 0.10876906)
+shape = SubResource("BoxShape3D_40mgl")
+
+[node name="ArrowDown5" type="StaticBody3D" parent="." unique_id=878843489 groups=["interactable"]]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0.2234449, -0.090624265, -0.020803094)
+script = ExtResource("2_p2unv")
+nr = 4
+up = false
+
+[node name="model" parent="ArrowDown5" unique_id=923781490 instance=ExtResource("3_h2ijg")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.010408282, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown5" unique_id=2056451360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008165747, 0.007944375, 0.10876906)
+shape = SubResource("BoxShape3D_40mgl")
+
+[node name="ArrowDown6" type="StaticBody3D" parent="." unique_id=774133887 groups=["interactable"]]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0.34818786, -0.090624265, -0.020803094)
+script = ExtResource("2_p2unv")
+nr = 5
+up = false
+
+[node name="model" parent="ArrowDown6" unique_id=1550846402 instance=ExtResource("3_h2ijg")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.010408282, 0.015987799, 0.107906)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArrowDown6" unique_id=1253222694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008165747, 0.007944375, 0.10876906)
+shape = SubResource("BoxShape3D_40mgl")
+
+[node name="SolutionSound" type="AudioStreamPlayer3D" parent="." unique_id=805494979]
+stream = ExtResource("4_05c3y")
+
+[node name="Locked" parent="." unique_id=1599868899 instance=ExtResource("5_kdr3o")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.0137043, 0.22092155, 0.053989917)
+
+[node name="Unlock" parent="." unique_id=1528153673 instance=ExtResource("6_260u5")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.014228791, 0.22372231, 0.05551839)

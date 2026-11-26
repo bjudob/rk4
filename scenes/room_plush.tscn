@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://c0jpjjrmisdgp" path="res://assets/painting/1_1_lap.png" id="7_v064f"]
 [ext_resource type="PackedScene" uid="uid://ddd6t2m8tx8uo" path="res://scenes/scroll.tscn" id="8_v064f"]
 [ext_resource type="Texture2D" uid="uid://dlrtg4v42rvsn" path="res://assets/papers/piece_1.png" id="9_lidlr"]
+[ext_resource type="PackedScene" uid="uid://cr1okuslol7d0" path="res://scenes/lock_abc.tscn" id="10_tmmr1"]
+[ext_resource type="PackedScene" uid="uid://bpm4fiuf77kxl" path="res://scenes/tarot.tscn" id="11_f56ji"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8w4pk"]
 size = Vector3(1.4800415, 1.3466797, 2.9245605)
@@ -52,3 +54,10 @@ texture = ExtResource("7_v064f")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.9, 0)
 paper_piece = 0
 scroll = ExtResource("9_lidlr")
+
+[node name="Lock" parent="." unique_id=932196067 instance=ExtResource("10_tmmr1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.12714806, 1.0184181, -1.4269437)
+
+[node name="Tarot" parent="." unique_id=1918866345 instance=ExtResource("11_f56ji")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59795463, 1.4464219, -0.60829914)
+number = 1

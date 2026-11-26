@@ -1004,6 +1004,8 @@ image = ExtResource("38_7ixpq")
 rarity = 10
 candy_cost = 1
 
+[node name="RoomSnowmanMoki" type="Node3D" parent="Rooms" unique_id=1578495659]
+
 [node name="RoomCandles" parent="Rooms" unique_id=2056734870 instance=ExtResource("14_trtic")]
 room_name = "Candles"
 wall_type = 3

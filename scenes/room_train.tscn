@@ -108,6 +108,22 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.3
 [node name="train-wagon-flat-short3" parent="Assets/Train0" unique_id=1361739527 instance=ExtResource("7_0x5y6")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.36428285, 0.49056458, 0.4641934)
 
+[node name="Rail1" type="Node3D" parent="Assets" unique_id=1086911544]
+
+[node name="trainset-rail-detailed-straight2" parent="Assets/Rail1" unique_id=1002811591 instance=ExtResource("3_ffmpk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6220883, 0.516647, -2.5599627)
+
+[node name="trainset-rail-detailed-straight3" parent="Assets/Rail1" unique_id=627258817 instance=ExtResource("3_ffmpk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0807634, 0.516647, -2.5599627)
+
+[node name="trainset-rail-detailed-straight4" parent="Assets/Rail1" unique_id=2135533413 instance=ExtResource("3_ffmpk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4378718, 0.516647, -2.5599627)
+
+[node name="Train1" type="Node3D" parent="Assets" unique_id=1975528507]
+
+[node name="train-locomotive2" parent="Assets" unique_id=1650277137 instance=ExtResource("7_njowa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05751574, 0.5125321, -2.583836)
+
 [node name="Candy" parent="." unique_id=2147321871 instance=ExtResource("3_yjuv5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91057074, 0.19775176)
 
@@ -124,7 +140,7 @@ texture = ExtResource("29_7nt65")
 
 [node name="Lock" parent="." unique_id=932196067 instance=ExtResource("11_0x5y6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1647186, -4.8595653)
-solution = "0 0 0 1 W"
+solution = "7 1 0 0 "
 
 [node name="Tarot" parent="." unique_id=1918866345 instance=ExtResource("12_14rhb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.751525, -4.8938217)

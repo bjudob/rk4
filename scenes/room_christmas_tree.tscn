@@ -134,7 +134,7 @@ wait_time = 20.0
 
 [node name="Tarot" parent="Csillagszoro" unique_id=1918866345 instance=ExtResource("21_3wnr1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.547649, 0.69323754, 0.20125252)
-number = 1
+number = 16
 
 [node name="Painting1" type="Sprite3D" parent="." unique_id=1174250421]
 transform = Transform3D(-4.371139e-09, -0.1, 4.371139e-09, 0, -4.371139e-09, -0.1, 0.1, -4.371139e-09, 1.9106854e-16, -3.240236, 0.7578404, -4.1143103)
