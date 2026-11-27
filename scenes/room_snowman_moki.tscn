@@ -26,6 +26,12 @@ transform = Transform3D(-1.7484556e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.7484556e-
 [node name="moki_tree" parent="Assets/Melted" unique_id=1922761847 instance=ExtResource("5_k50gh")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.9778533, 0.41870475, -1.9598067)
 
+[node name="carrot" parent="Assets/Melted" unique_id=489637582 instance=ExtResource("5_miv3h")]
+transform = Transform3D(-0.4, 0, 0, 0, 1.7484556e-08, -0.4, 0, 0.4, 1.7484556e-08, -0.56264794, 0.7023723, 1.27312)
+
+[node name="snow-flat-large2" parent="Assets/Melted" unique_id=1306275708 instance=ExtResource("9_1yij1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8885099, 0.5144851, 1.1245856)
+
 [node name="tree2" parent="Assets/Melted" unique_id=878718430 instance=ExtResource("2_jaois")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -3.4004078, 0.28799605, -0.64811707)
 
@@ -46,9 +52,6 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.9512259, 0.28799605, 
 
 [node name="tree8" parent="Assets/Melted" unique_id=1767066598 instance=ExtResource("2_jaois")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.554472, 0.28799605, -3.3393118)
-
-[node name="carrot" parent="Assets/Melted" unique_id=489637582 instance=ExtResource("5_miv3h")]
-transform = Transform3D(-0.4, 0, 0, 0, 1.7484556e-08, -0.4, 0, 0.4, 1.7484556e-08, -0.56264794, 0.7023723, 1.27312)
 
 [node name="Snow" type="Node3D" parent="Assets" unique_id=1431699098]
 
@@ -84,6 +87,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58698845, 0.39823902, 0.79
 
 [node name="snowball_pile2" parent="Assets/Snow" unique_id=1907791694 instance=ExtResource("8_kmbtt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5689259, 0, 1.3112698)
-
-[node name="snow-flat-large2" parent="Assets/Snow" unique_id=1306275708 instance=ExtResource("9_1yij1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8885099, 0.5144851, 1.1245856)
