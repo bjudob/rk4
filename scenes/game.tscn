@@ -989,7 +989,6 @@ rarity = 5
 
 [node name="RoomTrees" parent="Rooms" unique_id=92647697 instance=ExtResource("12_dinhu")]
 room_name = "erdo"
-wall_type = 3
 image = ExtResource("34_7ixpq")
 rarity = 20
 
