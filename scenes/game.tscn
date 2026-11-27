@@ -48,6 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://fex878er6xcv" path="res://assets/blueprints/blueprint_train.png" id="38_7ixpq"]
 [ext_resource type="Texture2D" uid="uid://c5ujsp84vsvdm" path="res://assets/blueprints/blueprint_snowman.png" id="38_m4url"]
 [ext_resource type="PackedScene" uid="uid://colgasov00ayl" path="res://scenes/room_snowman_moki.tscn" id="39_bk1p3"]
+[ext_resource type="Texture2D" uid="uid://xrmr84vqer2y" path="res://assets/blueprints_new/blueprint_hoember_moki.png" id="40_n8ral"]
 [ext_resource type="PackedScene" uid="uid://bv30mdkue1tiw" path="res://scenes/room_plush.tscn" id="43_458eo"]
 [ext_resource type="Texture2D" uid="uid://d3l2oafvwjqg8" path="res://assets/blueprints/blueprint_plush.png" id="44_h3rex"]
 [ext_resource type="PackedScene" uid="uid://c67dey5tq2h5l" path="res://assets/MeshyAI/shop_candies.glb" id="47_8qswn"]
@@ -130,6 +131,7 @@ environment = SubResource("Environment_lnu2h")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=53743505]
 stream = ExtResource("1_lnu2h")
+autoplay = true
 
 [node name="Snow" type="GPUParticles3D" parent="." unique_id=926231184]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 60, 0)
@@ -1005,8 +1007,11 @@ image = ExtResource("38_7ixpq")
 rarity = 10
 candy_cost = 1
 
-[node name="RoomSnowmanMoki" parent="Rooms" unique_id=1419968938 instance=ExtResource("39_bk1p3")]
+[node name="RoomHoemberMoki" parent="Rooms" unique_id=1419968938 instance=ExtResource("39_bk1p3")]
 room_name = "snowman_moki"
+wall_type = 3
+image = ExtResource("40_n8ral")
+rarity = 10
 
 [node name="RoomCandles" parent="Rooms" unique_id=2056734870 instance=ExtResource("14_trtic")]
 room_name = "Candles"

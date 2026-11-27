@@ -28,6 +28,7 @@ size = Vector3(10, 1, 10)
 [node name="Assets" type="Node3D" parent="." unique_id=2079720468]
 
 [node name="Melted" type="Node3D" parent="Assets" unique_id=1198281219]
+visible = false
 
 [node name="snow-pile2" parent="Assets/Melted" unique_id=2027550287 instance=ExtResource("2_figou")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9542546, 0.559059, 1.836601)
@@ -49,7 +50,6 @@ scroll = ExtResource("7_2mjca")
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.8578774, 0.8176768, 0.59144855)
 
 [node name="Snow" type="Node3D" parent="Assets" unique_id=1686796793]
-visible = false
 
 [node name="snowball2" parent="Assets/Snow" unique_id=2090824616 instance=ExtResource("2_2m7yi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0938804, 0.64928126, 1.4820575)

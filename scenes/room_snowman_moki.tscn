@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://colgasov00ayl"]
 
-[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_mdbk1"]
+[ext_resource type="Script" uid="uid://cxy05vdoe21rt" path="res://scenes/room_snowman_moki.gd" id="1_kmbtt"]
 [ext_resource type="PackedScene" uid="uid://dujvmh1fokw3t" path="res://assets/HolidayKit/tree.glb" id="2_jaois"]
 [ext_resource type="PackedScene" uid="uid://c4vkngi4unjs2" path="res://assets/Christmas/snowman_A.gltf" id="2_wfd0a"]
 [ext_resource type="PackedScene" uid="uid://dm7ijqguc1qe8" path="res://assets/HolidayKit/tree-snow-c.glb" id="3_hnxti"]
@@ -9,9 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://d3icyyl36o3py" path="res://assets/MeshyAI/carrot.glb" id="5_miv3h"]
 [ext_resource type="PackedScene" uid="uid://cwdxgh4suadmc" path="res://assets/Christmas/snowball_pile.gltf" id="8_kmbtt"]
 [ext_resource type="PackedScene" uid="uid://cf1jsfp5yo6kx" path="res://assets/HolidayKit/snow-flat-large.glb" id="9_1yij1"]
+[ext_resource type="Texture2D" uid="uid://br4gp5enpulih" path="res://assets/painting/1_1_alap.png" id="10_kmbtt"]
 
 [node name="RoomSnowmanMoki" type="Node3D" unique_id=1419968938]
-script = ExtResource("1_mdbk1")
+script = ExtResource("1_kmbtt")
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=1696707421]
 size = Vector3(10, 1, 10)
@@ -19,6 +20,7 @@ size = Vector3(10, 1, 10)
 [node name="Assets" type="Node3D" parent="." unique_id=1257919366]
 
 [node name="Melted" type="Node3D" parent="Assets" unique_id=834117382]
+visible = false
 
 [node name="moki" parent="Assets/Melted" unique_id=1212389232 instance=ExtResource("4_jaois")]
 transform = Transform3D(-1.7484556e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.7484556e-08, 1.132208, 0.78588533, 1.1517494)
@@ -53,6 +55,9 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.9512259, 0.28799605, 
 [node name="tree8" parent="Assets/Melted" unique_id=1767066598 instance=ExtResource("2_jaois")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.554472, 0.28799605, -3.3393118)
 
+[node name="snowball_pile2" parent="Assets/Melted" unique_id=1907791694 instance=ExtResource("8_kmbtt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5689259, 0, 1.3112698)
+
 [node name="Snow" type="Node3D" parent="Assets" unique_id=1431699098]
 
 [node name="moki" parent="Assets/Snow" unique_id=1170079293 instance=ExtResource("4_jaois")]
@@ -85,5 +90,10 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.9374697, 0.4816891, -
 [node name="snowman_A2" parent="Assets/Snow" unique_id=2075420894 instance=ExtResource("2_wfd0a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58698845, 0.39823902, 0.7917819)
 
-[node name="snowball_pile2" parent="Assets/Snow" unique_id=1907791694 instance=ExtResource("8_kmbtt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5689259, 0, 1.3112698)
+[node name="Painting1" type="Sprite3D" parent="." unique_id=1882422037]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -3.1758215, 1.6385659, -4.9199142)
+texture = ExtResource("10_kmbtt")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=911626857]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -2.4387972, 1.6385659, -4.9199142)
+texture = ExtResource("10_kmbtt")

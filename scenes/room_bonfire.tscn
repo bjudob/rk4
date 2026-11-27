@@ -29,8 +29,9 @@ shape = SubResource("BoxShape3D_ane40")
 
 [node name="FireSound" type="AudioStreamPlayer3D" parent="." unique_id=1603757784]
 stream = ExtResource("3_35xgh")
+volume_db = 10.0
 autoplay = true
-max_distance = 8.0
+max_distance = 10.0
 
 [node name="Painting1" type="Sprite3D" parent="." unique_id=681676955]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 2.8470168, -4.867195)
