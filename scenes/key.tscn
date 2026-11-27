@@ -18,4 +18,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006072998, 0.021194458, -0.
 shape = SubResource("BoxShape3D_fttkb")
 
 [node name="InteractSound" type="AudioStreamPlayer3D" parent="." unique_id=1293678137]
+visible = false
 stream = ExtResource("3_wy8tx")

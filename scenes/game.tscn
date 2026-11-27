@@ -27,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://bjkcmcw0jbods" path="res://scenes/room_bonfire.tscn" id="18_pr1ej"]
 [ext_resource type="Texture2D" uid="uid://chvk541omlbml" path="res://assets/room_icons/tree_room.png" id="18_sgl2t"]
 [ext_resource type="Texture2D" uid="uid://bbb7803c1hjcv" path="res://assets/blueprints/blueprint_bonfire.png" id="19_05nbr"]
-[ext_resource type="PackedScene" uid="uid://b6cfra3h2i5a7" path="res://scenes/room_parlor.tscn" id="19_5newe"]
 [ext_resource type="PackedScene" uid="uid://dp8054sjy4wxt" path="res://scenes/room_workshop.tscn" id="20_37s47"]
 [ext_resource type="Texture2D" uid="uid://dqywyq05gb53b" path="res://assets/blueprints/blueprint_start_room.png" id="21_05nbr"]
 [ext_resource type="PackedScene" uid="uid://cq0lpd0pxl5tm" path="res://scenes/room_library.tscn" id="21_bt5mj"]
@@ -1021,10 +1020,6 @@ rarity = 1
 [node name="RoomRest" parent="Rooms" unique_id=1819664826 instance=ExtResource("16_rysoc")]
 room_name = "Rest Room"
 image = ExtResource("17_5newe")
-rarity = 1
-
-[node name="RoomParlor" parent="Rooms" unique_id=2016360832 instance=ExtResource("19_5newe")]
-room_name = "Parlor"
 rarity = 1
 
 [node name="RoomWorkshop" parent="Rooms" unique_id=1601642086 instance=ExtResource("20_37s47")]

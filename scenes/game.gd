@@ -16,7 +16,6 @@ var player_starting_pos
 @onready var room_candles = $Rooms/RoomCandles
 @onready var room_rest = $Rooms/RoomRest
 @onready var room_red_button = $Rooms/RoomRedButton
-@onready var room_parlor = $Rooms/RoomParlor
 @onready var room_workshop = $Rooms/RoomWorkshop
 @onready var room_prison = $Rooms/RoomPrison
 @onready var room_reverse = $Rooms/RoomReverse
@@ -67,7 +66,6 @@ func _ready() -> void:
 		room_candles.room_name: room_candles,
 		room_rest.room_name: room_rest,
 		room_red_button.room_name: room_red_button,
-		room_parlor.room_name: room_parlor,
 		room_workshop.room_name: room_workshop,
 		room_prison.room_name: room_prison,
 		room_reverse.room_name: room_reverse,
