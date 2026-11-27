@@ -49,9 +49,13 @@
 [ext_resource type="PackedScene" uid="uid://colgasov00ayl" path="res://scenes/room_snowman_moki.tscn" id="39_bk1p3"]
 [ext_resource type="Texture2D" uid="uid://xrmr84vqer2y" path="res://assets/blueprints_new/blueprint_hoember_moki.png" id="40_n8ral"]
 [ext_resource type="PackedScene" uid="uid://8ojadnvcyr28" path="res://scenes/room_candies.tscn" id="41_3hbvx"]
+[ext_resource type="Texture2D" uid="uid://pio1dd4qrtry" path="res://assets/blueprints_new/blueprint_cukorka_bolt.png" id="42_ms3bu"]
 [ext_resource type="PackedScene" uid="uid://cxyt5p80p2npp" path="res://scenes/room_keys.tscn" id="42_q8j3a"]
 [ext_resource type="PackedScene" uid="uid://bv30mdkue1tiw" path="res://scenes/room_plush.tscn" id="43_458eo"]
+[ext_resource type="PackedScene" uid="uid://d3oy7v7kcsnqi" path="res://scenes/room_dices.tscn" id="43_q8j3a"]
+[ext_resource type="Texture2D" uid="uid://c1xtlybgx4gha" path="res://assets/blueprints_new/blueprint_kulcs_bolt.png" id="44_7ixpq"]
 [ext_resource type="Texture2D" uid="uid://d3l2oafvwjqg8" path="res://assets/blueprints/blueprint_plush.png" id="44_h3rex"]
+[ext_resource type="Texture2D" uid="uid://bq7my2bmvy0fh" path="res://assets/blueprints_new/blueprint_dobokocka_bolt.png" id="46_bk1p3"]
 [ext_resource type="PackedScene" uid="uid://drnjesthnya30" path="res://assets/MeshyAI/cat_devil.glb" id="53_o8ni1"]
 [ext_resource type="PackedScene" uid="uid://bpm4fiuf77kxl" path="res://scenes/tarot.tscn" id="54_3hbvx"]
 
@@ -1009,10 +1013,22 @@ image = ExtResource("40_n8ral")
 rarity = 10
 
 [node name="RoomCandies" parent="Rooms" unique_id=93161813 instance=ExtResource("41_3hbvx")]
+room_name = "cukorka_bolt"
+wall_type = 7
+image = ExtResource("42_ms3bu")
+rarity = 10
 
 [node name="RoomKeys" parent="Rooms" unique_id=1048123770 instance=ExtResource("42_q8j3a")]
+room_name = "kulcs_bolt"
+wall_type = 7
+image = ExtResource("44_7ixpq")
+rarity = 10
 
-[node name="RoomDices" type="Node3D" parent="Rooms" unique_id=1615689415]
+[node name="RoomDices" parent="Rooms" unique_id=1990482789 instance=ExtResource("43_q8j3a")]
+room_name = "dobokocka_bolt"
+wall_type = 7
+image = ExtResource("46_bk1p3")
+rarity = 10
 
 [node name="RoomCandles" parent="Rooms" unique_id=2056734870 instance=ExtResource("14_trtic")]
 room_name = "Candles"

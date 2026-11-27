@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://2v8a7rqsi7dk" path="res://scenes/key.tscn" id="3_dkrng"]
 [ext_resource type="Texture2D" uid="uid://br4gp5enpulih" path="res://assets/painting/1_1_alap.png" id="4_ic5e0"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ic5e0"]
+
 [node name="RoomKeys" type="Node3D" unique_id=1048123770]
 script = ExtResource("1_fl606")
 
@@ -12,7 +14,7 @@ script = ExtResource("1_fl606")
 size = Vector3(10, 1, 10)
 
 [node name="shop_keys" parent="." unique_id=263893663 instance=ExtResource("2_dkrng")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33922625, 1.4294834, -0.16046762)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.33922625, 2.3605633, -0.16046762)
 
 [node name="Key" parent="shop_keys" unique_id=1194844630 instance=ExtResource("3_dkrng")]
 transform = Transform3D(1, 0, 0, 0, 0.17364822, 0.9848077, 0, -0.9848077, 0.17364822, 0.26485896, -0.3859998, 0.5177764)
@@ -25,6 +27,12 @@ transform = Transform3D(1, 0, 0, 0, 0.17364822, 0.9848077, 0, -0.9848077, 0.1736
 
 [node name="Key4" parent="shop_keys" unique_id=1773791597 instance=ExtResource("3_dkrng")]
 transform = Transform3D(1, 0, 0, 0, 0.17364822, 0.9848077, 0, -0.9848077, 0.17364822, -0.14048791, -0.9069125, -0.920944)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shop_keys" unique_id=1329029120]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shop_keys/StaticBody3D" unique_id=100378972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1120659, 0)
+shape = SubResource("BoxShape3D_ic5e0")
 
 [node name="Painting1" type="Sprite3D" parent="." unique_id=245752879]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.29083222, 1.380723, -4.7917166)

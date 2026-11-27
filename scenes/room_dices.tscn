@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://d3oy7v7kcsnqi"]
+
+[ext_resource type="Script" uid="uid://ggcai01d3e17" path="res://scenes/room.gd" id="1_6i827"]
+[ext_resource type="PackedScene" uid="uid://duuxx27aj4tl4" path="res://assets/MeshyAI/shop_dices.glb" id="2_k7k6e"]
+[ext_resource type="PackedScene" uid="uid://ci4atq7uiwj2h" path="res://scenes/dice.tscn" id="3_dscs4"]
+[ext_resource type="Texture2D" uid="uid://br4gp5enpulih" path="res://assets/painting/1_1_alap.png" id="4_dscs4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dscs4"]
+size = Vector3(1, 0.18359375, 1)
+
+[node name="RoomDices" type="Node3D" unique_id=1990482789]
+script = ExtResource("1_6i827")
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=1543135253]
+size = Vector3(10, 1, 10)
+
+[node name="shop_dices" parent="." unique_id=854094888 instance=ExtResource("2_k7k6e")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.03536603, 2.3207989, 0.07298195)
+
+[node name="Dice" parent="shop_dices" unique_id=939750161 instance=ExtResource("3_dscs4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2485536, -0.34152865, -0.07298195)
+
+[node name="Dice2" parent="shop_dices" unique_id=1980326388 instance=ExtResource("3_dscs4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02378717, -0.34152865, -0.07298195)
+
+[node name="Dice3" parent="shop_dices" unique_id=171033658 instance=ExtResource("3_dscs4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22249657, -0.34152865, -0.07298195)
+
+[node name="Dice4" parent="shop_dices" unique_id=2124402772 instance=ExtResource("3_dscs4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22249657, -0.1398331, -0.07298195)
+
+[node name="Dice5" parent="shop_dices" unique_id=120497032 instance=ExtResource("3_dscs4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11199558, -0.1398331, -0.07298195)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shop_dices" unique_id=2102160166]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shop_dices/StaticBody3D" unique_id=455031088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.59217274, 0)
+shape = SubResource("BoxShape3D_dscs4")
+
+[node name="Painting1" type="Sprite3D" parent="." unique_id=1046408936]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.36348018, 1.8715789, -4.888879)
+texture = ExtResource("4_dscs4")
+
+[node name="Painting2" type="Sprite3D" parent="." unique_id=102887424]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.35401264, 1.8715789, -4.888879)
+texture = ExtResource("4_dscs4")

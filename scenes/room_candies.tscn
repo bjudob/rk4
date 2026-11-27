@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://brljfq6k8wh6q" path="res://scenes/candy.tscn" id="3_s04wv"]
 [ext_resource type="Texture2D" uid="uid://br4gp5enpulih" path="res://assets/painting/1_1_alap.png" id="4_08slo"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_08slo"]
+
 [node name="RoomCandies" type="Node3D" unique_id=93161813]
 script = ExtResource("1_rssao")
 
@@ -12,7 +14,7 @@ script = ExtResource("1_rssao")
 size = Vector3(10, 1, 10)
 
 [node name="shop_candies" parent="." unique_id=179088039 instance=ExtResource("2_b5jjd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4372274, -0.073764086)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2.3228335, -0.073764086)
 
 [node name="Candy" parent="shop_candies" unique_id=2147321871 instance=ExtResource("3_s04wv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25395477, -0.37324893, 0.073764086)
@@ -25,6 +27,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2166724, -0.37324893, 0.07
 
 [node name="Candy4" parent="shop_candies" unique_id=1810805577 instance=ExtResource("3_s04wv")]
 transform = Transform3D(-4.371139e-08, -1, 0, -4.371139e-08, 1.9106855e-15, -1, 1, -4.371139e-08, -4.371139e-08, -0.009078503, -0.9258959, -0.7092744)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shop_candies" unique_id=1126584766]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shop_candies/StaticBody3D" unique_id=1478052782]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0739385, 0)
+shape = SubResource("BoxShape3D_08slo")
 
 [node name="Painting1" type="Sprite3D" parent="." unique_id=382681410]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 1.5003998, -4.939402)

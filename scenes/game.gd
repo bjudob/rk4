@@ -25,6 +25,9 @@ var player_starting_pos
 @onready var room_plush = $Rooms/RoomPlush
 @onready var room_christmas_tree = $Rooms/RoomChristmasTree
 @onready var room_hoember_moki = $Rooms/RoomHoemberMoki
+@onready var room_shop_candies = $Rooms/RoomCandies
+@onready var room_shop_keys = $Rooms/RoomKeys
+@onready var room_shop_dices = $Rooms/RoomDices
 
 const save_file_path = "user://rk.json"
 var save_data = {
@@ -76,6 +79,9 @@ func _ready() -> void:
 		room_plush.room_name: room_plush,
 		room_christmas_tree.room_name: room_christmas_tree,
 		room_hoember_moki.room_name: room_hoember_moki,
+		room_shop_candies.room_name: room_shop_candies,
+		room_shop_keys.room_name: room_shop_keys,
+		room_shop_dices.room_name: room_shop_dices,
 	}
 	for room_name in rooms:
 		room_total_weights = room_total_weights + rooms[room_name].rarity
