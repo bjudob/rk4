@@ -174,6 +174,12 @@ func draw_rooms(rooms):
 		
 		# Get a copy of the image data so we don't mutate the original room.image resource
 		var img: Image = room.image.get_image()
+
+		if img.is_compressed():
+			var err = img.decompress()
+			if err != OK:
+				push_error("Failed to decompress room image")
+				continue
 		
 		match room.entry_direction:
 			Room.EntryDirection.DOWN:
