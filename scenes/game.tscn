@@ -48,14 +48,10 @@
 [ext_resource type="Texture2D" uid="uid://c5ujsp84vsvdm" path="res://assets/blueprints/blueprint_snowman.png" id="38_m4url"]
 [ext_resource type="PackedScene" uid="uid://colgasov00ayl" path="res://scenes/room_snowman_moki.tscn" id="39_bk1p3"]
 [ext_resource type="Texture2D" uid="uid://xrmr84vqer2y" path="res://assets/blueprints_new/blueprint_hoember_moki.png" id="40_n8ral"]
+[ext_resource type="PackedScene" uid="uid://8ojadnvcyr28" path="res://scenes/room_candies.tscn" id="41_3hbvx"]
+[ext_resource type="PackedScene" uid="uid://cxyt5p80p2npp" path="res://scenes/room_keys.tscn" id="42_q8j3a"]
 [ext_resource type="PackedScene" uid="uid://bv30mdkue1tiw" path="res://scenes/room_plush.tscn" id="43_458eo"]
 [ext_resource type="Texture2D" uid="uid://d3l2oafvwjqg8" path="res://assets/blueprints/blueprint_plush.png" id="44_h3rex"]
-[ext_resource type="PackedScene" uid="uid://c67dey5tq2h5l" path="res://assets/MeshyAI/shop_candies.glb" id="47_8qswn"]
-[ext_resource type="PackedScene" uid="uid://brljfq6k8wh6q" path="res://scenes/candy.tscn" id="48_pf7vy"]
-[ext_resource type="PackedScene" uid="uid://duuxx27aj4tl4" path="res://assets/MeshyAI/shop_dices.glb" id="48_rm0al"]
-[ext_resource type="PackedScene" uid="uid://dsedkpwoe387t" path="res://assets/MeshyAI/shop_keys.glb" id="49_i4re6"]
-[ext_resource type="PackedScene" uid="uid://2v8a7rqsi7dk" path="res://scenes/key.tscn" id="50_o8ni1"]
-[ext_resource type="PackedScene" uid="uid://ci4atq7uiwj2h" path="res://scenes/dice.tscn" id="52_3hbvx"]
 [ext_resource type="PackedScene" uid="uid://drnjesthnya30" path="res://assets/MeshyAI/cat_devil.glb" id="53_o8ni1"]
 [ext_resource type="PackedScene" uid="uid://bpm4fiuf77kxl" path="res://scenes/tarot.tscn" id="54_3hbvx"]
 
@@ -1012,6 +1008,12 @@ wall_type = 3
 image = ExtResource("40_n8ral")
 rarity = 10
 
+[node name="RoomCandies" parent="Rooms" unique_id=93161813 instance=ExtResource("41_3hbvx")]
+
+[node name="RoomKeys" parent="Rooms" unique_id=1048123770 instance=ExtResource("42_q8j3a")]
+
+[node name="RoomDices" type="Node3D" parent="Rooms" unique_id=1615689415]
+
 [node name="RoomCandles" parent="Rooms" unique_id=2056734870 instance=ExtResource("14_trtic")]
 room_name = "Candles"
 wall_type = 3
@@ -1428,35 +1430,6 @@ transform = Transform3D(-4.371139e-08, 0.5, 0.8660254, 0, 0.8660254, -0.5, -1, -
 use_collision = true
 size = Vector3(350, 400, 1)
 material = SubResource("StandardMaterial3D_3hbvx")
-
-[node name="Shops" type="Node3D" parent="." unique_id=360412798]
-
-[node name="shop_candies" parent="Shops" unique_id=179088039 instance=ExtResource("47_8qswn")]
-transform = Transform3D(1.4761337, 0, -1.3494552, 0, 2, 0, 1.3494552, 0, 1.4761337, 7.1527658, 2.4112906, 30.30994)
-
-[node name="Candy" parent="Shops/shop_candies" unique_id=2147321871 instance=ExtResource("48_pf7vy")]
-transform = Transform3D(0.99793714, 0, 0.064201385, 0, 1, 0, -0.064201385, 0, 0.99793714, 0.12319946, -0.30314422, 0.115021706)
-
-[node name="Candy2" parent="Shops/shop_candies" unique_id=1377601820 instance=ExtResource("48_pf7vy")]
-transform = Transform3D(0.99793714, 0, 0.064201385, 0, 1, 0, -0.064201385, 0, 0.99793714, -0.1113081, -0.30314422, 0.32940483)
-
-[node name="shop_keys" parent="Shops" unique_id=263893663 instance=ExtResource("49_i4re6")]
-transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 9.418836, 2.3502424, 34.496414)
-
-[node name="Key" parent="Shops/shop_keys" unique_id=1194844630 instance=ExtResource("50_o8ni1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.28639174, 0.6079674)
-
-[node name="shop_dices" parent="Shops" unique_id=854094888 instance=ExtResource("48_rm0al")]
-transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 9.029964, 2.3059926, 38.4927)
-
-[node name="Dice" parent="Shops/shop_dices" unique_id=939750161 instance=ExtResource("52_3hbvx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18601227, -0.312343, 0)
-
-[node name="Dice2" parent="Shops/shop_dices" unique_id=1334587392 instance=ExtResource("52_3hbvx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08380127, -0.312343, 0)
-
-[node name="Dice3" parent="Shops/shop_dices" unique_id=1471416674 instance=ExtResource("52_3hbvx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3225975, -0.312343, 0)
 
 [node name="Underground" type="Node3D" parent="." unique_id=93872733]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2681904, -303.39746, 2.3761482)
